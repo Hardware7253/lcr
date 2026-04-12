@@ -43,14 +43,14 @@
           "height": 1.27,
           "width": 2.54
         },
-        "silk_line_width": 0.1,
+        "silk_line_width": 0.153,
         "silk_text_italic": false,
         "silk_text_size_h": 1.0,
         "silk_text_size_v": 1.0,
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.5
+          "min_clearance": 0.3
         }
       },
       "diff_pair_dimensions": [
@@ -154,7 +154,7 @@
           "td_onpthpad": false,
           "td_onroundshapesonly": false,
           "td_onsmdpad": false,
-          "td_ontrackend": false,
+          "td_ontrackend": true,
           "td_onvia": true
         }
       ],
@@ -555,7 +555,7 @@
     "annotate_start_num": 0,
     "annotation": {
       "method": 0,
-      "sort_order": 0
+      "sort_order": 1
     },
     "bom_export_filename": "Manufacture/${PROJECTNAME}.csv",
     "bom_fmt_presets": [],
@@ -733,7 +733,7 @@
         "uuid": "226ea51e-4da2-4daa-967e-dce167947430"
       }
     ],
-    "used_designators": "R1-3,C1,#PWR92-93",
+    "used_designators": "N1,#FLG1-3,Y1-2,#PWR1-94,PS1,C1-43,U1-12,D1-3,DS1,J1-7,JP1,R1-32,TP1-10,SW1-2",
     "variants": []
   },
   "sheets": [
