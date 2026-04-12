@@ -155,7 +155,7 @@
           "td_onroundshapesonly": false,
           "td_onsmdpad": false,
           "td_ontrackend": true,
-          "td_onvia": true
+          "td_onvia": false
         }
       ],
       "teardrop_parameters": [
@@ -733,7 +733,7 @@
         "uuid": "226ea51e-4da2-4daa-967e-dce167947430"
       }
     ],
-    "used_designators": "N1,#FLG1-3,Y1-2,#PWR1-94,PS1,C1-43,U1-12,D1-3,DS1,J1-7,JP1,R1-32,TP1-10,SW1-2",
+    "used_designators": "TP13-14,#PWR38-39,#PWR92-93",
     "variants": []
   },
   "sheets": [

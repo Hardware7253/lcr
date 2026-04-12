@@ -1749,7 +1749,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "11970df4-8428-40ee-8b2e-6e13f580837d")
-		(property "Reference" "#PWR093"
+		(property "Reference" "#PWR081"
 			(at 119.38 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -1809,7 +1809,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5/2911f1c4-2f69-429a-9438-24c6ac9b9c30"
-					(reference "#PWR093")
+					(reference "#PWR081")
 					(unit 1)
 				)
 			)
@@ -1827,7 +1827,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3fc26552-2ed0-4871-b02e-95a1ec6db92e")
-		(property "Reference" "#PWR079"
+		(property "Reference" "#PWR077"
 			(at 111.76 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -1887,7 +1887,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5/2911f1c4-2f69-429a-9438-24c6ac9b9c30"
-					(reference "#PWR079")
+					(reference "#PWR077")
 					(unit 1)
 				)
 			)
@@ -1905,7 +1905,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "48f8ed2d-adae-4693-9991-66775349d33c")
-		(property "Reference" "C43"
+		(property "Reference" "C39"
 			(at 128.27 132.0801 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1991,7 +1991,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5/2911f1c4-2f69-429a-9438-24c6ac9b9c30"
-					(reference "C43")
+					(reference "C39")
 					(unit 1)
 				)
 			)
@@ -2009,7 +2009,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "751158a5-fe46-4997-b25e-4beff7f32aac")
-		(property "Reference" "#PWR080"
+		(property "Reference" "#PWR078"
 			(at 128.27 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -2069,7 +2069,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5/2911f1c4-2f69-429a-9438-24c6ac9b9c30"
-					(reference "#PWR080")
+					(reference "#PWR078")
 					(unit 1)
 				)
 			)
@@ -2087,7 +2087,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7f7f1047-3b52-4d2d-aec5-c3143293471d")
-		(property "Reference" "R25"
+		(property "Reference" "R19"
 			(at 148.59 107.9499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2173,7 +2173,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5/2911f1c4-2f69-429a-9438-24c6ac9b9c30"
-					(reference "R25")
+					(reference "R19")
 					(unit 1)
 				)
 			)
@@ -2191,7 +2191,7 @@
 		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "83ae2ddb-0866-4e38-aae1-a908ac6189f8")
-		(property "Reference" "R24"
+		(property "Reference" "R18"
 			(at 99.06 73.6599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2277,7 +2277,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5/2911f1c4-2f69-429a-9438-24c6ac9b9c30"
-					(reference "R24")
+					(reference "R18")
 					(unit 1)
 				)
 			)
@@ -2295,7 +2295,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "90bf6592-c763-4040-964e-82f1cba97c53")
-		(property "Reference" "TP6"
+		(property "Reference" "TP8"
 			(at 172.72 114.2999 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2378,7 +2378,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5/2911f1c4-2f69-429a-9438-24c6ac9b9c30"
-					(reference "TP6")
+					(reference "TP8")
 					(unit 1)
 				)
 			)
@@ -2396,7 +2396,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9e8aad4d-c60b-4967-86e5-0328be37df48")
-		(property "Reference" "TP5"
+		(property "Reference" "TP7"
 			(at 89.408 77.47 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2477,7 +2477,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5/2911f1c4-2f69-429a-9438-24c6ac9b9c30"
-					(reference "TP5")
+					(reference "TP7")
 					(unit 1)
 				)
 			)
@@ -2495,7 +2495,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ac8e92b4-3252-408a-9307-26cd8eb600c5")
-		(property "Reference" "R26"
+		(property "Reference" "R20"
 			(at 160.02 107.9499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2581,7 +2581,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5/2911f1c4-2f69-429a-9438-24c6ac9b9c30"
-					(reference "R26")
+					(reference "R20")
 					(unit 1)
 				)
 			)
@@ -2745,7 +2745,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cabb7d90-7015-45e5-9e44-613ca8f4e205")
-		(property "Reference" "#PWR094"
+		(property "Reference" "#PWR080"
 			(at 132.08 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -2805,7 +2805,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5/2911f1c4-2f69-429a-9438-24c6ac9b9c30"
-					(reference "#PWR094")
+					(reference "#PWR080")
 					(unit 1)
 				)
 			)
@@ -2927,7 +2927,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d33f9736-3e6b-4e85-9c37-e399ca44a6e9")
-		(property "Reference" "#PWR081"
+		(property "Reference" "#PWR079"
 			(at 111.76 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -2987,7 +2987,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5/2911f1c4-2f69-429a-9438-24c6ac9b9c30"
-					(reference "#PWR081")
+					(reference "#PWR079")
 					(unit 1)
 				)
 			)
