@@ -512,7 +512,7 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.2,
+        "clearance": 0.15,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -733,7 +733,7 @@
         "uuid": "226ea51e-4da2-4daa-967e-dce167947430"
       }
     ],
-    "used_designators": "TP13-14,#PWR38-39,#PWR92-93",
+    "used_designators": "U1-11,D1-6,C1-47,R1-29,JP1,TP1-14,Y1-2,#PWR1-101,PS1,#FLG1-3,DS1,H1-4,J1-6,N1,SW1-2",
     "variants": []
   },
   "sheets": [

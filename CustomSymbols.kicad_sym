@@ -742,6 +742,14 @@
 			)
 		)
 		(symbol "TLV757P_1_1"
+			(text private "NC and ground are connected for thermal dissipation"
+				(at 1.524 13.97 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
 			(pin power_in line
 				(at -7.62 2.54 0)
 				(length 2.54)
@@ -796,11 +804,11 @@
 					)
 				)
 			)
-			(pin power_in line
+			(pin passive line
 				(at 0 -7.62 90)
 				(length 2.54)
 				(hide yes)
-				(name "NC"
+				(name "GND"
 					(effects
 						(font
 							(size 1.27 1.27)
