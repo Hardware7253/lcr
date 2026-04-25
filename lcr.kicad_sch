@@ -6,7 +6,7 @@
 	(paper "A3")
 	(title_block
 		(title "LCR Main Section (digital)")
-		(date "2026-04-12")
+		(date "2026-04-26")
 		(company "LWQ")
 	)
 	(lib_symbols
@@ -10092,6 +10092,17 @@
 			)
 		)
 		(property "LCSC PART #" "C2286"
+			(at 151.13 254 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Already Have" "1"
 			(at 151.13 254 0)
 			(hide yes)
 			(show_name no)
