@@ -6303,10 +6303,6 @@
 		(uuid "187b7e71-78df-4ef0-b258-d278c179e501")
 	)
 	(no_connect
-		(at 156.21 97.79)
-		(uuid "29ab3193-4c67-4d5e-9d53-b0c24a1e779c")
-	)
-	(no_connect
 		(at 156.21 115.57)
 		(uuid "3ab8b1c6-841b-4030-a1db-a49137ded678")
 	)
@@ -6365,6 +6361,10 @@
 	(no_connect
 		(at 120.65 123.19)
 		(uuid "bb026eab-c283-4248-a55c-6d3ef09cd768")
+	)
+	(no_connect
+		(at 120.65 148.59)
+		(uuid "c22769d4-6555-49ae-913e-e84626640cb8")
 	)
 	(no_connect
 		(at 156.21 110.49)
@@ -6825,16 +6825,6 @@
 			(type default)
 		)
 		(uuid "3692cc3d-fd25-42aa-a6b4-780e1eb2b146")
-	)
-	(wire
-		(pts
-			(xy 115.57 148.59) (xy 120.65 148.59)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "371f33fd-9e85-484f-a70f-041dc53a8fea")
 	)
 	(wire
 		(pts
@@ -7738,6 +7728,16 @@
 	)
 	(wire
 		(pts
+			(xy 156.21 97.79) (xy 161.29 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9dcc1161-fa6d-4b00-af5b-9a262f1d98af")
+	)
+	(wire
+		(pts
 			(xy 147.32 223.52) (xy 149.86 223.52)
 		)
 		(stroke
@@ -8636,30 +8636,6 @@
 			)
 		)
 	)
-	(global_label "TEST_GAIN_S"
-		(shape input)
-		(at 115.57 148.59 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "11de617a-b764-43f3-93c4-7f85026f8d77")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 100.8525 148.59 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
 	(global_label "OSC_IN"
 		(shape input)
 		(at 48.26 132.08 90)
@@ -8780,7 +8756,7 @@
 			)
 		)
 	)
-	(global_label "dut_test_3"
+	(global_label "dut_test_4"
 		(shape input)
 		(at 115.57 120.65 180)
 		(fields_autoplaced yes)
@@ -9033,6 +9009,30 @@
 		(uuid "be1efe15-8931-41bb-89c7-9c19a68caabe")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 173.7699 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "TEST_GAIN_S"
+		(shape input)
+		(at 161.29 97.79 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c2120cb7-1367-4bf6-a247-a2467437cdaa")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 176.0075 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

@@ -621,16 +621,6 @@
 		)
 		(uuid "2245bda6-0f0b-4a7a-8bef-ee8502a24573")
 	)
-	(text "Tight ass mosfet: C7429875"
-		(exclude_from_sim no)
-		(at 159.766 18.034 0)
-		(effects
-			(font
-				(size 5.08 5.08)
-			)
-		)
-		(uuid "75cc3961-e369-41f4-96ae-7dc40079fdfc")
-	)
 	(junction
 		(at 93.98 31.75)
 		(diameter 0)

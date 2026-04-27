@@ -3785,7 +3785,7 @@
 	)
 	(rectangle
 		(start 279.4 138.43)
-		(end 350.52 243.84)
+		(end 370.84 243.84)
 		(stroke
 			(width 0)
 			(type dash)
@@ -3797,7 +3797,7 @@
 	)
 	(rectangle
 		(start 104.14 134.62)
-		(end 354.33 248.92)
+		(end 374.65 248.92)
 		(stroke
 			(width 0)
 			(type default)
@@ -4105,12 +4105,6 @@
 		(uuid "17cbbce2-2e8e-4fae-9ea2-9a12c6cc1730")
 	)
 	(junction
-		(at 175.26 323.85)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1a89c88d-dd9f-484a-a2b1-1a44fedbbd50")
-	)
-	(junction
 		(at 124.46 72.39)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4201,6 +4195,12 @@
 		(uuid "6ad4e2c4-3fdd-4308-97bf-e245d2948e59")
 	)
 	(junction
+		(at 165.1 323.85)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "71d868b7-d5c1-4fd5-9380-dd7341a9f9e9")
+	)
+	(junction
 		(at 406.4 229.87)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4273,7 +4273,7 @@
 		(uuid "908f4a84-005c-4a44-9ae6-58c8c5ea9abc")
 	)
 	(junction
-		(at 330.2 163.83)
+		(at 351.79 163.83)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9c062ab3-44e9-4a54-88cb-b790e7c90752")
@@ -4381,12 +4381,6 @@
 		(uuid "f8d59cbc-238d-4daa-8707-98fc07c166d7")
 	)
 	(junction
-		(at 165.1 323.85)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fa16a055-b96c-48d0-8c1f-fae832df5361")
-	)
-	(junction
 		(at 293.37 81.28)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4414,7 +4408,7 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 323.85) (xy 175.26 330.2)
+			(xy 175.26 304.8) (xy 175.26 330.2)
 		)
 		(stroke
 			(width 0)
@@ -4451,6 +4445,16 @@
 			(type default)
 		)
 		(uuid "077a7f89-6db2-4f6b-a6b4-71da02871b68")
+	)
+	(wire
+		(pts
+			(xy 165.1 323.85) (xy 165.1 330.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0789cebc-54f4-497a-b787-d60cc4888281")
 	)
 	(wire
 		(pts
@@ -4734,7 +4738,7 @@
 	)
 	(wire
 		(pts
-			(xy 330.2 171.45) (xy 330.2 163.83)
+			(xy 351.79 171.45) (xy 351.79 163.83)
 		)
 		(stroke
 			(width 0)
@@ -4791,26 +4795,6 @@
 			(type default)
 		)
 		(uuid "272b7e90-588e-447b-97f5-34288b265895")
-	)
-	(wire
-		(pts
-			(xy 294.64 161.29) (xy 312.42 161.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "28e80fa9-b7d6-49ca-b936-67278ead048d")
-	)
-	(wire
-		(pts
-			(xy 165.1 290.83) (xy 165.1 323.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "29817cde-d543-4bfc-9738-a7585c87972b")
 	)
 	(wire
 		(pts
@@ -4984,16 +4968,6 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 323.85) (xy 175.26 323.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3baf4dfe-7776-421d-a90c-c771e998c9af")
-	)
-	(wire
-		(pts
 			(xy 458.47 78.74) (xy 458.47 76.2)
 		)
 		(stroke
@@ -5001,16 +4975,6 @@
 			(type default)
 		)
 		(uuid "3bdd5121-5e0c-4331-9bac-86baa6f7397f")
-	)
-	(wire
-		(pts
-			(xy 175.26 304.8) (xy 175.26 323.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3c6f79a1-ea44-4b6c-a31b-b71adc84e069")
 	)
 	(wire
 		(pts
@@ -5024,7 +4988,7 @@
 	)
 	(wire
 		(pts
-			(xy 330.2 161.29) (xy 330.2 163.83)
+			(xy 351.79 161.29) (xy 351.79 163.83)
 		)
 		(stroke
 			(width 0)
@@ -5084,7 +5048,7 @@
 	)
 	(wire
 		(pts
-			(xy 330.2 163.83) (xy 327.66 163.83)
+			(xy 351.79 163.83) (xy 349.25 163.83)
 		)
 		(stroke
 			(width 0)
@@ -5161,6 +5125,16 @@
 			(type default)
 		)
 		(uuid "4872749a-e60b-4cd3-80a1-4def463c6ab5")
+	)
+	(wire
+		(pts
+			(xy 294.64 161.29) (xy 307.34 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4a4a1c0b-bdde-4074-b0c6-4b71fe05a545")
 	)
 	(wire
 		(pts
@@ -5644,7 +5618,7 @@
 	)
 	(wire
 		(pts
-			(xy 309.88 166.37) (xy 309.88 171.45)
+			(xy 331.47 166.37) (xy 331.47 171.45)
 		)
 		(stroke
 			(width 0)
@@ -5661,16 +5635,6 @@
 			(type default)
 		)
 		(uuid "79b7aa4a-74e7-4e6e-bd76-1701486c8178")
-	)
-	(wire
-		(pts
-			(xy 175.26 323.85) (xy 205.74 323.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "79fc7e6a-4791-4864-b4a2-66da282cee80")
 	)
 	(wire
 		(pts
@@ -5701,6 +5665,16 @@
 			(type default)
 		)
 		(uuid "7c8aaea1-1111-42bd-b205-d889cd03d92b")
+	)
+	(wire
+		(pts
+			(xy 165.1 323.85) (xy 205.74 323.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7d4e0358-7702-4378-92be-58e0ba98d22a")
 	)
 	(wire
 		(pts
@@ -5774,7 +5748,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 323.85) (xy 165.1 330.2)
+			(xy 165.1 290.83) (xy 165.1 323.85)
 		)
 		(stroke
 			(width 0)
@@ -5844,7 +5818,7 @@
 	)
 	(wire
 		(pts
-			(xy 330.2 163.83) (xy 334.01 163.83)
+			(xy 351.79 163.83) (xy 355.6 163.83)
 		)
 		(stroke
 			(width 0)
@@ -6304,6 +6278,16 @@
 	)
 	(wire
 		(pts
+			(xy 314.96 161.29) (xy 334.01 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b12958bd-1e5f-4874-8f1a-43cccd745666")
+	)
+	(wire
+		(pts
 			(xy 200.66 54.61) (xy 200.66 57.15)
 		)
 		(stroke
@@ -6374,7 +6358,7 @@
 	)
 	(wire
 		(pts
-			(xy 309.88 171.45) (xy 330.2 171.45)
+			(xy 331.47 171.45) (xy 351.79 171.45)
 		)
 		(stroke
 			(width 0)
@@ -6734,7 +6718,7 @@
 	)
 	(wire
 		(pts
-			(xy 312.42 166.37) (xy 309.88 166.37)
+			(xy 334.01 166.37) (xy 331.47 166.37)
 		)
 		(stroke
 			(width 0)
@@ -9343,8 +9327,8 @@
 		)
 		(uuid "4d2eb8bb-756d-42bc-8f39-b2c3cdd1b029")
 	)
-	(label "dut_test_2"
-		(at 299.72 161.29 0)
+	(label "dut_test_3"
+		(at 321.31 161.29 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9453,6 +9437,16 @@
 		)
 		(uuid "c3d03168-4553-4ed9-ab25-c688846a7858")
 	)
+	(label "dut_test_2"
+		(at 295.91 161.29 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ce7e549e-def4-4b24-be19-628179eb67a7")
+	)
 	(label "DDS_LPF_2"
 		(at 295.91 81.28 0)
 		(effects
@@ -9497,9 +9491,9 @@
 			)
 		)
 	)
-	(global_label "dut_test_3"
+	(global_label "dut_test_4"
 		(shape input)
-		(at 334.01 163.83 0)
+		(at 355.6 163.83 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -9509,7 +9503,7 @@
 		)
 		(uuid "0801236a-6c5a-4978-8db4-753c9fbf527a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 346.7317 163.83 0)
+			(at 368.3217 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11677,188 +11671,6 @@
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
 					(reference "D2")
 					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Opamp_Quad")
-		(at 213.36 326.39 0)
-		(unit 3)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "22adb9da-e2ef-412c-8416-11920bb8d5f6")
-		(property "Reference" "U9"
-			(at 213.36 316.23 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LM324"
-			(at 213.36 318.77 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
-			(at 213.36 326.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C7943.pdf"
-			(at 213.36 326.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Quad operational amplifier"
-			(at 213.36 326.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
-			(at 213.36 326.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Name" "kicad_builtin_opamp_quad"
-			(at 213.36 326.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "SUBCKT"
-			(at 213.36 326.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=out1 2=in1- 3=in1+ 4=vcc 5=in2+ 6=in2- 7=out2 8=out3 9=in3- 10=in3+ 11=vee 12=in4+ 13=in4- 14=out4"
-			(at 213.36 326.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC PART #" "C7943"
-			(at 213.36 326.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Already Have" "0"
-			(at 213.36 326.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "7"
-			(uuid "8ee80fb0-0575-49bb-b309-427fd5bd03d1")
-		)
-		(pin "8"
-			(uuid "9d1e8d50-b8b3-46d3-b41e-9078856a6609")
-		)
-		(pin "3"
-			(uuid "905e98ed-8449-4dde-ab9e-7c67b7fb081b")
-		)
-		(pin "6"
-			(uuid "cc1a025d-f4ba-4139-92ce-03ccec693344")
-		)
-		(pin "11"
-			(uuid "6f980387-bbd0-4277-85c1-99e8408513dd")
-		)
-		(pin "14"
-			(uuid "e1c49438-7284-4235-84e0-ffb6e0ba9b1c")
-		)
-		(pin "12"
-			(uuid "6af9a57a-d700-4b91-bb3e-8df28087920f")
-		)
-		(pin "10"
-			(uuid "6922bdc8-f7e0-4c42-86e0-6951f4d310ef")
-		)
-		(pin "2"
-			(uuid "1ed2e2a9-4699-4afd-ae9d-be251040a23e")
-		)
-		(pin "4"
-			(uuid "a7eeebaa-8fd8-4c8f-bebb-60dd7fb4f32f")
-		)
-		(pin "13"
-			(uuid "8645fce1-ae1c-42f5-ae06-2d2283b17247")
-		)
-		(pin "5"
-			(uuid "f34002e3-701b-4633-b91a-4e33c720850c")
-		)
-		(pin "1"
-			(uuid "12a52345-46f8-43a7-b473-7cfda7da1409")
-		)
-		(pin "9"
-			(uuid "56253beb-5dfd-4859-80c6-e3c85e4c8ce8")
-		)
-		(instances
-			(project "lcr"
-				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "U9")
-					(unit 3)
 				)
 			)
 		)
@@ -14267,83 +14079,6 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 139.7 306.07 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "524d21e8-adf5-445c-a5ab-6815cac0d6a0")
-		(property "Reference" "#PWR031"
-			(at 139.7 309.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 139.7 302.514 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 139.7 306.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 139.7 306.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 139.7 306.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "72d1bacf-2128-4812-8ae2-080ddddb4464")
-		)
-		(instances
-			(project "lcr"
-				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR031")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
 		(at 454.66 43.18 0)
 		(unit 1)
 		(body_style 1)
@@ -15711,7 +15446,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 330.2 161.29 0)
+		(at 351.79 161.29 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -15722,7 +15457,7 @@
 		(fields_autoplaced yes)
 		(uuid "761c5b65-8c0b-45e0-bcf7-4abbf3373b68")
 		(property "Reference" "TP5"
-			(at 332.74 156.7179 0)
+			(at 354.33 156.7179 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15733,7 +15468,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 332.74 159.2579 0)
+			(at 354.33 159.2579 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15744,7 +15479,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
-			(at 335.28 161.29 0)
+			(at 356.87 161.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15755,7 +15490,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/C5199801.pdf"
-			(at 335.28 161.29 0)
+			(at 356.87 161.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15766,7 +15501,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 330.2 161.29 0)
+			(at 351.79 161.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15777,7 +15512,7 @@
 			)
 		)
 		(property "LCSC PART #" "C5199801"
-			(at 330.2 161.29 0)
+			(at 351.79 161.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15788,7 +15523,7 @@
 			)
 		)
 		(property "Already Have" "0"
-			(at 330.2 161.29 0)
+			(at 351.79 161.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16776,6 +16511,188 @@
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
 					(reference "#PWR073")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Opamp_Quad")
+		(at 213.36 326.39 0)
+		(unit 4)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8d218209-4db5-4b07-8df4-18d532631413")
+		(property "Reference" "U9"
+			(at 213.36 316.23 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LM324"
+			(at 213.36 318.77 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
+			(at 213.36 326.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C7943.pdf"
+			(at 213.36 326.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Quad operational amplifier"
+			(at 213.36 326.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
+			(at 213.36 326.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" "kicad_builtin_opamp_quad"
+			(at 213.36 326.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" "SUBCKT"
+			(at 213.36 326.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=out1 2=in1- 3=in1+ 4=vcc 5=in2+ 6=in2- 7=out2 8=out3 9=in3- 10=in3+ 11=vee 12=in4+ 13=in4- 14=out4"
+			(at 213.36 326.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC PART #" "C7943"
+			(at 213.36 326.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Already Have" "0"
+			(at 213.36 326.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "7"
+			(uuid "8ee80fb0-0575-49bb-b309-427fd5bd03d5")
+		)
+		(pin "8"
+			(uuid "9d1e8d50-b8b3-46d3-b41e-9078856a660d")
+		)
+		(pin "3"
+			(uuid "905e98ed-8449-4dde-ab9e-7c67b7fb081f")
+		)
+		(pin "6"
+			(uuid "cc1a025d-f4ba-4139-92ce-03ccec693348")
+		)
+		(pin "11"
+			(uuid "6f980387-bbd0-4277-85c1-99e8408513e1")
+		)
+		(pin "14"
+			(uuid "670c2e17-2650-44f1-bbc4-910178def1c9")
+		)
+		(pin "12"
+			(uuid "bd647512-c802-4b53-b741-676afb4ac12d")
+		)
+		(pin "10"
+			(uuid "6922bdc8-f7e0-4c42-86e0-6951f4d310f3")
+		)
+		(pin "2"
+			(uuid "1ed2e2a9-4699-4afd-ae9d-be251040a242")
+		)
+		(pin "4"
+			(uuid "a7eeebaa-8fd8-4c8f-bebb-60dd7fb4f333")
+		)
+		(pin "13"
+			(uuid "5d86b9a9-b65e-4363-9918-ea75aae05a4c")
+		)
+		(pin "5"
+			(uuid "f34002e3-701b-4633-b91a-4e33c7208510")
+		)
+		(pin "1"
+			(uuid "12a52345-46f8-43a7-b473-7cfda7da140d")
+		)
+		(pin "9"
+			(uuid "56253beb-5dfd-4859-80c6-e3c85e4c8cec")
+		)
+		(instances
+			(project "lcr"
+				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
+					(reference "U9")
+					(unit 4)
 				)
 			)
 		)
@@ -18299,6 +18216,108 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 311.15 161.29 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a3bec1e3-592c-403e-845f-be83879468d9")
+		(property "Reference" "R30"
+			(at 311.15 154.94 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k"
+			(at 311.15 157.48 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 311.15 163.068 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C22548.pdf"
+			(at 311.15 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 311.15 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC PART #" "C22548"
+			(at 311.15 161.29 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Already Have" "0"
+			(at 311.15 161.29 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "48d5d815-585d-4a89-9526-08f7e58297f5")
+		)
+		(pin "2"
+			(uuid "b86e4356-7064-4c92-8adb-d55b882cfa37")
+		)
+		(instances
+			(project "lcr"
+				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
+					(reference "R30")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 120.65 382.27 0)
 		(unit 1)
@@ -18371,6 +18390,84 @@
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
 					(reference "#PWR0101")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 139.7 306.07 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a8844514-0a3e-44a3-9720-fc1b40594bc2")
+		(property "Reference" "#PWR085"
+			(at 139.7 309.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3A"
+			(at 139.7 300.99 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 139.7 306.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 139.7 306.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 139.7 306.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2793f9bf-52fe-4217-afc4-753fe28860dd")
+		)
+		(instances
+			(project "lcr"
+				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
+					(reference "#PWR085")
 					(unit 1)
 				)
 			)
@@ -20174,7 +20271,7 @@
 	)
 	(symbol
 		(lib_id "Device:Opamp_Quad")
-		(at 320.04 163.83 0)
+		(at 341.63 163.83 0)
 		(unit 3)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -20185,7 +20282,7 @@
 		(fields_autoplaced yes)
 		(uuid "d81b56ac-f4d3-44a2-8067-011c02a6c2ba")
 		(property "Reference" "U6"
-			(at 320.04 153.67 0)
+			(at 341.63 153.67 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20195,7 +20292,7 @@
 			)
 		)
 		(property "Value" "LMH6644MTX"
-			(at 320.04 156.21 0)
+			(at 341.63 156.21 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20205,7 +20302,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:TSSOP-14_4.4x5mm_P0.65mm"
-			(at 320.04 163.83 0)
+			(at 341.63 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20216,7 +20313,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/C962081.pdf"
-			(at 320.04 163.83 0)
+			(at 341.63 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20227,7 +20324,7 @@
 			)
 		)
 		(property "Description" "Quad operational amplifier"
-			(at 320.04 163.83 0)
+			(at 341.63 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20238,7 +20335,7 @@
 			)
 		)
 		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
-			(at 320.04 163.83 0)
+			(at 341.63 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20249,7 +20346,7 @@
 			)
 		)
 		(property "Sim.Name" "kicad_builtin_opamp_quad"
-			(at 320.04 163.83 0)
+			(at 341.63 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20260,7 +20357,7 @@
 			)
 		)
 		(property "Sim.Device" "SUBCKT"
-			(at 320.04 163.83 0)
+			(at 341.63 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20271,7 +20368,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=out1 2=in1- 3=in1+ 4=vcc 5=in2+ 6=in2- 7=out2 8=out3 9=in3- 10=in3+ 11=vee 12=in4+ 13=in4- 14=out4"
-			(at 320.04 163.83 0)
+			(at 341.63 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20282,7 +20379,7 @@
 			)
 		)
 		(property "LCSC PART #" "C962081"
-			(at 320.04 163.83 0)
+			(at 341.63 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20293,7 +20390,7 @@
 			)
 		)
 		(property "Already Have" "0"
-			(at 320.04 163.83 0)
+			(at 341.63 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21709,6 +21806,188 @@
 	)
 	(symbol
 		(lib_id "Device:Opamp_Quad")
+		(at 242.57 372.11 0)
+		(unit 3)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fb1c05f6-1713-4aa0-a8df-207defcb9987")
+		(property "Reference" "U9"
+			(at 242.57 361.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LM324"
+			(at 242.57 364.49 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
+			(at 242.57 372.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C7943.pdf"
+			(at 242.57 372.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Quad operational amplifier"
+			(at 242.57 372.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
+			(at 242.57 372.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" "kicad_builtin_opamp_quad"
+			(at 242.57 372.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" "SUBCKT"
+			(at 242.57 372.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=out1 2=in1- 3=in1+ 4=vcc 5=in2+ 6=in2- 7=out2 8=out3 9=in3- 10=in3+ 11=vee 12=in4+ 13=in4- 14=out4"
+			(at 242.57 372.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC PART #" "C7943"
+			(at 242.57 372.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Already Have" "0"
+			(at 242.57 372.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "7"
+			(uuid "8ee80fb0-0575-49bb-b309-427fd5bd03d1")
+		)
+		(pin "8"
+			(uuid "cc525f42-0e79-49ea-bd39-daded15bdca2")
+		)
+		(pin "3"
+			(uuid "905e98ed-8449-4dde-ab9e-7c67b7fb081b")
+		)
+		(pin "6"
+			(uuid "cc1a025d-f4ba-4139-92ce-03ccec693344")
+		)
+		(pin "11"
+			(uuid "6f980387-bbd0-4277-85c1-99e8408513dd")
+		)
+		(pin "14"
+			(uuid "e1c49438-7284-4235-84e0-ffb6e0ba9b1c")
+		)
+		(pin "12"
+			(uuid "6af9a57a-d700-4b91-bb3e-8df28087920f")
+		)
+		(pin "10"
+			(uuid "04d45de2-71eb-4d99-ac6b-1faf5f74fa2e")
+		)
+		(pin "2"
+			(uuid "1ed2e2a9-4699-4afd-ae9d-be251040a23e")
+		)
+		(pin "4"
+			(uuid "a7eeebaa-8fd8-4c8f-bebb-60dd7fb4f32f")
+		)
+		(pin "13"
+			(uuid "8645fce1-ae1c-42f5-ae06-2d2283b17247")
+		)
+		(pin "5"
+			(uuid "f34002e3-701b-4633-b91a-4e33c720850c")
+		)
+		(pin "1"
+			(uuid "12a52345-46f8-43a7-b473-7cfda7da1409")
+		)
+		(pin "9"
+			(uuid "0983c942-3e32-4af4-b05c-a80d39b64f76")
+		)
+		(instances
+			(project "lcr"
+				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
+					(reference "U9")
+					(unit 3)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Opamp_Quad")
 		(at 444.5 217.17 0)
 		(unit 5)
 		(body_style 1)
@@ -21887,188 +22166,6 @@
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
 					(reference "U6")
 					(unit 5)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Opamp_Quad")
-		(at 242.57 372.11 0)
-		(unit 4)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ff4482bd-01f4-4dd6-9868-1370b71b9693")
-		(property "Reference" "U9"
-			(at 242.57 361.95 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LM324"
-			(at 242.57 364.49 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
-			(at 242.57 372.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C7943.pdf"
-			(at 242.57 372.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Quad operational amplifier"
-			(at 242.57 372.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
-			(at 242.57 372.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Name" "kicad_builtin_opamp_quad"
-			(at 242.57 372.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "SUBCKT"
-			(at 242.57 372.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=out1 2=in1- 3=in1+ 4=vcc 5=in2+ 6=in2- 7=out2 8=out3 9=in3- 10=in3+ 11=vee 12=in4+ 13=in4- 14=out4"
-			(at 242.57 372.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC PART #" "C7943"
-			(at 242.57 372.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Already Have" "0"
-			(at 242.57 372.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "7"
-			(uuid "8ee80fb0-0575-49bb-b309-427fd5bd03d5")
-		)
-		(pin "8"
-			(uuid "9d1e8d50-b8b3-46d3-b41e-9078856a660d")
-		)
-		(pin "3"
-			(uuid "905e98ed-8449-4dde-ab9e-7c67b7fb081f")
-		)
-		(pin "6"
-			(uuid "cc1a025d-f4ba-4139-92ce-03ccec693348")
-		)
-		(pin "11"
-			(uuid "6f980387-bbd0-4277-85c1-99e8408513e1")
-		)
-		(pin "14"
-			(uuid "e1c49438-7284-4235-84e0-ffb6e0ba9b20")
-		)
-		(pin "12"
-			(uuid "6af9a57a-d700-4b91-bb3e-8df280879213")
-		)
-		(pin "10"
-			(uuid "6922bdc8-f7e0-4c42-86e0-6951f4d310f3")
-		)
-		(pin "2"
-			(uuid "1ed2e2a9-4699-4afd-ae9d-be251040a242")
-		)
-		(pin "4"
-			(uuid "a7eeebaa-8fd8-4c8f-bebb-60dd7fb4f333")
-		)
-		(pin "13"
-			(uuid "8645fce1-ae1c-42f5-ae06-2d2283b1724b")
-		)
-		(pin "5"
-			(uuid "f34002e3-701b-4633-b91a-4e33c7208510")
-		)
-		(pin "1"
-			(uuid "12a52345-46f8-43a7-b473-7cfda7da140d")
-		)
-		(pin "9"
-			(uuid "56253beb-5dfd-4859-80c6-e3c85e4c8cec")
-		)
-		(instances
-			(project "lcr"
-				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "U9")
-					(unit 4)
 				)
 			)
 		)
