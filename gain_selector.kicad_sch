@@ -856,7 +856,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5e32f66c-821c-45ed-8641-e786abe7e664")
-		(property "Reference" "R32"
+		(property "Reference" "R25"
 			(at 115.57 55.8799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -942,7 +942,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5/2911f1c4-2f69-429a-9438-24c6ac9b9c30"
-					(reference "R32")
+					(reference "R25")
 					(unit 1)
 				)
 			)
@@ -960,7 +960,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6a5cb197-a25b-4cd8-9b63-15f865fedbad")
-		(property "Reference" "TP9"
+		(property "Reference" "TP11"
 			(at 115.57 24.6379 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1043,7 +1043,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5/2911f1c4-2f69-429a-9438-24c6ac9b9c30"
-					(reference "TP9")
+					(reference "TP11")
 					(unit 1)
 				)
 			)
@@ -1061,7 +1061,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8d98c4f5-88da-48a2-9054-f00c6dae1e8c")
-		(property "Reference" "Q12"
+		(property "Reference" "Q2"
 			(at 91.44 60.9601 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1183,7 +1183,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5/2911f1c4-2f69-429a-9438-24c6ac9b9c30"
-					(reference "Q12")
+					(reference "Q2")
 					(unit 1)
 				)
 			)
@@ -1201,7 +1201,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ca047f3e-870c-4cfd-9853-428ffa8140a5")
-		(property "Reference" "Q11"
+		(property "Reference" "Q1"
 			(at 91.44 44.4499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1323,7 +1323,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5/2911f1c4-2f69-429a-9438-24c6ac9b9c30"
-					(reference "Q11")
+					(reference "Q1")
 					(unit 1)
 				)
 			)
@@ -1341,7 +1341,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cf6334a9-2d92-4db2-ae3e-594fdce83f59")
-		(property "Reference" "TP10"
+		(property "Reference" "TP12"
 			(at 115.57 85.8519 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1424,7 +1424,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5/2911f1c4-2f69-429a-9438-24c6ac9b9c30"
-					(reference "TP10")
+					(reference "TP12")
 					(unit 1)
 				)
 			)
@@ -1442,7 +1442,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ed96bec6-a707-4a99-a649-cf4aa319d7d9")
-		(property "Reference" "R20"
+		(property "Reference" "R26"
 			(at 90.17 72.3899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1528,7 +1528,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5/2911f1c4-2f69-429a-9438-24c6ac9b9c30"
-					(reference "R20")
+					(reference "R26")
 					(unit 1)
 				)
 			)
