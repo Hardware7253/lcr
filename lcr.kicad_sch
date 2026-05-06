@@ -8684,7 +8684,7 @@
 			)
 		)
 	)
-	(global_label "dut_cur_4"
+	(global_label "dut_curr_4"
 		(shape input)
 		(at 161.29 105.41 0)
 		(fields_autoplaced yes)
@@ -8696,7 +8696,7 @@
 		)
 		(uuid "289f229a-1d32-417a-b038-9721d481eb25")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 173.4674 105.41 0)
+			(at 174.2536 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
