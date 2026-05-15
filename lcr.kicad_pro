@@ -542,7 +542,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "manufacture/gerbers/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
@@ -557,7 +557,7 @@
       "method": 0,
       "sort_order": 1
     },
-    "bom_export_filename": "Manufacture/${PROJECTNAME}.csv",
+    "bom_export_filename": "manufacture/${PROJECTNAME}.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
@@ -739,7 +739,7 @@
         "uuid": "226ea51e-4da2-4daa-967e-dce167947430"
       }
     ],
-    "used_designators": "",
+    "used_designators": "TP1-16,R1-35,JP1,#FLG1-3,Y1-2,#PWR1-100,PS1-2,C1-47,U1-10,D1-10,DS1,H1-4,J1-7,N1,Q1-10,SW1-2",
     "variants": []
   },
   "sheets": [

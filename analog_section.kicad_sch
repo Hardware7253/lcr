@@ -6,7 +6,7 @@
 	(paper "A2")
 	(title_block
 		(title "LCR Analog Section")
-		(date "2026-04-26")
+		(date "2026-05-16")
 		(company "LWQ")
 	)
 	(lib_symbols
@@ -3162,6 +3162,145 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:+12V"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "+12V"
+				(at 0 3.556 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+12V\""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "+12V_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+12V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:+2V5"
 			(power global)
 			(pin_numbers
@@ -4055,16 +4194,6 @@
 		)
 		(uuid "1c9eb672-94fd-405a-98df-13990e680ac5")
 	)
-	(text "TI TLV9352IPWR"
-		(exclude_from_sim no)
-		(at 531.368 211.328 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "1df8d2a1-575c-4acf-8f64-f7285359faa1")
-	)
 	(text "Measuring"
 		(exclude_from_sim no)
 		(at 117.602 142.748 0)
@@ -4145,9 +4274,9 @@
 		)
 		(uuid "4c6b907a-b3ef-4e2b-a421-51b58b738a3d")
 	)
-	(text "This jumper can be used to\ntest the output impedance of\nthe amplifier by measuring\nopen circuit vs load voltage\nat the output.\nI can't remember why I need to do that though"
+	(text "This jumper can be used to\ntest the output impedance of\nthe amplifier by measuring\nopen circuit vs load voltage\nat the output."
 		(exclude_from_sim no)
-		(at 309.626 50.038 0)
+		(at 330.708 51.816 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4190,6 +4319,16 @@
 			)
 		)
 		(uuid "78fa513f-bcf1-4214-91c4-23c135bf258c")
+	)
+	(text "2.55V"
+		(exclude_from_sim no)
+		(at 151.384 316.484 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "796b8d55-67ab-45c8-924f-6ea479cc404f")
 	)
 	(text "DDS and Filtering"
 		(exclude_from_sim no)
@@ -4321,6 +4460,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "25c62339-36b0-4fc5-995f-5bf16159f47d")
+	)
+	(junction
+		(at 152.4 360.68)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "25f1df0f-fb68-4708-bd6d-08478ac01967")
 	)
 	(junction
 		(at 184.15 360.68)
@@ -4822,16 +4967,6 @@
 	)
 	(wire
 		(pts
-			(xy 220.98 307.34) (xy 224.79 307.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0ff563e7-001f-40f9-a960-f1a1828d42d4")
-	)
-	(wire
-		(pts
 			(xy 124.46 81.28) (xy 124.46 72.39)
 		)
 		(stroke
@@ -4839,6 +4974,16 @@
 			(type default)
 		)
 		(uuid "103aab46-c25e-41f2-b6e4-3ea7fbe19bfd")
+	)
+	(wire
+		(pts
+			(xy 232.41 288.29) (xy 236.22 288.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1059d147-3fd8-46ff-ac0a-85d13ce1cad0")
 	)
 	(wire
 		(pts
@@ -5029,6 +5174,16 @@
 			(type default)
 		)
 		(uuid "1dc7eccc-57ff-40d5-a7d9-4346449e0b70")
+	)
+	(wire
+		(pts
+			(xy 220.98 326.39) (xy 224.79 326.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e38ea29-fd60-466a-8728-2ac56915e85d")
 	)
 	(wire
 		(pts
@@ -5582,6 +5737,16 @@
 	)
 	(wire
 		(pts
+			(xy 152.4 358.14) (xy 152.4 360.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5267679e-bd5b-47d1-ba99-7c76ebfd702e")
+	)
+	(wire
+		(pts
 			(xy 369.57 83.82) (xy 372.11 83.82)
 		)
 		(stroke
@@ -5802,6 +5967,16 @@
 	)
 	(wire
 		(pts
+			(xy 232.41 326.39) (xy 236.22 326.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "65431e4b-2c65-4205-8773-42aaf8c05ac8")
+	)
+	(wire
+		(pts
 			(xy 250.19 81.28) (xy 250.19 78.74)
 		)
 		(stroke
@@ -5849,6 +6024,16 @@
 			(type default)
 		)
 		(uuid "68b51a9b-fa75-473d-b862-73b44bb5ae10")
+	)
+	(wire
+		(pts
+			(xy 232.41 307.34) (xy 236.22 307.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "68df8cce-49b7-46e8-a804-221b7102b91d")
 	)
 	(wire
 		(pts
@@ -6902,16 +7087,6 @@
 	)
 	(wire
 		(pts
-			(xy 220.98 326.39) (xy 224.79 326.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "beba582b-cfdf-4366-89f6-801a2f06df6a")
-	)
-	(wire
-		(pts
 			(xy 217.17 71.12) (xy 217.17 73.66)
 		)
 		(stroke
@@ -7539,6 +7714,16 @@
 			(type default)
 		)
 		(uuid "f1e43594-8b2a-443f-aca4-3adb07058b73")
+	)
+	(wire
+		(pts
+			(xy 220.98 307.34) (xy 224.79 307.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f26533ee-2a4a-459b-8caa-9d7f39d62458")
 	)
 	(wire
 		(pts
@@ -9971,16 +10156,6 @@
 		)
 		(uuid "81632563-aa77-4c50-9653-533783a2e6e9")
 	)
-	(label "+12V"
-		(at 171.45 360.68 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a66f9df6-5a94-412a-97d5-d86512859e8b")
-	)
 	(label "pre_dut"
 		(at 165.1 214.63 0)
 		(effects
@@ -10052,30 +10227,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-			)
-		)
-	)
-	(global_label "TEST_GAIN_G"
-		(shape input)
-		(at 224.79 288.29 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "0b66a512-770c-44cc-a292-d9fff6222987")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 239.568 288.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 	)
@@ -10175,6 +10326,30 @@
 			)
 		)
 	)
+	(global_label "TEST_GAIN_G"
+		(shape input)
+		(at 236.22 288.29 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "3092ab66-f075-4102-beff-e563eaf07fb3")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 250.998 288.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
 	(global_label "dut_curr_4"
 		(shape input)
 		(at 378.46 226.06 0)
@@ -10247,6 +10422,30 @@
 			)
 		)
 	)
+	(global_label "RANGE_G1"
+		(shape input)
+		(at 236.22 326.39 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "6a261fcd-c8d6-4d69-ba9c-d6d66bc0d264")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 248.7604 326.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
 	(global_label "DDS_SDATA"
 		(shape input)
 		(at 158.75 73.66 180)
@@ -10292,6 +10491,30 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+	)
+	(global_label "RANGE_G0"
+		(shape input)
+		(at 236.22 307.34 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "744e736d-f34b-4a34-9d94-85f60d53de25")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 248.7604 307.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 	)
@@ -10380,30 +10603,6 @@
 		(uuid "9fe53279-7e6a-401c-a8b7-aeb13c7e0bf6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 394.4476 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
-	(global_label "RANGE_G0"
-		(shape input)
-		(at 224.79 307.34 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "b89f4241-1184-4dba-8581-f99ef5970bbd")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 237.3304 307.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10532,30 +10731,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-			)
-		)
-	)
-	(global_label "RANGE_G1"
-		(shape input)
-		(at 224.79 326.39 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "f8bc6da3-e8c8-4d4b-b706-88f2828fc191")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 237.3304 326.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 	)
@@ -10741,6 +10916,17 @@
 				)
 			)
 		)
+		(property "Already Have" "0"
+			(at 359.41 176.53 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "08ade8cb-34cd-4847-8098-200b35f603c1")
 		)
@@ -10767,7 +10953,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "031412f4-7d0f-4015-ae84-971158b251dc")
-		(property "Reference" "J2"
+		(property "Reference" "J3"
 			(at 177.8 218.694 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10850,7 +11036,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "J2")
+					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -10868,7 +11054,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "060d2bda-fd7a-4b1b-97d0-bd86befbb8a7")
-		(property "Reference" "R23"
+		(property "Reference" "R26"
 			(at 177.8 332.7399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10954,7 +11140,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "R23")
+					(reference "R26")
 					(unit 1)
 				)
 			)
@@ -11355,7 +11541,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0a869914-843c-4e75-b0fb-180cfd7d56b0")
-		(property "Reference" "#PWR043"
+		(property "Reference" "#PWR044"
 			(at 351.79 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -11415,7 +11601,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR043")
+					(reference "#PWR044")
 					(unit 1)
 				)
 			)
@@ -11511,7 +11697,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0d1d12db-0e84-4cb6-9b6e-915ded356df4")
-		(property "Reference" "R24"
+		(property "Reference" "R27"
 			(at 187.96 332.7399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11597,7 +11783,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "R24")
+					(reference "R27")
 					(unit 1)
 				)
 			)
@@ -11615,7 +11801,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0f109f40-20d6-4c04-bf81-6fa5b0e30f51")
-		(property "Reference" "#PWR039"
+		(property "Reference" "#PWR040"
 			(at 458.47 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -11675,7 +11861,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR039")
+					(reference "#PWR040")
 					(unit 1)
 				)
 			)
@@ -11693,7 +11879,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "10cfb82e-4c88-4628-981d-9600f0f8d985")
-		(property "Reference" "#PWR092"
+		(property "Reference" "#PWR093"
 			(at 139.7 337.82 0)
 			(hide yes)
 			(show_name no)
@@ -11753,7 +11939,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR092")
+					(reference "#PWR093")
 					(unit 1)
 				)
 			)
@@ -11826,7 +12012,7 @@
 				)
 			)
 		)
-		(property "Already Have" "0"
+		(property "Already Have" "1"
 			(at 454.66 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -11858,6 +12044,84 @@
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
 					(reference "C5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+12V")
+		(at 139.7 306.07 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "15d6d0b4-7006-4ddd-988b-3db28e939c20")
+		(property "Reference" "#PWR092"
+			(at 139.7 309.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+12V"
+			(at 139.7 300.99 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 139.7 306.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 139.7 306.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+12V\""
+			(at 139.7 306.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "45f03335-9bf5-4fdf-b384-d68a188ffc97")
+		)
+		(instances
+			(project "lcr"
+				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
+					(reference "#PWR092")
 					(unit 1)
 				)
 			)
@@ -12039,7 +12303,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "181df503-ae65-429b-a174-5b850673c37b")
-		(property "Reference" "#PWR084"
+		(property "Reference" "#PWR085"
 			(at 295.91 242.57 0)
 			(hide yes)
 			(show_name no)
@@ -12099,7 +12363,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR084")
+					(reference "#PWR085")
 					(unit 1)
 				)
 			)
@@ -12314,7 +12578,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C14663.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C64705.pdf"
 			(at 288.29 223.52 0)
 			(hide yes)
 			(show_name no)
@@ -12347,7 +12611,7 @@
 				)
 			)
 		)
-		(property "LCSC PART #" "C14663"
+		(property "LCSC PART #" "C64705"
 			(at 288.29 223.52 90)
 			(hide yes)
 			(show_name no)
@@ -12611,7 +12875,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "238faf57-49db-444d-a500-d9af7a88c1d3")
-		(property "Reference" "#PWR046"
+		(property "Reference" "#PWR047"
 			(at 454.66 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -12671,7 +12935,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR046")
+					(reference "#PWR047")
 					(unit 1)
 				)
 			)
@@ -12793,7 +13057,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "27d474d8-baaf-4bfa-9931-ca600b9f4e67")
-		(property "Reference" "#PWR094"
+		(property "Reference" "#PWR096"
 			(at 120.65 368.3 0)
 			(hide yes)
 			(show_name no)
@@ -12853,7 +13117,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR094")
+					(reference "#PWR096")
 					(unit 1)
 				)
 			)
@@ -12937,6 +13201,17 @@
 				)
 			)
 		)
+		(property "Already Have" "0"
+			(at 359.41 219.71 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "32520f09-fae8-4685-82f3-a8fb77449e76")
 		)
@@ -12964,7 +13239,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2b799f11-c51f-4809-99ca-8a35580c9440")
-		(property "Reference" "#PWR093"
+		(property "Reference" "#PWR094"
 			(at 175.26 349.25 0)
 			(hide yes)
 			(show_name no)
@@ -13024,7 +13299,111 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR093")
+					(reference "#PWR094")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 139.7 312.42 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2c46e1d6-acd3-445a-a5a4-3e6d5f82dcea")
+		(property "Reference" "R22"
+			(at 142.24 311.1499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "2k7"
+			(at 142.24 313.6899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 141.478 312.42 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C114612.pdf"
+			(at 139.7 312.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 139.7 312.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Already Have" "0"
+			(at 139.7 312.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC PART #" "C114612"
+			(at 139.7 312.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "09fe1357-9b83-4066-a2cd-d6b019c6f77b")
+		)
+		(pin "2"
+			(uuid "8d09e563-8d7e-4b42-9d28-48c7cde16f42")
+		)
+		(instances
+			(project "lcr"
+				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
+					(reference "R22")
 					(unit 1)
 				)
 			)
@@ -13104,6 +13483,172 @@
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
 					(reference "#PWR028")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Opamp_Dual")
+		(at 524.51 219.71 0)
+		(unit 3)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2f7116b9-d0b4-4888-b87b-62029c30b955")
+		(property "Reference" "U7"
+			(at 523.24 218.4399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LMH6643MMX"
+			(at 523.24 220.9799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "CustomFootprints:VSSOP-8_3x3mm_P0.65mm"
+			(at 524.51 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C478382.pdf"
+			(at 524.51 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Dual operational amplifier"
+			(at 524.51 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
+			(at 524.51 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" "kicad_builtin_opamp_dual"
+			(at 524.51 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" "SUBCKT"
+			(at 524.51 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=out1 2=in1- 3=in1+ 4=vee 5=in2+ 6=in2- 7=out2 8=vcc"
+			(at 524.51 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC PART #" "C478382"
+			(at 524.51 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Already Have" "0"
+			(at 524.51 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "8"
+			(uuid "c1713922-0daf-4ef5-a72d-a409220b58a5")
+		)
+		(pin "5"
+			(uuid "161cfd2b-ea57-4bdc-b78d-05a2c1b563b7")
+		)
+		(pin "2"
+			(uuid "bbb5790d-7545-461f-a3f5-ea1e7b1f613a")
+		)
+		(pin "3"
+			(uuid "d9a53fde-90af-4197-b1fc-98a06c65c2f2")
+		)
+		(pin "7"
+			(uuid "760fe7bc-80f7-4cb9-b547-19d95cddc04a")
+		)
+		(pin "6"
+			(uuid "749f29bc-7afb-4b4d-ad2a-d0d7cd9404eb")
+		)
+		(pin "4"
+			(uuid "3d2cc19d-8529-4fa3-a83b-9e98c7988257")
+		)
+		(pin "1"
+			(uuid "b9a8f2b6-78e3-414f-8698-d4ca2288a525")
+		)
+		(instances
+			(project "lcr"
+				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
+					(reference "U7")
+					(unit 3)
 				)
 			)
 		)
@@ -13222,7 +13767,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3711bfa1-a19a-441a-bdc7-9cd8fad8fa11")
-		(property "Reference" "#PWR049"
+		(property "Reference" "#PWR050"
 			(at 430.53 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -13282,7 +13827,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR049")
+					(reference "#PWR050")
 					(unit 1)
 				)
 			)
@@ -13300,7 +13845,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "375d1459-8be1-4961-b3f1-1ed767a1eb0a")
-		(property "Reference" "#PWR087"
+		(property "Reference" "#PWR088"
 			(at 359.41 246.38 0)
 			(hide yes)
 			(show_name no)
@@ -13360,7 +13905,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR087")
+					(reference "#PWR088")
 					(unit 1)
 				)
 			)
@@ -13377,7 +13922,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "39d59faa-1d97-49a1-aca4-b8817d7ebc30")
-		(property "Reference" "J3"
+		(property "Reference" "J4"
 			(at 190.5 218.694 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13460,7 +14005,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "J3")
+					(reference "J4")
 					(unit 1)
 				)
 			)
@@ -13478,7 +14023,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "39deda33-ab76-44be-b619-1f13c24f0847")
-		(property "Reference" "#PWR038"
+		(property "Reference" "#PWR039"
 			(at 422.91 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -13538,7 +14083,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR038")
+					(reference "#PWR039")
 					(unit 1)
 				)
 			)
@@ -13556,7 +14101,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3ab2fe1f-b355-4814-99d3-9a7790144af9")
-		(property "Reference" "#PWR045"
+		(property "Reference" "#PWR046"
 			(at 430.53 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -13616,7 +14161,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR045")
+					(reference "#PWR046")
 					(unit 1)
 				)
 			)
@@ -13628,7 +14173,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -13727,7 +14272,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3f164ca0-aded-4120-8e11-1f45595e4824")
-		(property "Reference" "#PWR083"
+		(property "Reference" "#PWR084"
 			(at 167.64 242.57 0)
 			(hide yes)
 			(show_name no)
@@ -13787,7 +14332,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR083")
+					(reference "#PWR084")
 					(unit 1)
 				)
 			)
@@ -13865,159 +14410,6 @@
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
 					(reference "#PWR018")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Opamp_Dual")
-		(at 321.31 170.18 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3f7d2059-d7da-4f96-9089-2c38922b167c")
-		(property "Reference" "U7"
-			(at 321.31 160.02 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TLV9352IPWR"
-			(at 321.31 162.56 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_SO:TSSOP-8_4.4x3mm_P0.65mm"
-			(at 321.31 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Ftlv9354"
-			(at 321.31 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Dual operational amplifier"
-			(at 321.31 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
-			(at 321.31 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Name" "kicad_builtin_opamp_dual"
-			(at 321.31 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "SUBCKT"
-			(at 321.31 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=out1 2=in1- 3=in1+ 4=vee 5=in2+ 6=in2- 7=out2 8=vcc"
-			(at 321.31 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC PART #" "C4367453"
-			(at 321.31 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b6070708-4a5a-4f4f-add8-7f4ed3e1eace")
-		)
-		(pin "8"
-			(uuid "fef8fe8a-dced-44e4-ab8e-df838dc454ef")
-		)
-		(pin "6"
-			(uuid "7a230539-aaba-43f0-8adf-a616430afc3e")
-		)
-		(pin "3"
-			(uuid "bca592d9-352b-4ea8-b11b-7c16d28cdebc")
-		)
-		(pin "5"
-			(uuid "39c35fd3-f2ab-4e6f-900d-6549c44a4df4")
-		)
-		(pin "7"
-			(uuid "87f52b05-b919-4b5d-b122-f0d9b0cae606")
-		)
-		(pin "2"
-			(uuid "6b846727-01d7-45f1-8137-b14d6b2372cd")
-		)
-		(pin "4"
-			(uuid "f2e4f5db-60fc-43fd-8449-cc6de56111e3")
-		)
-		(instances
-			(project "lcr"
-				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "U7")
 					(unit 1)
 				)
 			)
@@ -14295,7 +14687,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "485dcf22-fbff-4388-9d17-97af4e6fe769")
-		(property "Reference" "#PWR095"
+		(property "Reference" "#PWR097"
 			(at 166.37 373.38 0)
 			(hide yes)
 			(show_name no)
@@ -14356,7 +14748,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR095")
+					(reference "#PWR097")
 					(unit 1)
 				)
 			)
@@ -14578,7 +14970,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4ba182fd-1a13-43c9-95ef-3b590b907611")
-		(property "Reference" "#PWR096"
+		(property "Reference" "#PWR098"
 			(at 193.04 373.38 0)
 			(hide yes)
 			(show_name no)
@@ -14639,7 +15031,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR096")
+					(reference "#PWR098")
 					(unit 1)
 				)
 			)
@@ -14657,7 +15049,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4df2e18d-3186-46b3-827e-573877953515")
-		(property "Reference" "R21"
+		(property "Reference" "R23"
 			(at 142.24 323.8499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14743,7 +15135,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "R21")
+					(reference "R23")
 					(unit 1)
 				)
 			)
@@ -14761,7 +15153,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4e9552b7-55bd-45ee-a8f9-dc613b2344c2")
-		(property "Reference" "R22"
+		(property "Reference" "R25"
 			(at 167.64 332.7399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14847,7 +15239,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "R22")
+					(reference "R25")
 					(unit 1)
 				)
 			)
@@ -15003,7 +15395,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C14663.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C64705.pdf"
 			(at 288.29 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -15036,7 +15428,7 @@
 				)
 			)
 		)
-		(property "LCSC PART #" "C14663"
+		(property "LCSC PART #" "C64705"
 			(at 288.29 167.64 90)
 			(hide yes)
 			(show_name no)
@@ -15178,7 +15570,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "52229bf2-94a1-4e1c-9c2b-74e5503b82de")
-		(property "Reference" "#PWR082"
+		(property "Reference" "#PWR083"
 			(at 521.97 231.14 0)
 			(hide yes)
 			(show_name no)
@@ -15238,7 +15630,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR082")
+					(reference "#PWR083")
 					(unit 1)
 				)
 			)
@@ -15256,7 +15648,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "522cb166-f502-4ce2-8b9d-1803d6081038")
-		(property "Reference" "#PWR074"
+		(property "Reference" "#PWR075"
 			(at 433.07 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -15317,7 +15709,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR074")
+					(reference "#PWR075")
 					(unit 1)
 				)
 			)
@@ -15335,7 +15727,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "52699b8c-d67c-48d1-82bf-d6b879c3569d")
-		(property "Reference" "#PWR067"
+		(property "Reference" "#PWR068"
 			(at 521.97 208.28 0)
 			(hide yes)
 			(show_name no)
@@ -15395,7 +15787,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR067")
+					(reference "#PWR068")
 					(unit 1)
 				)
 			)
@@ -15490,7 +15882,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "545aa94a-d31e-4ff1-9a0d-20b835d1fc08")
-		(property "Reference" "J5"
+		(property "Reference" "J6"
 			(at 218.44 218.694 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15573,7 +15965,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "J5")
+					(reference "J6")
 					(unit 1)
 				)
 			)
@@ -15645,7 +16037,7 @@
 				)
 			)
 		)
-		(property "Already Have" "0"
+		(property "Already Have" "1"
 			(at 458.47 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -15761,6 +16153,107 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 228.6 288.29 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5cc95ec4-b887-4bd5-8fe6-2cdc8e209bbd")
+		(property "Reference" "R20"
+			(at 228.6 283.21 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100"
+			(at 228.6 285.75 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 228.6 286.512 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C105588.pdf"
+			(at 228.6 288.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 228.6 288.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Already Have" "0"
+			(at 228.6 288.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC PART #" "C105588"
+			(at 228.6 288.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4db71cab-46b5-4431-90ba-3c4ea6c634c9")
+		)
+		(pin "2"
+			(uuid "0b614ecf-9044-495b-ab56-8086a7178fc5")
+		)
+		(instances
+			(project "lcr"
+				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
+					(reference "R20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 331.47 223.52 0)
 		(unit 1)
@@ -15856,6 +16349,84 @@
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
 					(reference "TP7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+12V")
+		(at 152.4 358.14 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "65c576d8-3862-4c25-a090-bc6ad1761a96")
+		(property "Reference" "#PWR095"
+			(at 152.4 361.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+12V"
+			(at 152.4 353.06 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 152.4 358.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 358.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+12V\""
+			(at 152.4 358.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "aa01f80c-6cb1-417f-bf85-0ad0273db569")
+		)
+		(instances
+			(project "lcr"
+				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
+					(reference "#PWR095")
 					(unit 1)
 				)
 			)
@@ -15977,7 +16548,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "67582766-fea4-48d0-bf20-06604e024eff")
-		(property "Reference" "#PWR064"
+		(property "Reference" "#PWR065"
 			(at 175.26 210.82 0)
 			(hide yes)
 			(show_name no)
@@ -16037,7 +16608,171 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR064")
+					(reference "#PWR065")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Opamp_Dual")
+		(at 321.31 170.18 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "69ad2f35-f90e-40f1-8493-e52be3dededf")
+		(property "Reference" "U7"
+			(at 321.31 160.02 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LMH6643MMX"
+			(at 321.31 162.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "CustomFootprints:VSSOP-8_3x3mm_P0.65mm"
+			(at 321.31 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C478382.pdf"
+			(at 321.31 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Dual operational amplifier"
+			(at 321.31 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
+			(at 321.31 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" "kicad_builtin_opamp_dual"
+			(at 321.31 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" "SUBCKT"
+			(at 321.31 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=out1 2=in1- 3=in1+ 4=vee 5=in2+ 6=in2- 7=out2 8=vcc"
+			(at 321.31 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC PART #" "C478382"
+			(at 321.31 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Already Have" "0"
+			(at 321.31 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "8"
+			(uuid "6b9e75aa-b800-40d3-abd2-48a3df4a7553")
+		)
+		(pin "5"
+			(uuid "161cfd2b-ea57-4bdc-b78d-05a2c1b563b8")
+		)
+		(pin "2"
+			(uuid "53170832-9a4f-45ea-aec8-203fce2c8ebc")
+		)
+		(pin "3"
+			(uuid "e406f5dd-fe9a-4fd1-8a88-c2b13db0ea5d")
+		)
+		(pin "7"
+			(uuid "760fe7bc-80f7-4cb9-b547-19d95cddc04b")
+		)
+		(pin "6"
+			(uuid "749f29bc-7afb-4b4d-ad2a-d0d7cd9404ec")
+		)
+		(pin "4"
+			(uuid "928f2348-9b97-4205-8747-de697d36a79c")
+		)
+		(pin "1"
+			(uuid "b466f75a-668f-4a61-8f49-f6a254e9d96b")
+		)
+		(instances
+			(project "lcr"
+				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
+					(reference "U7")
 					(unit 1)
 				)
 			)
@@ -16055,7 +16790,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6e30898c-67e1-4eb4-92c1-0b91a8c15253")
-		(property "Reference" "#PWR055"
+		(property "Reference" "#PWR056"
 			(at 295.91 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -16115,7 +16850,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR055")
+					(reference "#PWR056")
 					(unit 1)
 				)
 			)
@@ -16133,7 +16868,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6f0cd156-fab8-4c38-997f-91bc89f6b6bb")
-		(property "Reference" "#PWR070"
+		(property "Reference" "#PWR071"
 			(at 359.41 217.17 0)
 			(hide yes)
 			(show_name no)
@@ -16193,7 +16928,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR070")
+					(reference "#PWR071")
 					(unit 1)
 				)
 			)
@@ -16598,7 +17333,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "745ca466-0d16-4c41-a76f-a079d3b3df2f")
-		(property "Reference" "#PWR097"
+		(property "Reference" "#PWR099"
 			(at 228.6 379.73 0)
 			(hide yes)
 			(show_name no)
@@ -16658,7 +17393,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR097")
+					(reference "#PWR099")
 					(unit 1)
 				)
 			)
@@ -16777,7 +17512,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "765d3d3b-2af4-46e0-9f20-40f81ee5a681")
-		(property "Reference" "#PWR050"
+		(property "Reference" "#PWR051"
 			(at 454.66 127 0)
 			(hide yes)
 			(show_name no)
@@ -16837,7 +17572,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR050")
+					(reference "#PWR051")
 					(unit 1)
 				)
 			)
@@ -16855,7 +17590,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "76626885-fd6c-4bc7-be55-f5a6e98333e1")
-		(property "Reference" "#PWR059"
+		(property "Reference" "#PWR060"
 			(at 241.3 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -16915,7 +17650,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR059")
+					(reference "#PWR060")
 					(unit 1)
 				)
 			)
@@ -17037,7 +17772,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7c91fe52-bd1f-42cc-9bf9-d62f27bece75")
-		(property "Reference" "#PWR066"
+		(property "Reference" "#PWR067"
 			(at 474.98 208.28 0)
 			(hide yes)
 			(show_name no)
@@ -17097,7 +17832,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR066")
+					(reference "#PWR067")
 					(unit 1)
 				)
 			)
@@ -17441,110 +18176,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 139.7 312.42 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "85d36852-ba79-4c8c-8a51-add9dc26732c")
-		(property "Reference" "R20"
-			(at 142.24 311.1499 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "10k"
-			(at 142.24 313.6899 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 141.478 312.42 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C25804.pdf"
-			(at 139.7 312.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 139.7 312.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Already Have" "1"
-			(at 139.7 312.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC PART #" "C25804"
-			(at 139.7 312.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "0bc266c8-ad00-466e-8c2a-4c5444b3c943")
-		)
-		(pin "1"
-			(uuid "6958c883-910e-4547-929d-9b9dd75a13a5")
-		)
-		(instances
-			(project "lcr"
-				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "R20")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:Opamp_Dual")
 		(at 252.73 212.09 0)
 		(unit 1)
@@ -17676,10 +18307,10 @@
 			)
 		)
 		(pin "8"
-			(uuid "6b9e75aa-b800-40d3-abd2-48a3df4a7553")
+			(uuid "6b9e75aa-b800-40d3-abd2-48a3df4a7554")
 		)
 		(pin "5"
-			(uuid "161cfd2b-ea57-4bdc-b78d-05a2c1b563b8")
+			(uuid "161cfd2b-ea57-4bdc-b78d-05a2c1b563b9")
 		)
 		(pin "2"
 			(uuid "b20a04cd-f1ca-4175-80df-d18be83cbf08")
@@ -17688,13 +18319,13 @@
 			(uuid "4925818e-6e62-446b-be0c-355dbc950bf8")
 		)
 		(pin "7"
-			(uuid "760fe7bc-80f7-4cb9-b547-19d95cddc04b")
+			(uuid "760fe7bc-80f7-4cb9-b547-19d95cddc04c")
 		)
 		(pin "6"
-			(uuid "749f29bc-7afb-4b4d-ad2a-d0d7cd9404ec")
+			(uuid "749f29bc-7afb-4b4d-ad2a-d0d7cd9404ed")
 		)
 		(pin "4"
-			(uuid "928f2348-9b97-4205-8747-de697d36a79c")
+			(uuid "928f2348-9b97-4205-8747-de697d36a79d")
 		)
 		(pin "1"
 			(uuid "635272dc-9e52-4c4f-98d6-c3329ca97762")
@@ -17997,7 +18628,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "88e85ef5-d67b-4098-912a-c1b20ecc0ad7")
-		(property "Reference" "#PWR057"
+		(property "Reference" "#PWR058"
 			(at 359.41 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -18057,7 +18688,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR057")
+					(reference "#PWR058")
 					(unit 1)
 				)
 			)
@@ -18075,7 +18706,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "890c39cd-4951-479c-9eae-8843e45cb294")
-		(property "Reference" "#PWR080"
+		(property "Reference" "#PWR081"
 			(at 439.42 231.14 0)
 			(hide yes)
 			(show_name no)
@@ -18135,7 +18766,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR080")
+					(reference "#PWR081")
 					(unit 1)
 				)
 			)
@@ -18153,7 +18784,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8bed144c-eda8-4460-8150-f67055a7dd71")
-		(property "Reference" "#PWR062"
+		(property "Reference" "#PWR063"
 			(at 359.41 190.5 0)
 			(hide yes)
 			(show_name no)
@@ -18213,7 +18844,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR062")
+					(reference "#PWR063")
 					(unit 1)
 				)
 			)
@@ -18577,7 +19208,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "90f400dd-d069-4706-920f-86b728fb9832")
-		(property "Reference" "#PWR065"
+		(property "Reference" "#PWR066"
 			(at 439.42 208.28 0)
 			(hide yes)
 			(show_name no)
@@ -18637,7 +19268,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR065")
+					(reference "#PWR066")
 					(unit 1)
 				)
 			)
@@ -18814,7 +19445,7 @@
 				)
 			)
 		)
-		(property "Already Have" "0"
+		(property "Already Have" "1"
 			(at 422.91 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -19546,7 +20177,7 @@
 				)
 			)
 		)
-		(property "Already Have" "0"
+		(property "Already Have" "1"
 			(at 495.3 213.36 0)
 			(hide yes)
 			(show_name no)
@@ -19776,7 +20407,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9f8d7ccb-f702-44aa-905d-71d46fecb16d")
-		(property "Reference" "#PWR075"
+		(property "Reference" "#PWR076"
 			(at 468.63 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -19837,163 +20468,8 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR075")
+					(reference "#PWR076")
 					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Opamp_Dual")
-		(at 524.51 219.71 0)
-		(unit 3)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a00839e6-fff7-4a7a-847e-d3dd1ea1a14e")
-		(property "Reference" "U7"
-			(at 523.24 218.4399 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TLV9352IPWR"
-			(at 523.24 220.9799 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_SO:TSSOP-8_4.4x3mm_P0.65mm"
-			(at 524.51 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Ftlv9354"
-			(at 524.51 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Dual operational amplifier"
-			(at 524.51 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
-			(at 524.51 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Name" "kicad_builtin_opamp_dual"
-			(at 524.51 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "SUBCKT"
-			(at 524.51 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=out1 2=in1- 3=in1+ 4=vee 5=in2+ 6=in2- 7=out2 8=vcc"
-			(at 524.51 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC PART #" "C4367453"
-			(at 524.51 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b6070708-4a5a-4f4f-add8-7f4ed3e1eacf")
-		)
-		(pin "8"
-			(uuid "fef8fe8a-dced-44e4-ab8e-df838dc454f0")
-		)
-		(pin "6"
-			(uuid "7a230539-aaba-43f0-8adf-a616430afc3f")
-		)
-		(pin "3"
-			(uuid "bca592d9-352b-4ea8-b11b-7c16d28cdebd")
-		)
-		(pin "5"
-			(uuid "39c35fd3-f2ab-4e6f-900d-6549c44a4df5")
-		)
-		(pin "7"
-			(uuid "87f52b05-b919-4b5d-b122-f0d9b0cae607")
-		)
-		(pin "2"
-			(uuid "6b846727-01d7-45f1-8137-b14d6b2372ce")
-		)
-		(pin "4"
-			(uuid "f2e4f5db-60fc-43fd-8449-cc6de56111e4")
-		)
-		(instances
-			(project "lcr"
-				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "U7")
-					(unit 3)
 				)
 			)
 		)
@@ -20190,7 +20666,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a4009a3d-034f-4cee-9409-cf5d6418da6f")
-		(property "Reference" "#PWR098"
+		(property "Reference" "#PWR0100"
 			(at 120.65 388.62 0)
 			(hide yes)
 			(show_name no)
@@ -20250,7 +20726,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR098")
+					(reference "#PWR0100")
 					(unit 1)
 				)
 			)
@@ -20352,84 +20828,6 @@
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
 					(reference "TP8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 139.7 306.07 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a8844514-0a3e-44a3-9720-fc1b40594bc2")
-		(property "Reference" "#PWR091"
-			(at 139.7 309.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3V3A"
-			(at 139.7 300.99 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 139.7 306.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 139.7 306.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 139.7 306.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2793f9bf-52fe-4217-afc4-753fe28860dd")
-		)
-		(instances
-			(project "lcr"
-				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR091")
 					(unit 1)
 				)
 			)
@@ -20728,25 +21126,25 @@
 			(uuid "a8ab87c0-319e-475f-b5ea-91a05b9e8abf")
 		)
 		(pin "5"
-			(uuid "161cfd2b-ea57-4bdc-b78d-05a2c1b563b7")
+			(uuid "161cfd2b-ea57-4bdc-b78d-05a2c1b563ba")
 		)
 		(pin "2"
-			(uuid "bbb5790d-7545-461f-a3f5-ea1e7b1f613a")
+			(uuid "bbb5790d-7545-461f-a3f5-ea1e7b1f613b")
 		)
 		(pin "3"
-			(uuid "d9a53fde-90af-4197-b1fc-98a06c65c2f2")
+			(uuid "d9a53fde-90af-4197-b1fc-98a06c65c2f3")
 		)
 		(pin "7"
-			(uuid "760fe7bc-80f7-4cb9-b547-19d95cddc04a")
+			(uuid "760fe7bc-80f7-4cb9-b547-19d95cddc04d")
 		)
 		(pin "6"
-			(uuid "749f29bc-7afb-4b4d-ad2a-d0d7cd9404eb")
+			(uuid "749f29bc-7afb-4b4d-ad2a-d0d7cd9404ee")
 		)
 		(pin "4"
 			(uuid "d1e8b90a-3a24-457e-884a-90ddd6f872a7")
 		)
 		(pin "1"
-			(uuid "b9a8f2b6-78e3-414f-8698-d4ca2288a525")
+			(uuid "b9a8f2b6-78e3-414f-8698-d4ca2288a526")
 		)
 		(instances
 			(project "lcr"
@@ -20988,6 +21386,170 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:Opamp_Dual")
+		(at 321.31 226.06 0)
+		(unit 2)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b6756c7c-afd9-4202-a90b-811fc79203c6")
+		(property "Reference" "U7"
+			(at 321.31 217.17 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LMH6643MMX"
+			(at 321.31 219.71 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "CustomFootprints:VSSOP-8_3x3mm_P0.65mm"
+			(at 321.31 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C478382.pdf"
+			(at 321.31 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Dual operational amplifier"
+			(at 321.31 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
+			(at 321.31 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" "kicad_builtin_opamp_dual"
+			(at 321.31 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" "SUBCKT"
+			(at 321.31 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=out1 2=in1- 3=in1+ 4=vee 5=in2+ 6=in2- 7=out2 8=vcc"
+			(at 321.31 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC PART #" "C478382"
+			(at 321.31 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Already Have" "0"
+			(at 321.31 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "8"
+			(uuid "6b9e75aa-b800-40d3-abd2-48a3df4a7555")
+		)
+		(pin "5"
+			(uuid "14fdab07-fbdc-4668-ac95-ad76ddc2920b")
+		)
+		(pin "2"
+			(uuid "bbb5790d-7545-461f-a3f5-ea1e7b1f613c")
+		)
+		(pin "3"
+			(uuid "d9a53fde-90af-4197-b1fc-98a06c65c2f4")
+		)
+		(pin "7"
+			(uuid "a7362b27-f073-4362-b0e3-9e1a18c30d19")
+		)
+		(pin "6"
+			(uuid "0257102c-311a-4319-b008-c5837a21d67e")
+		)
+		(pin "4"
+			(uuid "928f2348-9b97-4205-8747-de697d36a79e")
+		)
+		(pin "1"
+			(uuid "b9a8f2b6-78e3-414f-8698-d4ca2288a527")
+		)
+		(instances
+			(project "lcr"
+				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
+					(reference "U7")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 226.06 170.18 90)
 		(unit 1)
@@ -21205,7 +21767,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c0faa39d-be5d-497d-b184-fa1ddf662e8f")
-		(property "Reference" "#PWR063"
+		(property "Reference" "#PWR064"
 			(at 208.28 190.5 0)
 			(hide yes)
 			(show_name no)
@@ -21265,7 +21827,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR063")
+					(reference "#PWR064")
 					(unit 1)
 				)
 			)
@@ -21751,7 +22313,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c641051c-702e-458a-984b-5941a0914dce")
-		(property "Reference" "#PWR037"
+		(property "Reference" "#PWR038"
 			(at 323.85 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -21811,7 +22373,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR037")
+					(reference "#PWR038")
 					(unit 1)
 				)
 			)
@@ -21829,7 +22391,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cb802306-391a-492e-b0e3-acf6b3909ba9")
-		(property "Reference" "#PWR069"
+		(property "Reference" "#PWR070"
 			(at 295.91 214.63 0)
 			(hide yes)
 			(show_name no)
@@ -21889,7 +22451,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR069")
+					(reference "#PWR070")
 					(unit 1)
 				)
 			)
@@ -21985,7 +22547,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ce409a97-3438-4c39-ae8c-56738bbd89a8")
-		(property "Reference" "#PWR061"
+		(property "Reference" "#PWR062"
 			(at 295.91 186.69 0)
 			(hide yes)
 			(show_name no)
@@ -22045,7 +22607,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR061")
+					(reference "#PWR062")
 					(unit 1)
 				)
 			)
@@ -22167,7 +22729,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d398bb7e-4fda-4fef-8b36-73a3fc4f8ece")
-		(property "Reference" "#PWR081"
+		(property "Reference" "#PWR082"
 			(at 474.98 231.14 0)
 			(hide yes)
 			(show_name no)
@@ -22227,7 +22789,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR081")
+					(reference "#PWR082")
 					(unit 1)
 				)
 			)
@@ -22276,7 +22838,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C14663.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C64705.pdf"
 			(at 317.5 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -22309,7 +22871,7 @@
 				)
 			)
 		)
-		(property "LCSC PART #" "C14663"
+		(property "LCSC PART #" "C64705"
 			(at 317.5 81.28 90)
 			(hide yes)
 			(show_name no)
@@ -22451,7 +23013,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "da69810b-6edc-44c8-b70d-5802df92c5f8")
-		(property "Reference" "#PWR073"
+		(property "Reference" "#PWR074"
 			(at 241.3 224.79 0)
 			(hide yes)
 			(show_name no)
@@ -22511,7 +23073,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR073")
+					(reference "#PWR074")
 					(unit 1)
 				)
 			)
@@ -22631,7 +23193,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "de8d84f8-39e8-4065-bfca-ab0a8ecf58fc")
-		(property "Reference" "#PWR076"
+		(property "Reference" "#PWR077"
 			(at 495.3 232.41 0)
 			(hide yes)
 			(show_name no)
@@ -22691,7 +23253,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR076")
+					(reference "#PWR077")
 					(unit 1)
 				)
 			)
@@ -22980,6 +23542,17 @@
 				)
 			)
 		)
+		(property "Already Have" "0"
+			(at 359.41 232.41 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "dc6de5a1-b276-4a7d-a5b3-29a254f9c947")
 		)
@@ -23139,7 +23712,7 @@
 				)
 			)
 		)
-		(property "Already Have" "0"
+		(property "Already Have" "1"
 			(at 200.66 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -23290,6 +23863,107 @@
 	)
 	(symbol
 		(lib_id "Device:R")
+		(at 228.6 326.39 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ec3f5b60-9245-4396-a4e7-ef3502a99f41")
+		(property "Reference" "R24"
+			(at 228.6 321.31 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100"
+			(at 228.6 323.85 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 228.6 324.612 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C105588.pdf"
+			(at 228.6 326.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 228.6 326.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Already Have" "0"
+			(at 228.6 326.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC PART #" "C105588"
+			(at 228.6 326.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "025dc0e8-f772-48ac-9c2d-ec1d6d03c6e4")
+		)
+		(pin "2"
+			(uuid "d679d527-78b0-401d-876f-c9c70af3679f")
+		)
+		(instances
+			(project "lcr"
+				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
+					(reference "R24")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
 		(at 295.91 217.17 180)
 		(unit 1)
 		(body_style 1)
@@ -23388,159 +24062,6 @@
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
 					(reference "R15")
 					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Opamp_Dual")
-		(at 321.31 226.06 0)
-		(unit 2)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f0700c60-3faf-4b8d-9615-0f3ba417ec45")
-		(property "Reference" "U7"
-			(at 321.31 215.9 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TLV9352IPWR"
-			(at 321.31 218.44 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_SO:TSSOP-8_4.4x3mm_P0.65mm"
-			(at 321.31 226.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Ftlv9354"
-			(at 321.31 226.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Dual operational amplifier"
-			(at 321.31 226.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
-			(at 321.31 226.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Name" "kicad_builtin_opamp_dual"
-			(at 321.31 226.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "SUBCKT"
-			(at 321.31 226.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=out1 2=in1- 3=in1+ 4=vee 5=in2+ 6=in2- 7=out2 8=vcc"
-			(at 321.31 226.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC PART #" "C4367453"
-			(at 321.31 226.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b6070708-4a5a-4f4f-add8-7f4ed3e1ead0")
-		)
-		(pin "8"
-			(uuid "fef8fe8a-dced-44e4-ab8e-df838dc454f1")
-		)
-		(pin "6"
-			(uuid "7a230539-aaba-43f0-8adf-a616430afc40")
-		)
-		(pin "3"
-			(uuid "bca592d9-352b-4ea8-b11b-7c16d28cdebe")
-		)
-		(pin "5"
-			(uuid "39c35fd3-f2ab-4e6f-900d-6549c44a4df6")
-		)
-		(pin "7"
-			(uuid "87f52b05-b919-4b5d-b122-f0d9b0cae608")
-		)
-		(pin "2"
-			(uuid "6b846727-01d7-45f1-8137-b14d6b2372cf")
-		)
-		(pin "4"
-			(uuid "f2e4f5db-60fc-43fd-8449-cc6de56111e5")
-		)
-		(instances
-			(project "lcr"
-				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "U7")
-					(unit 2)
 				)
 			)
 		)
@@ -23730,6 +24251,107 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 228.6 307.34 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f5668032-f6f8-4eb7-a1d2-f5996037a1d7")
+		(property "Reference" "R21"
+			(at 228.6 302.26 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100"
+			(at 228.6 304.8 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 228.6 305.562 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C105588.pdf"
+			(at 228.6 307.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 228.6 307.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Already Have" "0"
+			(at 228.6 307.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC PART #" "C105588"
+			(at 228.6 307.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "59518da3-7dd0-4b37-9675-3b4d7e34165f")
+		)
+		(pin "2"
+			(uuid "94ba1110-df31-43b2-86eb-091d9a17c195")
+		)
+		(instances
+			(project "lcr"
+				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
+					(reference "R21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:Conn_01x01_Socket")
 		(at 204.47 222.25 270)
 		(unit 1)
@@ -23740,7 +24362,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f6e3d25e-c573-44b6-bed0-253dfc2d509d")
-		(property "Reference" "J4"
+		(property "Reference" "J5"
 			(at 205.74 218.694 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23823,7 +24445,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "J4")
+					(reference "J5")
 					(unit 1)
 				)
 			)
@@ -23897,6 +24519,17 @@
 			)
 		)
 		(property "LCSC PART #" "C146335"
+			(at 359.41 163.83 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Already Have" "0"
 			(at 359.41 163.83 90)
 			(hide yes)
 			(show_name no)
