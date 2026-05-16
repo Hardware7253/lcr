@@ -4,4 +4,6 @@ fp-info-cache
 *.bak
 *.lck
 gerbers
+target
+.history
 .history_trim
