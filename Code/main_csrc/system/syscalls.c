@@ -1,7 +1,7 @@
 // From https://github.com/cpq/bare-metal-programming-guide
 
 #include <stddef.h>
-#include "stm32f4xx_hal.h"
+#include "stm32g4xx_hal.h"
 
 void _init(void) {
 

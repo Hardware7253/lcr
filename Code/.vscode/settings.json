@@ -2,6 +2,7 @@
     "cortex-debug.gdbPath": "/usr/bin/arm-none-eabi-gdb",
     "cortex-debug.stutilPath": "/usr/bin/st-util",
     "files.associations": {
-        "stm32f4xx.h": "c"
+        "stm32g4xx.h": "c",
+        "system.h": "c"
     },
 }

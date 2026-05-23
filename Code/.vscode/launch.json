@@ -13,7 +13,7 @@
             "servertype": "stutil",
             "interface": "swd",
             "preLaunchTask": "build", // configured in tasks.json
-            "svdFile": "${workspaceFolder}/STM32F405.svd", // Include svd to watch device peripherals
+            "svdFile": "${workspaceFolder}/STM32G431.svd", // Include svd to watch device peripherals
         },
     ]
 }

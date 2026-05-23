@@ -1,6 +1,6 @@
 #include <stdbool.h>
 #include "blocking_delay.h"
-#include "stm32f4xx_hal.h"
+#include "stm32g4xx_hal.h"
 
 // Enables DWT counter
 void init_blocking_delay(void) {

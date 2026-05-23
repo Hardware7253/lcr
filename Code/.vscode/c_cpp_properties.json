@@ -10,15 +10,15 @@
             "includePath": [
                 "${workspaceFolder}",
                 "/usr/lib/gcc/arm-none-eabi/14.2.0/include",
-                "${workspaceFolder}/submodules/CMSIS_5/CMSIS/Core/Include",
-                "${workspaceFolder}/submodules/cmsis-device-f4/Include",
-                "${workspaceFolder}/submodules/stm32f4xx-hal-driver/Inc",
+                "${workspaceFolder}/submodules/CMSIS_6/CMSIS/Core/Include",
+                "${workspaceFolder}/submodules/cmsis-device-g4/Include",
+                "${workspaceFolder}/submodules/stm32g4xx-hal-driver/Inc",
                 "${workspaceFolder}/submodules/embedded_c_modules/**",
                 "${workspaceFolder}/main_csrc/**"
             ],
 
             "defines": [
-                "STM32F407xx"
+                "STM32G431xx"
             ]
         }
     ],

@@ -7,7 +7,7 @@ LDFLAGS ?= -Tlink.ld -nostartfiles -nostdlib --specs nano.specs \
 			-lc -lgcc -lm -Wl,--gc-sections -Wl,-Map=$@.map
 
 DEFINES := \
-	-DSTM32F407xx
+	-DSTM32G431xx
 CFLAGS += $(DEFINES)
 
 # Add application specific user libraries here
@@ -16,10 +16,10 @@ CFLAGS += $(DEFINES)
 LIBRARIES := \
 	main_csrc \
 	submodules/embedded_c_modules \
-	submodules/stm32f4xx-hal-driver/Src \
-	submodules/stm32f4xx-hal-driver/Inc \
-	submodules/CMSIS_5/CMSIS/Core/Include \
-	submodules/cmsis-device-f4/Include \
+	submodules/stm32g4xx-hal-driver/Src \
+	submodules/stm32g4xx-hal-driver/Inc \
+	submodules/CMSIS_6/CMSIS/Core/Include \
+	submodules/cmsis-device-g4/Include \
 
 INCLUDES := -I. \
 	$(foreach lib,$(LIBRARIES),$(addprefix -I,$(lib))) \
@@ -27,18 +27,16 @@ INCLUDES := -I. \
 CFLAGS += $(INCLUDES)
 
 # CMSIS sources
-S_SOURCES := submodules/cmsis-device-f4/Source/Templates/gcc/startup_stm32f407xx.s
-C_SOURCES := submodules/cmsis-device-f4/Source/Templates/system_stm32f4xx.c
+S_SOURCES := submodules/cmsis-device-g4/Source/Templates/gcc/startup_stm32g431xx.s
+C_SOURCES := submodules/cmsis-device-g4/Source/Templates/system_stm32g4xx.c
 
 # Add application code and library sources
 C_SOURCES += $(shell find $(LIBRARIES) -type f -name '*.c')
 S_SOURCES += $(shell find $(LIBRARIES) -type f -name '*.s')
 
-# Filter out sources that aren't needed, or don't play nicely with outer sources 
+# Filter out sources that aren't needed, or don't play nicely with other sources 
 SOURCE_EXCLUDES := \
-	submodules/stm32f4xx-hal-driver/Src/stm32f4xx_hal_msp_template.c \
-	submodules/stm32f4xx-hal-driver/Src/stm32f4xx_hal_timebase_rtc_alarm_template.c \
-	submodules/stm32f4xx-hal-driver/Src/stm32f4xx_hal_timebase_rtc_wakeup_template.c \
+	submodules/stm32f4xx-hal-driver/Src/stm32fgxx_hal_msp_template.c \
 	submodules/stm32f4xx-hal-driver/Src/stm32f4xx_hal_timebase_tim_template.c
 C_SOURCES := $(filter-out $(SOURCE_EXCLUDES), $(C_SOURCES))
 

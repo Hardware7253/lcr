@@ -1,6 +1,7 @@
 #pragma once
 
-#include "stm32f4xx_hal_def.h"
+#include "stm32g4xx_hal_def.h"
+#include <stdint.h>
 
 // General prupose error and ok to be used with the error handler functions
 #define GP_ERROR    HAL_ERROR
