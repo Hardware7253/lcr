@@ -6,7 +6,7 @@
 	(paper "A2")
 	(title_block
 		(title "LCR Analog Section")
-		(date "2026-05-16")
+		(date "2026-06-03")
 		(company "LWQ")
 	)
 	(lib_symbols
@@ -10872,7 +10872,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-323F"
+		(property "Footprint" "Diode_SMD:D_SOD-323_HandSoldering"
 			(at 359.41 176.53 0)
 			(hide yes)
 			(show_name no)
@@ -13157,7 +13157,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-323F"
+		(property "Footprint" "Diode_SMD:D_SOD-323_HandSoldering"
 			(at 359.41 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -23498,7 +23498,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-323F"
+		(property "Footprint" "Diode_SMD:D_SOD-323_HandSoldering"
 			(at 359.41 232.41 0)
 			(hide yes)
 			(show_name no)
@@ -24485,7 +24485,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-323F"
+		(property "Footprint" "Diode_SMD:D_SOD-323_HandSoldering"
 			(at 359.41 163.83 0)
 			(hide yes)
 			(show_name no)

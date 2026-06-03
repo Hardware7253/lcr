@@ -17,7 +17,7 @@
 "R4,R22","2","2k7","Resistor_SMD:R_0603_1608Metric","https://www.lcsc.com/datasheet/C114612.pdf","C114612","0"
 "R8","1","470k","Resistor_SMD:R_0603_1608Metric","https://www.lcsc.com/datasheet/C114622.pdf","C114622","0"
 "SW1,SW2","2","SW_Push","CustomFootprints:Korean Hroparts Elec K2-1107ST-A4DW-06","https://www.lcsc.com/datasheet/C118141.pdf","C118141","1"
-"D3,D4,D7,D9","4","CUS10S30","Diode_SMD:D_SOD-323F","https://www.lcsc.com/datasheet/C146335.pdf","C146335","0"
+"D3,D4,D7,D9","4","CUS10S30","Diode_SMD:D_SOD-323_HandSoldering","https://www.lcsc.com/datasheet/C146335.pdf","C146335","0"
 "C29,C30","2","20p","Capacitor_SMD:C_0603_1608Metric","https://www.lcsc.com/datasheet/C326779.pdf","C326779","1"
 "U2","1","UMW HT7836-A","Package_TO_SOT_SMD:SOT-89-3","https://www.lcsc.com/datasheet/C347196.pdf","C347196","0"
 "U4,U6,U7","3","LMH6643MMX","CustomFootprints:VSSOP-8_3x3mm_P0.65mm","https://www.lcsc.com/datasheet/C478382.pdf","C478382","0"
