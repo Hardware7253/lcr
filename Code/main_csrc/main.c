@@ -9,8 +9,8 @@
 #include "software_timer.h"
 #include "blocking_delay.h"
 
-// #include "dut_measure.h"
-// #include "lcr_math.h"
+#include "dut_measure.h"
+#include "lcr_math.h"
 
 int main(void) {
 
@@ -18,7 +18,7 @@ int main(void) {
     init_clocks();
     init_blocking_delay();
 
-    // init_dut_measurement();
+    init_dut_measurement();
    
     // 2 Hz software timer
     // software_timer_t stimer = construct_stimer_f((uint16_t)get_tick_frequency(), 2, HAL_GetTick(), PERIODIC_ST);
@@ -30,7 +30,7 @@ int main(void) {
     // volatile passive_component_t dut = {0};
     // volatile unit_float_t reactive_component_unit_val = {0};
 
-    // start_dut_measurement(TF_10KHZ);
+    start_dut_measurement(TF_1KHZ);
 
     while (true) {
 

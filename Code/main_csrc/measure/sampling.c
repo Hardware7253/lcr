@@ -208,6 +208,7 @@ void init_sampling(void) {
         hspi.Init.FirstBit = SPI_FIRSTBIT_MSB;
         hspi.Init.TIMode = SPI_TIMODE_DISABLE;
         hspi.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
+        hspi.Init.NSSPMode = SPI_NSS_PULSE_DISABLE;
         HAL_SPI_Init(&hspi);
 
         GPIO_InitTypeDef pin_cfg = {

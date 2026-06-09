@@ -35,9 +35,7 @@ C_SOURCES += $(shell find $(LIBRARIES) -type f -name '*.c')
 S_SOURCES += $(shell find $(LIBRARIES) -type f -name '*.s')
 
 # Filter out sources that aren't needed, or don't play nicely with other sources 
-SOURCE_EXCLUDES := \
-	submodules/stm32f4xx-hal-driver/Src/stm32fgxx_hal_msp_template.c \
-	submodules/stm32f4xx-hal-driver/Src/stm32f4xx_hal_timebase_tim_template.c
+SOURCE_EXCLUDES := 
 C_SOURCES := $(filter-out $(SOURCE_EXCLUDES), $(C_SOURCES))
 
 OBJECTS := $(addprefix target/,$(C_SOURCES:.c=.o))
