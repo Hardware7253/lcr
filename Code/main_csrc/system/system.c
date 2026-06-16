@@ -13,7 +13,6 @@ void error_handler_msg(HAL_StatusTypeDef status, volatile char* msg) {
     while (status != HAL_OK) (void) msg;
 }
 
-
 // Init clocks so:
 // SYSCLK = 170 MHz
 // HCLK =   170 MHz
@@ -25,7 +24,7 @@ void init_clocks(void) {
         RCC_PLLInitTypeDef pll_cfg = {
             .PLLState = RCC_PLL_ON,
             .PLLSource = RCC_PLLSOURCE_HSE,
-            .PLLM = 2,
+            .PLLM = RCC_PLLM_DIV2,
             .PLLN = 85,
             .PLLP = RCC_PLLP_DIV2,
             .PLLQ = RCC_PLLQ_DIV2,
@@ -50,8 +49,16 @@ void init_clocks(void) {
             .APB1CLKDivider = RCC_HCLK_DIV1,
             .APB2CLKDivider = RCC_HCLK_DIV1,
         };
-        error_handler_msg(HAL_RCC_ClockConfig(&clk_cfg, FLASH_ACR_LATENCY_5WS), "Error with clock config");
+        error_handler_msg(HAL_RCC_ClockConfig(&clk_cfg, FLASH_ACR_LATENCY_4WS), "Error with clock config");
     }
+
+    // Peripheral clock config
+    RCC_PeriphCLKInitTypeDef periph_clk_cfg = {
+        .PeriphClockSelection = RCC_PERIPHCLK_ADC12,
+        .Adc12ClockSelection = RCC_ADC12CLKSOURCE_SYSCLK,
+    };
+
+    HAL_RCCEx_PeriphCLKConfig(&periph_clk_cfg);
 }
 
 // Returns the tick frequency of the systick interrupt in Hz
@@ -62,5 +69,3 @@ uint32_t get_tick_frequency(void) {
 extern void SysTick_Handler(void) {
     HAL_IncTick();
 }
-
-// extern void

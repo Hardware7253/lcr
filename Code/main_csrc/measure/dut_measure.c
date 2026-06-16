@@ -2,7 +2,6 @@
 #include <string.h>
 #include <math.h>
 
-#define SAMPLES_PER_PERIOD 16  /* ADC can't read fast enough going above 16 samples per period at 93.75KHz */
 #define OFFSET_90_SAMPLES (SAMPLES_PER_PERIOD / 4) 
 #define SAMPLE_PERIODS 10 
 #define SAMPLES (SAMPLES_PER_PERIOD * SAMPLE_PERIODS)

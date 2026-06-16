@@ -15,6 +15,7 @@
 #define TEST_ADC                ADC1
 #define TEST_ADC_CLK_EN         __HAL_RCC_ADC12_CLK_ENABLE
 #define TEST_ADC_CHANNEL        ADC_CHANNEL_15
+#define TEST_DMA_REQUEST        DMA_REQUEST_ADC1
 #define TEST_DMA_INST           DMA1_Channel1
 #define TEST_DMA_IRQn           DMA1_Channel1_IRQn 
 #define TEST_DMA_ISR            DMA1_Channel1_IRQHandler
@@ -23,6 +24,7 @@
 #define CURR_ADC                 ADC2 
 #define CURR_ADC_CLK_EN          __HAL_RCC_ADC12_CLK_ENABLE
 #define CURR_ADC_CHANNEL         ADC_CHANNEL_13
+#define CURR_DMA_REQUEST        DMA_REQUEST_ADC2
 #define CURR_DMA_INST            DMA1_Channel2 
 #define CURR_DMA_IRQn            DMA1_Channel2_IRQn
 #define CURR_DMA_ISR             DMA1_Channel2_IRQHandler
@@ -56,6 +58,7 @@
 #define SPI_FSYNC_PIN           GPIO_PIN_12
 #define SPI_FSYNC_PIN_BUS       GPIOB
 
+#define TIM_BASE_CLK            170000000UL
 #define DDS_MCLK                25000000UL
 
 static SPI_HandleTypeDef hspi;
@@ -78,6 +81,18 @@ typedef struct {
     uint32_t test_f;
 } test_frequency_conf_t;
 
+// Indexed by the value of a test_frequency_t enum
+const test_frequency_conf_t TEST_CONFIGS[1] = {
+    #define PRESCALER_HZ 1000000
+    #define TEST_HZ 1000000
+    {
+        .prescaler = __HAL_TIM_CALC_PSC(TIM_BASE_CLK, 1000000),
+        .period = __HAL_TIM_CALC_PERIOD(TIM_BASE_CLK, __HAL_TIM_CALC_PSC(TIM_BASE_CLK, 10), 100),
+        .sample_time = 0,
+        .test_f = 0,
+    },
+};
+
 // Spi write function for ad9833
 static void spi_write_ad9833(uint16_t val) {
     HAL_GPIO_WritePin(SPI_FSYNC_PIN_BUS, SPI_FSYNC_PIN, GPIO_PIN_RESET);
@@ -98,15 +113,15 @@ static const ad9833_t ad9833 = {
 static test_frequency_conf_t get_tf_conf(test_frequency_t test_f) {
     test_frequency_conf_t conf;
     switch (test_f) {
-        case TF_94KHZ:
+        case TF_100KHZ:
             conf.prescaler = 0;
             conf.period = 55;
             conf.sample_time = ADC_SAMPLETIME_24CYCLES_5;
             conf.test_f = 93750;
             break;
         case TF_10KHZ:
-            conf.prescaler = 4;
-            conf.period = 104;
+            conf.prescaler = 8;
+            conf.period = 500;
             conf.sample_time = ADC_SAMPLETIME_247CYCLES_5;
             conf.test_f = 10000;
             break;
@@ -126,42 +141,48 @@ static test_frequency_conf_t get_tf_conf(test_frequency_t test_f) {
     return conf;
 }
 
-// This function initialises an ADC peripheral and DMA stream pair
-// ADC and DMA will be setup to work together
-//
-// Before running this the ADC and DMA handle needs some config
-// The Instances need to be set
-// The ADC ExternalTrigConv needs to be seet
-// Peripheral clocks need to be enabled
-// Interrupts need to be enabled in the NVIC
-// Pins need to be configured
-//
-// After running the ADC channel_cfg needs to be set
+// Initialises last common settings for ADC and DMA then inits and links ADC and DMA
+// Assumes other required config is already done
 static void init_adc_dma(DMA_HandleTypeDef *hdma, ADC_HandleTypeDef *hadc) {
+
+// int num = __HAL_TIM_CALC_PSC(1, 1);
+// int num = __HAL_TIM_CALC_PERIOD(1, 1);
 
     // Config DMA
     hdma->Init.Direction = DMA_PERIPH_TO_MEMORY;
     hdma->Init.PeriphInc = DMA_PINC_DISABLE;
     hdma->Init.MemInc = DMA_MINC_ENABLE;
-    hdma->Init.PeriphDataAlignment = DMA_PDATAALIGN_WORD;
-    hdma->Init.MemDataAlignment = DMA_MDATAALIGN_HALFWORD;
+    hdma->Init.PeriphDataAlignment = DMA_PDATAALIGN_HALFWORD;
+    hdma->Init.MemDataAlignment = DMA_MDATAALIGN_WORD;
     hdma->Init.Mode = DMA_NORMAL;
     hdma->Init.Priority = DMA_PRIORITY_MEDIUM;
 
     // Config ADC
     hadc->Init.Resolution = ADC_RESOLUTION_12B;
-    hadc->Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV2;
+    hadc->Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV1;
     hadc->Init.DataAlign = ADC_DATAALIGN_RIGHT;
+    hadc->Init.GainCompensation = 0;
+    hadc->Init.ScanConvMode = ADC_SCAN_DISABLE;
     hadc->Init.EOCSelection = ADC_EOC_SINGLE_CONV;
+    hadc->Init.LowPowerAutoWait = DISABLE;
     hadc->Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_RISING;
     hadc->Init.NbrOfConversion = 1;
     hadc->Init.ScanConvMode = DISABLE;
     hadc->Init.ContinuousConvMode = DISABLE;
     hadc->Init.DiscontinuousConvMode = DISABLE;
-    hadc->Init.DMAContinuousRequests = ENABLE;
+    hadc->Init.DMAContinuousRequests = DISABLE;
+    hadc->Init.Overrun = ADC_OVR_DATA_PRESERVED; 
+    hadc->Init.OversamplingMode = DISABLE;
 
     error_handler_msg(HAL_DMA_Init(hdma), "Failed to init DMA");
     error_handler_msg(HAL_ADC_Init(hadc), "Failed to init ADC");
+
+    // Set ADC to independent mode
+    ADC_MultiModeTypeDef mm_config = {
+        .Mode = ADC_MODE_INDEPENDENT,
+    };
+    error_handler_msg(HAL_ADCEx_MultiModeConfigChannel(hadc, &mm_config), "Failed to set ADC independent mode");
+
     __HAL_LINKDMA(hadc, DMA_Handle, *hdma);
 }
 
@@ -184,11 +205,23 @@ void init_sampling(void) {
         htim.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
         htim.Channel = HAL_TIM_ACTIVE_CHANNEL_1;
 
+        // Use any numbers for init
+        htim.Init.Prescaler = 100;
+        htim.Init.Period = 100;
+
         TIM_MasterConfigTypeDef master_cfg = {
             .MasterOutputTrigger = TIM_TRGO_UPDATE,
             .MasterSlaveMode =  TIM_MASTERSLAVEMODE_DISABLE,
         };
 
+        TIM_ClockConfigTypeDef clk_cfg = {
+            .ClockSource = TIM_CLOCKSOURCE_INTERNAL,
+        };
+
+
+
+        error_handler_msg(HAL_TIM_Base_Init(&htim), "Failed to init TIM");
+        error_handler_msg(HAL_TIM_ConfigClockSource(&htim, &clk_cfg), "Failed to config TIM clock source");
         error_handler_msg(HAL_TIMEx_MasterConfigSynchronization(&htim, &master_cfg), "Failed to config TIM master mode");
     }
 
@@ -254,16 +287,22 @@ void init_sampling(void) {
         hadc_curr.Init.ExternalTrigConv = ADC_EXTERNALTRIG;
 
         hdma_test.Instance = TEST_DMA_INST;
+        hdma_test.Init.Request = TEST_DMA_REQUEST;
         HAL_NVIC_SetPriority(TEST_DMA_IRQn, 4, 1);
         HAL_NVIC_EnableIRQ(TEST_DMA_IRQn);
 
         hdma_curr.Instance = CURR_DMA_INST;
+        hdma_curr.Init.Request = CURR_DMA_REQUEST;
         HAL_NVIC_SetPriority(CURR_DMA_IRQn, 4, 2);
         HAL_NVIC_EnableIRQ(CURR_DMA_IRQn);
 
         init_adc_dma(&hdma_test, &hadc_test);
         init_adc_dma(&hdma_curr, &hadc_curr);
+
+        HAL_ADCEx_Calibration_Start(&hadc_test, ADC_SINGLE_ENDED);
+        HAL_ADCEx_Calibration_Start(&hadc_curr, ADC_SINGLE_ENDED);
     }
+
 
     delay_us(1);
     init_ad9833(ad9833_p);
@@ -278,7 +317,7 @@ void start_sampling(test_frequency_t test_f, uint32_t *test_buf, uint32_t *dut_b
     // Config channel
     ADC_ChannelConfTypeDef channel_cfg = {
         .Channel = TEST_ADC_CHANNEL,
-        .Rank = 1,
+        .Rank = ADC_REGULAR_RANK_1,
         .SamplingTime = conf.sample_time, 
         .SingleDiff = ADC_SINGLE_ENDED,
         .OffsetNumber = ADC_OFFSET_NONE,
@@ -288,7 +327,7 @@ void start_sampling(test_frequency_t test_f, uint32_t *test_buf, uint32_t *dut_b
     };
     error_handler_msg(HAL_ADC_ConfigChannel(&hadc_test, &channel_cfg), "Failed to config test ADC channel");
     channel_cfg.Channel = CURR_ADC_CHANNEL;
-    error_handler_msg(HAL_ADC_ConfigChannel(&hadc_curr, &channel_cfg), "Failed to config DUT ADC channel");
+    error_handler_msg(HAL_ADC_ConfigChannel(&hadc_curr, &channel_cfg), "Failed to config current ADC channel");
 
     // Config prescalers
     htim.Init.Prescaler = conf.prescaler;
@@ -301,14 +340,14 @@ void start_sampling(test_frequency_t test_f, uint32_t *test_buf, uint32_t *dut_b
 
     // Start recording data
     error_handler_msg(HAL_ADC_Start_DMA(&hadc_test, test_buf, buf_len), "Failed to start test ADC DMA");
-    error_handler_msg(HAL_ADC_Start_DMA(&hadc_curr, dut_buf, buf_len), "Failed to start DUT ADC DMA");
+    error_handler_msg(HAL_ADC_Start_DMA(&hadc_curr, dut_buf, buf_len), "Failed to start current ADC DMA");
     error_handler_msg(HAL_TIM_Base_Start(&htim), "Failed to start TIM");
 }
 
 // Returns true when the sample buffers have been filled
 // This function will return true once per buffer fill
 bool sample_buffers_full(void) {
-    if (test_buf_full & dut_buf_full) {
+    if (test_buf_full && dut_buf_full) {
         test_buf_full = false;
         dut_buf_full = false;
         return true;
@@ -324,7 +363,7 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc) {
         dut_buf_full = true;
     }
 
-    if (test_buf_full & dut_buf_full) {
+    if (test_buf_full && dut_buf_full) {
         error_handler_msg(HAL_TIM_Base_Stop(&htim), "Failed to stop TIM");
         stop_ad9833(ad9833_p);
     }

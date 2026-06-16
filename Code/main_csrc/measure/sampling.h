@@ -11,8 +11,10 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+#define SAMPLES_PER_PERIOD 16  /* ADC can't read fast enough going above 16 samples per period at 93.75KHz */
+
 typedef enum {
-    TF_94KHZ, // Higher than 94 MHz isn't possible without using ADC_SAMPLETIME_3CYCLES
+    TF_100KHZ, // Higher than 94 MHz isn't possible without using ADC_SAMPLETIME_3CYCLES
     TF_10KHZ,
     TF_1KHZ,
     TF_100HZ,

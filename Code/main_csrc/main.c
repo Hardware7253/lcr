@@ -30,20 +30,23 @@ int main(void) {
     // volatile passive_component_t dut = {0};
     // volatile unit_float_t reactive_component_unit_val = {0};
 
-    start_dut_measurement(TF_1KHZ);
+    start_dut_measurement(TF_10KHZ);
+
+    polar_t dut_z;
+    passive_component_t dut;
+    unit_float_t reactive_component_unit_val;
 
     while (true) {
 
-
         // if (is_stimer_finished(&stimer, HAL_GetTick())) {
 
-        // if (get_dut_measurement(&dut_z, 130)) {
-        //     dut = calc_passive_component(&dut_z, 10000);
-        //     reactive_component_unit_val = convert_to_unit(dut.reactive_component_val);
-        //     if (reactive_component_unit_val.val > 1.0F) {
-        //         (void) 0;
-        //     }
-        // }
+        if (get_dut_measurement(&dut_z, 5000.0)) {
+            dut = calc_passive_component(&dut_z, 10000);
+            reactive_component_unit_val = convert_to_unit(dut.reactive_component_val);
+            if (reactive_component_unit_val.val > 1.0F) {
+                (void) 0;
+            }
+        }
         
     }
 
