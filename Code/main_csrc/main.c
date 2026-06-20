@@ -34,13 +34,13 @@ int main(void) {
 
     polar_t dut_z;
     passive_component_t dut;
-    unit_float_t reactive_component_unit_val;
+    volatile unit_float_t reactive_component_unit_val;
 
     while (true) {
 
         // if (is_stimer_finished(&stimer, HAL_GetTick())) {
 
-        if (get_dut_measurement(&dut_z, 5000.0)) {
+        if (get_dut_measurement(&dut_z, 100.0)) {
             dut = calc_passive_component(&dut_z, 10000);
             reactive_component_unit_val = convert_to_unit(dut.reactive_component_val);
             if (reactive_component_unit_val.val > 1.0F) {

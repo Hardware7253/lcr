@@ -2,7 +2,7 @@
 #include <string.h>
 #include <math.h>
 
-#define OFFSET_90_SAMPLES (SAMPLES_PER_PERIOD / 4) 
+#define OFFSET_SAMPLES_90_DEG (SAMPLES_PER_PERIOD / 4) 
 #define SAMPLE_PERIODS 10 
 #define SAMPLES (SAMPLES_PER_PERIOD * SAMPLE_PERIODS)
 
@@ -11,6 +11,7 @@
 typedef int32_t buf_t; // int32_t is needed to allow multiplication of 12 bit ADC reads and large accumulators
 static buf_t test_samples[SAMPLES] = {0}; // Measured before DUT
 static buf_t dut_samples[SAMPLES] = {0};  // Measured after DUT
+
 
 static bool is_sampling = false;
 
@@ -75,12 +76,15 @@ static polar_t calculate_z(float range_resistor) {
         dut_pk_pk = dut_max - dut_min;
     }
 
-    volatile int64_t in_phase = 0;
-    volatile int64_t quadrature = 0;
+    int64_t in_phase = 0;
+    int64_t quadrature = 0;
     for (uint16_t i = 0; i < SAMPLES; i++) {
 
         // 90 degrees leading index
-        uint16_t j = (i + OFFSET_90_SAMPLES) % SAMPLES;
+        uint16_t j = i + OFFSET_SAMPLES_90_DEG;
+        if (j >= SAMPLES) {
+            j %= SAMPLES;
+        }
 
         in_phase += test_samples[i] * dut_samples[i];
         quadrature += test_samples[j] * dut_samples[i];
