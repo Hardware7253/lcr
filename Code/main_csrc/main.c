@@ -9,16 +9,25 @@
 #include "software_timer.h"
 #include "blocking_delay.h"
 
+#include "display.h"
 #include "dut_measure.h"
 #include "lcr_math.h"
 
-int main(void) {
 
+
+int main(void) {
     HAL_Init();
     init_clocks();
     init_blocking_delay();
 
+
     init_dut_measurement();
+
+    u8g2_t display;
+    init_display(&display, U8G2_R0);
+    u8g2_ClearDisplay(&display);
+    u8g2_SetFont(&display, u8g2_font_6x13_tr);
+    u8g2_DrawStr(&display, 0, 20, "Hello World");
    
     // 2 Hz software timer
     // software_timer_t stimer = construct_stimer_f((uint16_t)get_tick_frequency(), 2, HAL_GetTick(), PERIODIC_ST);
@@ -26,15 +35,12 @@ int main(void) {
     // This would be a 2 second period software timer
     // software_timer_t stimer = construct_stimer_p((uint16_t)get_tick_frequency(), 2000, HAL_GetTick(), PERIODIC_ST);
 
-    // polar_t dut_z = {0};
-    // volatile passive_component_t dut = {0};
-    // volatile unit_float_t reactive_component_unit_val = {0};
-
     start_dut_measurement(TF_10KHZ);
 
-    polar_t dut_z;
-    passive_component_t dut;
-    volatile unit_float_t reactive_component_unit_val;
+    polar_t dut_z = {0};
+    passive_component_t dut = {0};
+    volatile unit_float_t reactive_component_unit_val = {0};
+
 
     while (true) {
 

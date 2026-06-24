@@ -10,3 +10,6 @@
 [submodule "Code/submodules/stm32g4xx-hal-driver"]
 	path = Code/submodules/stm32g4xx-hal-driver
 	url = https://github.com/STMicroelectronics/stm32g4xx-hal-driver.git
+[submodule "Code/submodules/u8g2"]
+	path = Code/submodules/u8g2
+	url = https://github.com/olikraus/u8g2.git

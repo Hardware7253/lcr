@@ -9,11 +9,12 @@
 
             "includePath": [
                 "${workspaceFolder}",
-                "/usr/lib/gcc/arm-none-eabi/14.2.0/include",
+                "/usr/lib/gcc/arm-none-eabi/16.1.0/include",
                 "${workspaceFolder}/submodules/CMSIS_6/CMSIS/Core/Include",
                 "${workspaceFolder}/submodules/cmsis-device-g4/Include",
                 "${workspaceFolder}/submodules/stm32g4xx-hal-driver/Inc",
                 "${workspaceFolder}/submodules/embedded_c_modules/**",
+                "${workspaceFolder}/submodules/u8g2/csrc",
                 "${workspaceFolder}/main_csrc/**"
             ],
 

@@ -15,6 +15,7 @@ CFLAGS += $(DEFINES)
 # If a library has seperate src and inc folders put both of them here
 LIBRARIES := \
 	main_csrc \
+	submodules/u8g2/csrc \
 	submodules/embedded_c_modules \
 	submodules/stm32g4xx-hal-driver/Src \
 	submodules/stm32g4xx-hal-driver/Inc \
