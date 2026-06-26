@@ -3,6 +3,8 @@
 #include "blocking_delay.h"
 #include "system.h"
 
+#include <stdbool.h>
+
 #define SPI_INSTANCE            SPI1
 #define SPI_BAUDRATE            SPI_BAUDRATEPRESCALER_128 
 
@@ -19,12 +21,25 @@
 #define CS_PIN                  GPIO_PIN_15
 #define CS_PIN_BUS              GPIOA
 
+#define DC_PIN                  GPIO_PIN_4
+#define DC_PIN_BUS              GPIOB
+
 static SPI_HandleTypeDef hspi;
 
+// Implement SPI transfers from u8g2 to the display
 static uint8_t u8x8_byte_hw_spi(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, void *arg_ptr) {
+    static bool dc_state = 0;
     switch(msg) {
         case U8X8_MSG_BYTE_SEND:
-            HAL_SPI_Transmit(&hspi, arg_ptr, arg_int, 10);
+
+            // Add DC bit to display data (for 3W SPI)
+            uint8_t* src = arg_ptr;
+            static uint16_t txbuf[256];
+            for (uint8_t i = 0; i < arg_int; i++) {
+                txbuf[i] = ((uint16_t)dc_state << 8) | src[i];
+            }
+
+            error_handler_msg(HAL_SPI_Transmit(&hspi, (uint8_t*)txbuf, arg_int, 10), "Failed SPI transfer");
             break;
 
         case U8X8_MSG_BYTE_INIT:
@@ -32,7 +47,8 @@ static uint8_t u8x8_byte_hw_spi(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, void
             break;
 
         case U8X8_MSG_BYTE_SET_DC:
-            // u8x8_gpio_SetDC(u8x8, arg_int); // Unused
+            // u8x8_gpio_SetDC(u8x8, arg_int); // For 4W SPI 
+            dc_state = (bool)arg_int;
             break;
 
         case U8X8_MSG_BYTE_START_TRANSFER:
@@ -50,6 +66,7 @@ static uint8_t u8x8_byte_hw_spi(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, void
     return 1;
 }
 
+// Allow u8g2 to setup and use SPI, GPIO, and delays
 static uint8_t u8x8_gpio_and_delay(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, void *arg_ptr)
 {
     (void) arg_ptr;
@@ -78,18 +95,24 @@ static uint8_t u8x8_gpio_and_delay(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, v
                 .Alternate = 0,
             };
             HAL_GPIO_Init(CS_PIN_BUS, &software_pin_cfg); // CS
+            software_pin_cfg.Pin = DC_PIN;
+            HAL_GPIO_Init(DC_PIN_BUS, &software_pin_cfg); // DC
+
+            // Set DC pin low for 3W SPI communication
+            HAL_GPIO_WritePin(DC_PIN_BUS, DC_PIN, GPIO_PIN_RESET);
 
             // Setup SPI
             SPI_CLK_EN();
             hspi.Instance = SPI_INSTANCE;
             hspi.Init.Mode = SPI_MODE_MASTER;
             hspi.Init.Direction = SPI_DIRECTION_2LINES;
-            hspi.Init.DataSize = SPI_DATASIZE_8BIT;
+            hspi.Init.DataSize = SPI_DATASIZE_9BIT;
             hspi.Init.NSS = SPI_NSS_SOFT; 
-            hspi.Init.BaudRatePrescaler = SPI_BAUDRATE; 
+            hspi.Init.BaudRatePrescaler = SPI_BAUDRATE;
             hspi.Init.FirstBit = SPI_FIRSTBIT_MSB;
             hspi.Init.TIMode = SPI_TIMODE_DISABLE;
             hspi.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
+            hspi.Init.NSSPMode = SPI_NSS_PULSE_DISABLE;
 
             // Use mode 3 
             hspi.Init.CLKPolarity = SPI_POLARITY_HIGH;
@@ -98,7 +121,7 @@ static uint8_t u8x8_gpio_and_delay(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, v
             // Send garbage bytes over spi so clock idles properly
             u8x8_gpio_SetCS(u8x8, u8x8->display_info->chip_disable_level);
             error_handler_msg(HAL_SPI_Init(&hspi), "Failed to init SPI");
-            HAL_SPI_Transmit(&hspi, (uint8_t[]){0}, 1, 10);
+            error_handler_msg(HAL_SPI_Transmit(&hspi, (uint8_t[]){0, 0}, 1, 10), "Failed SPI transfer");
             delay_us(1);
 
             break;
@@ -120,6 +143,10 @@ static uint8_t u8x8_gpio_and_delay(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, v
             HAL_GPIO_WritePin(CS_PIN_BUS, CS_PIN, arg_int);
             break;
 
+        case U8X8_MSG_GPIO_DC:
+            HAL_GPIO_WritePin(DC_PIN_BUS, DC_PIN, arg_int);
+            break;
+
         default:
             u8x8_SetGPIOResult(u8x8, 1);			// default return value
             break;
@@ -129,7 +156,7 @@ static uint8_t u8x8_gpio_and_delay(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, v
 
 // Initialises u8g2
 void init_display(u8g2_t* u8g2, const u8g2_cb_t *rotation) {
-    init_blocking_delay();
-    u8g2_Setup_ssd1306_128x64_noname_f(u8g2, rotation, u8x8_byte_hw_spi, u8x8_gpio_and_delay);
+    u8g2_Setup_ssd1315_128x64_noname_f(u8g2, rotation, u8x8_byte_hw_spi, u8x8_gpio_and_delay);
     u8g2_InitDisplay(u8g2); 
+    u8g2_SetPowerSave(u8g2, 0);
 }

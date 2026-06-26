@@ -20,14 +20,17 @@ int main(void) {
     init_clocks();
     init_blocking_delay();
 
-
     init_dut_measurement();
+
+    // Wait to ensure display is reset by RC circuit before communication
+    delay_ms(25);
 
     u8g2_t display;
     init_display(&display, U8G2_R0);
-    u8g2_ClearDisplay(&display);
+    u8g2_ClearBuffer(&display);
     u8g2_SetFont(&display, u8g2_font_6x13_tr);
     u8g2_DrawStr(&display, 0, 20, "Hello World");
+    u8g2_SendBuffer(&display);
    
     // 2 Hz software timer
     // software_timer_t stimer = construct_stimer_f((uint16_t)get_tick_frequency(), 2, HAL_GetTick(), PERIODIC_ST);
