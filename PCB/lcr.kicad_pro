@@ -739,7 +739,7 @@
         "uuid": "226ea51e-4da2-4daa-967e-dce167947430"
       }
     ],
-    "used_designators": "JP2-3,#PWR49,DS2",
+    "used_designators": "SW1-2,PS1,R1-39,TP1-20,JP1,Q1-4,N1,Y1-2,#PWR1-101,U1-9,D1-13,C1-42,#FLG1-3,DS1,H1-4,K1-3,J1-6",
     "variants": []
   },
   "sheets": [
@@ -750,18 +750,6 @@
     [
       "c9f416db-c7a0-48f3-8fda-35fdd9af5fe5",
       "Analog Section"
-    ],
-    [
-      "2911f1c4-2f69-429a-9438-24c6ac9b9c30",
-      "Gain Selector"
-    ],
-    [
-      "ec704481-2e23-475c-acd0-894f13851a8c",
-      "Range Resistor 1"
-    ],
-    [
-      "498f4e60-134d-473a-b487-d86df052d229",
-      "Range Resistor 2"
     ]
   ],
   "text_variables": {},
