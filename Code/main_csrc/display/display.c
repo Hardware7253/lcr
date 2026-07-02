@@ -155,7 +155,7 @@ static uint8_t u8x8_gpio_and_delay(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, v
 }
 
 // Initialises u8g2
-void init_display(u8g2_t* u8g2, const u8g2_cb_t *rotation) {
+void init_display(u8g2_t *u8g2, const u8g2_cb_t *rotation) {
     u8g2_Setup_ssd1315_128x64_noname_f(u8g2, rotation, u8x8_byte_hw_spi, u8x8_gpio_and_delay);
     u8g2_InitDisplay(u8g2); 
     u8g2_SetPowerSave(u8g2, 0);

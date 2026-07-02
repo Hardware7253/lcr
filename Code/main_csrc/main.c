@@ -9,54 +9,40 @@
 #include "software_timer.h"
 #include "blocking_delay.h"
 
-#include "display.h"
 #include "dut_measure.h"
 #include "lcr_math.h"
 
+#include "ui.h"
+#include "buttons.h"
 
+#define BUTTON_POLL_HZ 200
+#define UI_UPDATE_HZ 10
+#define HZ_TO_MS(hz) (1000U / (hz))
+
+static uint32_t button_poll_last_run_ms = 0;
+static uint32_t ui_update_last_run_ms = 0;
 
 int main(void) {
     HAL_Init();
     init_clocks();
     init_blocking_delay();
-
-    init_dut_measurement();
-
-    // Wait to ensure display is reset by RC circuit before communication
-    delay_ms(25);
-
-    u8g2_t display;
-    init_display(&display, U8G2_R0);
-    u8g2_ClearBuffer(&display);
-    u8g2_SetFont(&display, u8g2_font_6x13_tr);
-    u8g2_DrawStr(&display, 0, 20, "Hello World");
-    u8g2_SendBuffer(&display);
-   
-    // 2 Hz software timer
-    // software_timer_t stimer = construct_stimer_f((uint16_t)get_tick_frequency(), 2, HAL_GetTick(), PERIODIC_ST);
-
-    // This would be a 2 second period software timer
-    // software_timer_t stimer = construct_stimer_p((uint16_t)get_tick_frequency(), 2000, HAL_GetTick(), PERIODIC_ST);
-
-    start_dut_measurement(TF_10KHZ);
-
-    polar_t dut_z = {0};
-    passive_component_t dut = {0};
-    volatile unit_float_t reactive_component_unit_val = {0};
-
+    init_buttons();
+    init_ui();
 
     while (true) {
 
-        // if (is_stimer_finished(&stimer, HAL_GetTick())) {
-
-        if (get_dut_measurement(&dut_z, 100.0)) {
-            dut = calc_passive_component(&dut_z, 10000);
-            reactive_component_unit_val = convert_to_unit(dut.reactive_component_val);
-            if (reactive_component_unit_val.val > 1.0F) {
-                (void) 0;
-            }
+        // Poll buttons
+        if (HAL_GetTick() - button_poll_last_run_ms >= HZ_TO_MS(BUTTON_POLL_HZ)) {
+            poll_buttons();
+            button_poll_last_run_ms = HAL_GetTick();
+            
         }
-        
+
+        // Update UI
+        if (HAL_GetTick() - ui_update_last_run_ms >= HZ_TO_MS(UI_UPDATE_HZ)) {
+            run_ui();
+            button_poll_last_run_ms = HAL_GetTick();
+        }
     }
 
     return 0;

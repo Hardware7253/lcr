@@ -3,6 +3,9 @@
     "cortex-debug.stutilPath": "/usr/bin/st-util",
     "files.associations": {
         "stm32g4xx.h": "c",
-        "system.h": "c"
+        "system.h": "c",
+        "cmath": "c",
+        "complex.h": "c",
+        "buttons.h": "c"
     },
 }

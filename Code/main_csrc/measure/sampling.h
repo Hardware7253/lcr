@@ -21,6 +21,8 @@ typedef enum {
     NO_OF_TEST_FREQUENCIES,
 } test_frequency_t;
 
+
+uint32_t get_test_frequency_hz(test_frequency_t tf);
 void init_sampling(void);
 void start_sampling(test_frequency_t test_f, uint32_t *test_buf, uint32_t *dut_buf, uint32_t buf_len);
 bool sample_buffers_full(void);

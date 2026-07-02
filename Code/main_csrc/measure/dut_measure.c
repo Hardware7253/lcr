@@ -1,4 +1,8 @@
 #include "dut_measure.h"
+
+#include "blocking_delay.h"
+#include "range_resistor.h"
+
 #include <string.h>
 #include <math.h>
 
@@ -6,7 +10,9 @@
 #define SAMPLE_PERIODS 10 
 #define SAMPLES (SAMPLES_PER_PERIOD * SAMPLE_PERIODS)
 
-#define TEST_GAIN 10.0 
+#define V_TEST_AMP_R1 1000.0f
+
+#define NO_OF_TESTS 5
 
 typedef int32_t buf_t; // int32_t is needed to allow multiplication of 12 bit ADC reads and large accumulators
 static buf_t test_samples[SAMPLES] = {0}; // Measured before DUT
@@ -60,7 +66,7 @@ static void offset_samples(buf_t buf[], uint16_t buf_len, buf_t offset) {
 }
 
 // Calculate impedance from test and dut sample buffers
-static polar_t calculate_z(float range_resistor) {
+static polar_t calculate_z(float range_resistor, float test_gain_resistor) {
     buf_t test_pk_pk, dut_pk_pk;
 
     // Remove DC component from ADC readings
@@ -93,8 +99,10 @@ static polar_t calculate_z(float range_resistor) {
     in_phase /= SAMPLES;
     quadrature /= SAMPLES;
 
+    float v_test_amp_gain = test_gain_resistor / V_TEST_AMP_R1;
+
     return (polar_t) {
-        .mag =  ((float)test_pk_pk * (float)range_resistor) / ((float)dut_pk_pk * (float)TEST_GAIN),
+        .mag =  ((float)test_pk_pk * (float)range_resistor) / ((float)dut_pk_pk * v_test_amp_gain),
         .angle = -atan2f((float)(quadrature), (float)(in_phase))
     };
 }
@@ -105,6 +113,7 @@ void init_dut_measurement(void) {
 
 // Starts measuring the DUT
 // Nothing will happen if a measurement operation is already underway
+// This function does not block
 void start_dut_measurement(test_frequency_t test_f) {
     if (!is_sampling) {
         start_sampling(test_f, (uint32_t*)test_samples, (uint32_t*)dut_samples, SAMPLES);
@@ -114,11 +123,50 @@ void start_dut_measurement(test_frequency_t test_f) {
 
 // Attempts to update the z parameter based on the result of the last measurement
 // Returns true if the z parameter was set
-bool get_dut_measurement(polar_t *z, float range_resistor) {
+// This function does not block
+bool get_dut_measurement(polar_t *z, float range_resistor, float test_gain_resistor) {
     if (sample_buffers_full()) {
-        *z = calculate_z(range_resistor);
+        *z = calculate_z(range_resistor, test_gain_resistor);
         is_sampling = false;
         return true;
     }
     return false;
+}
+
+// Measures the DUT multiple times and averages the complex impedances
+// Also automatically selects the correct range resistor
+// Returns a complex impedance in polar form
+// This function blocks
+polar_t measure_dut(test_frequency_t test_f) {
+
+    // Select range resistor and gain_resistor
+    // Placeholder
+    // range_resistor_t rr = RR_DEFAULT;
+    // gain_resistor_t gr = GR_DEFAULT;
+    float gain_resistor = 1.0;
+    float range_resistor = 1.0;
+
+    delay_ms(1);
+
+    // Perform tests
+    polar_t z_accumulator;
+    polar_t z_result;
+
+    for (uint8_t i = 0; i < NO_OF_TESTS; i++) {
+       start_dut_measurement(test_f);
+
+       // Block until the measurement is complete
+        while(!get_dut_measurement(&z_result, range_resistor, gain_resistor)) {
+            (void)0;
+        }
+
+        z_accumulator.mag += z_result.mag;
+        z_accumulator.angle += z_result.angle;
+        delay_ms(1);
+    }
+
+    // Average
+    z_accumulator.mag /= NO_OF_TESTS;
+    z_accumulator.angle /= NO_OF_TESTS;
+    return z_accumulator;
 }

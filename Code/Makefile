@@ -1,5 +1,5 @@
 CC = arm-none-eabi-gcc
-CFLAGS  ?=  -Wall -Werror -Wshadow -Wdouble-promotion \
+CFLAGS  ?=  -Wall -Werror -Wshadow \
             -Wformat-truncation -fno-common \
             -g3 -Os -ffunction-sections -fdata-sections \
             -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -MMD -MP

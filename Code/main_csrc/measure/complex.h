@@ -13,11 +13,5 @@ typedef struct {
 } rectangular_t;
 
 
-float rad_to_degrees(float radians);
-rectangular_t polar_to_rectangular(polar_t *polar);
-polar_t rectangular_to_polar(rectangular_t *rectangular);
-
-
-
-
-
+rectangular_t polar_to_rectangular(const polar_t *polar);
+polar_t rectangular_to_polar(const rectangular_t *rectangular);

@@ -162,6 +162,11 @@ static void init_adc_dma(DMA_HandleTypeDef *hdma, ADC_HandleTypeDef *hadc) {
     __HAL_LINKDMA(hadc, DMA_Handle, *hdma);
 }
 
+// Used for getting the frequency in Hz out of the test_frequency_t enum
+uint32_t get_test_frequency_hz(test_frequency_t tf) {
+    return TEST_CONFIGS[tf].test_f;
+}
+
 // Initialises peripherals for reading samples
 void init_sampling(void) {
     TIM_CLK_EN();
