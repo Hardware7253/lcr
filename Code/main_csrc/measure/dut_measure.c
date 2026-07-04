@@ -10,9 +10,21 @@
 #define SAMPLE_PERIODS 10 
 #define SAMPLES (SAMPLES_PER_PERIOD * SAMPLE_PERIODS)
 
+// Value of R11
 #define V_TEST_AMP_R1 1000.0f
 
+// Number of measurements used to form an average
 #define NO_OF_TESTS 5
+
+// The signal is clipping if it's pk-pk ADC read exceeds this value
+#define CLIP_PK_PK 3972 /* 3.2V */
+
+// Pk-pk less than this is considered noise
+#define NOISE_PK_PK 62 /* 50mV */
+
+// If the waveforms are above this threshold when selecting range resistors
+// the combination will be accepted instantly
+#define GOOD_PK_PK 248 /* 200mV */
 
 typedef int32_t buf_t; // int32_t is needed to allow multiplication of 12 bit ADC reads and large accumulators
 static buf_t test_samples[SAMPLES] = {0}; // Measured before DUT
@@ -36,7 +48,7 @@ static void get_acc_min_max(buf_t buf[], uint16_t buf_len, int64_t *accumulator,
 }
 
 // Updates mean, min, and max from sample buffer
-// Splits the buffer up into bins and averages the max and min from each of this bins
+// Splits the buffer up into bins and averages the max and min from each of these bins
 // buf_len must be divisible by bin_size
 static void bin_get_mean_min_max(buf_t buf[], uint16_t buf_len, uint16_t bin_size, buf_t *mean, buf_t *max, buf_t *min) {
     int64_t accumulator = 0;
@@ -66,6 +78,7 @@ static void offset_samples(buf_t buf[], uint16_t buf_len, buf_t offset) {
 }
 
 // Calculate impedance from test and dut sample buffers
+// Assumes the sample buffers are usable
 static polar_t calculate_z(float range_resistor, float test_gain_resistor) {
     buf_t test_pk_pk, dut_pk_pk;
 
@@ -108,6 +121,7 @@ static polar_t calculate_z(float range_resistor, float test_gain_resistor) {
 }
 
 void init_dut_measurement(void) {
+    init_range_resistors();
     init_sampling();
 }
 
@@ -133,40 +147,105 @@ bool get_dut_measurement(polar_t *z, float range_resistor, float test_gain_resis
     return false;
 }
 
-// Measures the DUT multiple times and averages the complex impedances
-// Also automatically selects the correct range resistor
-// Returns a complex impedance in polar form
-// This function blocks
-polar_t measure_dut(test_frequency_t test_f) {
+// Finds the correct range and gain resistor to use for the selected test frequency
+// Returns true if a range/gain resistor combination was found, false otherwise
+// Returns GOOD_RANGE or BAD_RANGE depending on the quality of the test and dut waveforms
+// Returns NO_RANGE if no suitable range / gain resistor combination was found
+static range_status_t find_range_gain_resistors(test_frequency_t test_f, range_resistor_t *rr, gain_resistor_t *gr) {
+    buf_t best_test_pk_pk = 0;
+    buf_t best_dut_pk_pk = 0;
+    range_resistor_t best_rr, best_gr;
 
-    // Select range resistor and gain_resistor
-    // Placeholder
-    // range_resistor_t rr = RR_DEFAULT;
-    // gain_resistor_t gr = GR_DEFAULT;
-    float gain_resistor = 1.0;
-    float range_resistor = 1.0;
+    for (*gr = 0; *gr < NO_GRS; (*gr)++) {
+        for (*rr = 0; *rr < NO_RRS; (*rr)++) {
+            set_range_resistor(*rr);
+            set_gain_resistor(*gr);
+            delay_ms(1);
 
+            start_dut_measurement(test_f);
+            while (!sample_buffers_full()) {
+                (void)0;
+            }
+
+            // Calculate pk-pk
+            buf_t test_pk_pk, dut_pk_pk;
+            {
+                buf_t test_mean, test_max, test_min;
+                buf_t dut_mean, dut_max, dut_min;
+                bin_get_mean_min_max(test_samples, SAMPLES, SAMPLES_PER_PERIOD, &test_mean, &test_max, &test_min);
+                bin_get_mean_min_max(dut_samples, SAMPLES, SAMPLES_PER_PERIOD, &dut_mean, &dut_max, &dut_min);
+                test_pk_pk = test_max - test_min;
+                dut_pk_pk = dut_max - dut_min;
+            }
+
+            // Return early if we find an acceptable combination
+            if (test_pk_pk > GOOD_PK_PK && dut_pk_pk > GOOD_PK_PK) {
+                return GOOD_RANGE;
+            }
+
+            // Track the least bad combination
+            if (test_pk_pk > best_test_pk_pk && dut_pk_pk > best_dut_pk_pk) {
+                best_test_pk_pk = test_pk_pk;
+                best_dut_pk_pk = dut_pk_pk;
+                best_rr = *rr;
+                best_gr = *gr;
+            }
+        }
+    }
+
+    if (best_test_pk_pk > NOISE_PK_PK && best_dut_pk_pk > NOISE_PK_PK) {
+        set_range_resistor(best_rr);
+        set_gain_resistor(best_gr);
+        return BAD_RANGE;
+    }
+
+    set_range_resistor(RR_DEFAULT);
+    set_gain_resistor(GR_DEFAULT);
+    return NO_RANGE;
+}
+
+// Automatically selects the correct range resistor and then
+// measures the DUT multiple times and averages the complex impedances
+// The impedance result is returned by updating *z
+// The function returns the status of the range resistors
+range_status_t measure_dut(polar_t *z, test_frequency_t test_f) {
+
+    // Select range and gain resistor
+    range_resistor_t rr;
+    gain_resistor_t gr;
+    range_status_t range_status = find_range_gain_resistors(test_f, &rr, &gr);
+
+    if (range_status == NO_RANGE) {
+        return range_status;
+    }
+
+    float rr_val = set_range_resistor(rr);
+    float gr_val = set_gain_resistor(gr);
     delay_ms(1);
 
-    // Perform tests
-    polar_t z_accumulator;
     polar_t z_result;
 
+    // Perform tests
     for (uint8_t i = 0; i < NO_OF_TESTS; i++) {
        start_dut_measurement(test_f);
 
        // Block until the measurement is complete
-        while(!get_dut_measurement(&z_result, range_resistor, gain_resistor)) {
+        while(!get_dut_measurement(&z_result, rr_val, gr_val)) {
             (void)0;
         }
 
-        z_accumulator.mag += z_result.mag;
-        z_accumulator.angle += z_result.angle;
+        z->mag += z_result.mag;
+        z->angle += z_result.angle;
         delay_ms(1);
     }
 
+    // Reset range resistors to default state (coil unpowered)
+    set_range_resistor(RR_DEFAULT);
+    set_gain_resistor(GR_DEFAULT);
+
     // Average
-    z_accumulator.mag /= NO_OF_TESTS;
-    z_accumulator.angle /= NO_OF_TESTS;
-    return z_accumulator;
+    z->mag /= NO_OF_TESTS;
+    z->angle /= NO_OF_TESTS;
+
+    return range_status;
 }

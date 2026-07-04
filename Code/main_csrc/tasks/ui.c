@@ -86,7 +86,7 @@ void run_ui(void) {
 
     // Measure
     if (is_button_just_pressed(BUTTON_1)) {
-        dut_z = measure_dut(test_frequency);
+        measure_dut(&dut_z, test_frequency);
         update_display();
     }
 

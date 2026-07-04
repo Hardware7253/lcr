@@ -6,14 +6,16 @@
 #define GR_DEFAULT GR_10K
 
 // Values the main range resistors can take
+// Ordered from most to least likely to find the correct range (most likely = 5K)
 typedef enum {
-    RR_100 = 0,
-    RR_5K,
+    RR_5K = 0,
+    RR_100,
     RR_100K,
     NO_RRS,
 } range_resistor_t;
 
 // Values the gain resistor can take for the test voltage amplifier opamp
+// Ordered from most to least likely to find the correct range (most likely = 10K)
 typedef enum {
     GR_10K = 0,
     GR_100K,
