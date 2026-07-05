@@ -3,27 +3,34 @@
 #include "blocking_delay.h"
 #include "lcr_math.h"
 #include "math_helpers.h"
+#include <math.h>
 
 #include "dut_measure.h"
 #include "display.h"
+#include "custom_fonts.h"
+
+#include "buttons.h"
+
+#define NANOPRINTF_IMPLEMENTATION
+#include "nanoprintf.h"
 
 #include <stdio.h>
 #include <string.h>
 
-#include "buttons.h"
 
-#define TOP_PAD 4
+#define TOP_PAD 10
 #define LEFT_PAD 4
 
-#define FONT u8g2_font_6x10_mr
-#define LINE_SPACING 
+#define FONT lcr_font_6x8 
+#define LINE_SPACING 10
 
-#define CHARS_PER_LINE 20
-#define NO_LINES 5
+#define CHARS_PER_LINE 21 
+#define NO_LINES 6
 
 static char lines[NO_LINES][CHARS_PER_LINE + 1] = {0};
 
 static polar_t dut_z = {0};
+static range_status_t range_status;
 static test_frequency_t test_frequency = TF_10KHZ;
 
 static u8g2_t display;
@@ -42,31 +49,74 @@ static void write_lines() {
 
 // Updates display with newest measurement data
 static void update_display(void) {
+    memset(lines, (int)' ', sizeof(lines));
+
+    // Add test frequency to bottom line
+    // Show test frequency and a warning for a bad range on the bottom line
     float test_frequency_hz = (float)get_test_frequency_hz(test_frequency);
-    passive_component_t dut = calc_passive_component(&dut_z, test_frequency_hz);
+    char warning_char = (range_status == BAD_RANGE) ? '!' : ' ';
+    eng_float_t tf_eng_val = convert_to_eng_notation(test_frequency_hz);
+    npf_snprintf(
+        lines[NO_LINES - 1],
+        CHARS_PER_LINE,
+        "TF = %d %cHz   %c",
+        (int)tf_eng_val.val,
+        tf_eng_val.unit_prefix,
+        warning_char
+    );
+
+    // Show error for out of range
+    if (range_status == NO_RANGE) {
+        npf_snprintf(lines[0], CHARS_PER_LINE, "Out of range,");
+        npf_snprintf(lines[1], CHARS_PER_LINE, "try a different");
+        npf_snprintf(lines[2], CHARS_PER_LINE, "test frequency.");
+        write_lines();
+        return;
+    }
 
     // Print impedance in polar form
-    sprintf(lines[0], "Z = %.3f / %.3fdeg", dut_z.mag, rad_to_degrees(dut_z.angle));
+    passive_component_t dut = calc_passive_component(&dut_z, test_frequency_hz);
+    eng_float_t dut_z_mag_eng_val = convert_to_eng_notation(dut_z.mag);
+    npf_snprintf(
+        lines[0],
+        CHARS_PER_LINE,
+        "Z = %.2f<%.2f* %c^",
+        dut_z_mag_eng_val.val,
+        rad_to_degrees(dut_z.angle),
+        dut_z_mag_eng_val.unit_prefix
+    );
+
+    // Print impedance real part
+    eng_float_t dut_r_eng_val = convert_to_eng_notation(dut.impedance.real);
+    npf_snprintf(lines[1], CHARS_PER_LINE, "R = %.3f %c^", dut_r_eng_val.val, dut_r_eng_val.unit_prefix);
 
     if (dut.passive_type != RESISTOR) {
+        char symbol = 'C';
+        char unit = 'F';
+
+        if (dut.passive_type == INDUCTOR) {
+            symbol = 'L';
+            unit = 'H';
+        }
 
         // Print inductance / capacitance
         eng_float_t reactive_component_eng_val = convert_to_eng_notation(dut.reactive_component_val);
-        sprintf(lines[1], "C = %.3f%c", reactive_component_eng_val.val, reactive_component_eng_val.unit_prefix);
-        if (dut.passive_type == INDUCTOR) {
-            lines[1][0] = 'L';
-        }
+        npf_snprintf(
+            lines[2],
+            CHARS_PER_LINE,
+            "%c = %.3f %c%c",
+            symbol,
+            reactive_component_eng_val.val,
+            reactive_component_eng_val.unit_prefix,
+            unit
+        );
 
-        // Print ESR / DCR and dissipation factor
-        sprintf(lines[2], "R = %.3f", dut.impedance.real);
-        sprintf(lines[3], "D = %.3f", 0.0); // Placeholder
+        // Print dissipation factor
+        npf_snprintf(lines[3], CHARS_PER_LINE, "D = %.3f", dut.impedance.real / fabsf(dut.impedance.imaginary));
     } else {
-        sprintf(lines[1], "Z = %.3f + %.3fj", dut.impedance.real, dut.impedance.imaginary);
+        eng_float_t dut_x_eng_val = convert_to_eng_notation(dut.impedance.imaginary);
+        npf_snprintf(lines[2], CHARS_PER_LINE, "X = %.3f %c^", dut_x_eng_val.val, dut_x_eng_val.unit_prefix);
     }
-
-    // Add test frequency to bottom line
-    eng_float_t tf_eng_val = convert_to_eng_notation(test_frequency_hz);
-    sprintf(lines[NO_LINES - 1], "TF=%.0f%cHz", tf_eng_val.val, tf_eng_val.unit_prefix);
 
     write_lines();
 }
@@ -84,9 +134,26 @@ void init_ui(void) {
 
 void run_ui(void) {
 
+    // Test graphics
+    // // range_status = NO_RANGE;
+    // // range_status = BAD_RANGE;
+    // range_status = GOOD_RANGE;
+
+    // dut_z.mag = 1.668;
+    // dut_z.angle = -1.2566;
+
+    // // dut_z.mag = 511356;
+    // // dut_z.angle = 1.2566;
+
+    // // dut_z.mag = 1235;
+    // // dut_z.angle = 0.0542;
+
+    // update_display();
+    // return;
+
     // Measure
     if (is_button_just_pressed(BUTTON_1)) {
-        measure_dut(&dut_z, test_frequency);
+        range_status = measure_dut(&dut_z, test_frequency);
         update_display();
     }
 
