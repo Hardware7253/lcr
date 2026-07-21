@@ -29,11 +29,12 @@
 
 static char lines[NO_LINES][CHARS_PER_LINE + 1] = {0};
 
-static polar_t dut_z = {0};
-static range_status_t range_status;
+static polar_t dut_z = {0.0, 0.0};
+static range_status_t range_status = GOOD_RANGE;
 static test_frequency_t test_frequency = TF_10KHZ;
 
 static u8g2_t display;
+
 
 // Write the lines from the lines array to the display 
 static void write_lines() {
@@ -47,9 +48,30 @@ static void write_lines() {
     u8g2_SendBuffer(&display);
 }
 
+// Returns a pointer to a string containing the unit prefix
+// This makes it so no blank char is inserted when the unit prefix is a space (ie base units)
+static char* get_unit_prefix_string(char unit_prefix) {
+    static char string[2] = {0};
+
+    if (unit_prefix != ' ') {
+        string[0] = unit_prefix;
+        string[1] = '\0';
+    } else {
+        string[0] = '\0';
+    }
+
+    return string;
+}
+
+// Reset the lines array to all zeros
+static inline void reset_lines(void) {
+    memset(lines, 0, sizeof(lines));
+}
+
 // Updates display with newest measurement data
-static void update_display(void) {
-    memset(lines, (int)' ', sizeof(lines));
+// Function parameters are used to show message screens
+static void update_display(bool overwrite_message, const char* message) {
+    reset_lines();
 
     // Add test frequency to bottom line
     // Show test frequency and a warning for a bad range on the bottom line
@@ -59,11 +81,18 @@ static void update_display(void) {
     npf_snprintf(
         lines[NO_LINES - 1],
         CHARS_PER_LINE,
-        "TF = %d %cHz   %c",
+        "TF = %d %sHz   %c",
         (int)tf_eng_val.val,
-        tf_eng_val.unit_prefix,
+        get_unit_prefix_string(tf_eng_val.unit_prefix),
         warning_char
     );
+
+    // Show overwrite message
+    if (overwrite_message) {
+        npf_snprintf(lines[0], CHARS_PER_LINE, message);
+        write_lines();
+        return;
+    }
 
     // Show error for out of range
     if (range_status == NO_RANGE) {
@@ -80,15 +109,15 @@ static void update_display(void) {
     npf_snprintf(
         lines[0],
         CHARS_PER_LINE,
-        "Z = %.2f<%.2f* %c^",
+        "Z = %.3f<%.2f* %s^",
         dut_z_mag_eng_val.val,
         rad_to_degrees(dut_z.angle),
-        dut_z_mag_eng_val.unit_prefix
+        get_unit_prefix_string(dut_z_mag_eng_val.unit_prefix)
     );
 
     // Print impedance real part
     eng_float_t dut_r_eng_val = convert_to_eng_notation(dut.impedance.real);
-    npf_snprintf(lines[1], CHARS_PER_LINE, "R = %.3f %c^", dut_r_eng_val.val, dut_r_eng_val.unit_prefix);
+    npf_snprintf(lines[1], CHARS_PER_LINE, "R = %.2f %c^", dut_r_eng_val.val, dut_r_eng_val.unit_prefix);
 
     if (dut.passive_type != RESISTOR) {
         char symbol = 'C';
@@ -104,18 +133,26 @@ static void update_display(void) {
         npf_snprintf(
             lines[2],
             CHARS_PER_LINE,
-            "%c = %.3f %c%c",
+            "%c = %.2f %s%c",
             symbol,
             reactive_component_eng_val.val,
-            reactive_component_eng_val.unit_prefix,
+            get_unit_prefix_string(reactive_component_eng_val.unit_prefix),
             unit
         );
 
         // Print dissipation factor
         npf_snprintf(lines[3], CHARS_PER_LINE, "D = %.3f", dut.impedance.real / fabsf(dut.impedance.imaginary));
     } else {
+
+        // Show resistor stray reactance
         eng_float_t dut_x_eng_val = convert_to_eng_notation(dut.impedance.imaginary);
-        npf_snprintf(lines[2], CHARS_PER_LINE, "X = %.3f %c^", dut_x_eng_val.val, dut_x_eng_val.unit_prefix);
+        npf_snprintf(
+            lines[2],
+            CHARS_PER_LINE,
+            "X = %.3f %s^",
+            dut_x_eng_val.val,
+            get_unit_prefix_string(dut_x_eng_val.unit_prefix)
+        );
     }
 
     write_lines();
@@ -130,43 +167,27 @@ void init_ui(void) {
 
     init_display(&display, U8G2_R2);
     u8g2_ClearBuffer(&display);
+    update_display(true, "No measurement");
 }
 
 void run_ui(void) {
 
-    // Test graphics
-    // // range_status = NO_RANGE;
-    // // range_status = BAD_RANGE;
-    // range_status = GOOD_RANGE;
-
-    // dut_z.mag = 1.668;
-    // dut_z.angle = -1.2566;
-
-    // // dut_z.mag = 511356;
-    // // dut_z.angle = 1.2566;
-
-    // // dut_z.mag = 1235;
-    // // dut_z.angle = 0.0542;
-
-    // update_display();
-    // return;
-
     // Measure
-    if (is_button_just_pressed(BUTTON_1)) {
+    if (get_button_data(BUTTON_1, btn_just_n_released) == 2) {
+        update_display(true, "Measuring...");
+        delay_ms(50);
         range_status = measure_dut(&dut_z, test_frequency);
-        update_display();
+        update_display(false, "");
     }
 
     // Change test frequency
-    if (get_button_consecutive_presses(BUTTON_1) == 2) {
+    if (get_button_data(BUTTON_1, btn_just_released)) {
         test_frequency++;
         if (test_frequency >= NO_OF_TEST_FREQUENCIES) {
             test_frequency = 0;
         }
 
-        // Last measurement is now invalid, so reset the display
-        dut_z.angle = 0.0;
-        dut_z.mag = 0.0;
-        update_display();
+        // Last measurement is now invalid, so show no measurement message
+        update_display(true, "No measurement");
     }
 }

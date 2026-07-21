@@ -6,6 +6,7 @@
         "system.h": "c",
         "cmath": "c",
         "complex.h": "c",
-        "buttons.h": "c"
+        "buttons.h": "c",
+        "button_debouncing.h": "c"
     },
 }

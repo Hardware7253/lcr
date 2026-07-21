@@ -41,7 +41,7 @@ int main(void) {
         // Update UI
         if (HAL_GetTick() - ui_update_last_run_ms >= HZ_TO_MS(UI_UPDATE_HZ)) {
             run_ui();
-            button_poll_last_run_ms = HAL_GetTick();
+            ui_update_last_run_ms = HAL_GetTick();
         }
     }
 

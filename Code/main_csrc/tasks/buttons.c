@@ -1,12 +1,9 @@
 #include "buttons.h"
-#include "button_debouncing.h"
 #include "stm32g4xx_hal.h"
 
 typedef struct {
-    button_debounce_t debounce_data;
+    btn_debounce_t debounce_data;
     bool active_low;
-    bool just_pressed;
-    bool just_long_pressed;
     uint16_t pin;
     GPIO_TypeDef* bus;
 } button_data_t;
@@ -34,39 +31,12 @@ void init_buttons(void) {
 void poll_buttons(void) {
     for (uint8_t i = 0; i < NO_BUTTONS; i++) {
         button_data_t* this_button = &buttons_array[i];
-        bool button_state = HAL_GPIO_ReadPin(this_button->bus, this_button->pin) ^ this_button->active_low; 
-        this_button->just_pressed = button_pressed(&this_button->debounce_data, button_state, HAL_GetTick());
-        this_button->just_long_pressed = button_long_pressed(&this_button->debounce_data, button_state, HAL_GetTick());
+        bool button_state = (bool)HAL_GPIO_ReadPin(this_button->bus, this_button->pin) ^ this_button->active_low; 
+        btn_debounce_update(&this_button->debounce_data, (uint8_t)button_state, HAL_GetTick());
     }
 }
 
-// Returns true if the given button is pressed (with debouncing)
-bool is_button_pressed(button_t button) {
-    return buttons_array[button].debounce_data.state;
+// Gets button data for the given button using the getter function
+uint8_t get_button_data(button_t button, btn_getter btn_getter_fn) {
+    return btn_getter_fn(&buttons_array[button].debounce_data, HAL_GetTick());
 }
-
-// Returns true if the given button state just transitioned from not pressed to pressed (with debouncing)
-bool is_button_just_pressed(button_t button) {
-    bool return_value = buttons_array[button].just_pressed;
-    buttons_array[button].just_pressed = false;
-    return return_value;
-}
-
-// Returns true if the given button is registering a long press
-bool is_button_long_pressed(button_t button) {
-    return buttons_array[button].debounce_data.long_press_registered;
-}
-
-// Returns true if the given button long press state just transitioned from false to true
-bool is_button_just_long_pressed(button_t button) {
-    bool return_value = buttons_array[button].just_long_pressed;
-    buttons_array[button].just_long_pressed = false;
-    return return_value;
-}
-
-#if ENABLE_BUTTON_COUNTING
-// Returns the current number of consecutive presses a button has registered
-uint8_t get_button_consecutive_presses(button_t button) {
-    return buttons_array[button].debounce_data.consecutive_presses;
-}
-#endif

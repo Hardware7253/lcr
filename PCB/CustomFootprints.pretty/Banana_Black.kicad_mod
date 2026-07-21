@@ -1,0 +1,275 @@
+(footprint "Banana_Black"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Cliff single 4mm shrouded banana panel socket, through-hole, horizontal, black, https://www.cliffuk.co.uk/products/testleads/sockets/S16NPC.pdf")
+	(tags "cliff 4mm socket jack banana black")
+	(property "Reference" "REF**"
+		(at 0 -7.25 0)
+		(layer "F.SilkS")
+		(uuid "3b9aa443-d25b-4388-a89a-ea478a540453")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Banana_Black"
+		(at 0 7.25 0)
+		(layer "F.Fab")
+		(uuid "55ed6eb0-9410-4eae-bf8d-f88cf218a90a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "edf110e3-9257-4714-a43e-c21ec56f4edc")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "89ecbf5e-6e4a-488e-aa56-c63790e3890b")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -13.6 -6.1)
+		(end -13.6 6.1)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "19473bbf-a154-469f-857a-1681693b9cee")
+	)
+	(fp_line
+		(start -13.6 6.1)
+		(end -7 6.1)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "fc19cd50-0aac-4e84-bcc0-9ee965611910")
+	)
+	(fp_line
+		(start -7 -6.1)
+		(end -13.6 -6.1)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "90f7f3fc-72f6-456d-942a-a7dade3c41ba")
+	)
+	(fp_line
+		(start -5.7 6.1)
+		(end 3.2 6.1)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "960ac882-f10e-45b2-8ddb-ac8fae47cd8c")
+	)
+	(fp_line
+		(start 3.2 -6.1)
+		(end -5.7 -6.1)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ec69f3c1-27b5-4d4c-a3e1-a5636be94840")
+	)
+	(fp_line
+		(start 4.4 6.1)
+		(end 5.6 6.1)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "216a735e-e327-483c-a3df-77030f3c8024")
+	)
+	(fp_line
+		(start 5.6 -6.1)
+		(end 4.4 -6.1)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "22598bba-fdf9-4322-ac5a-256a6f153860")
+	)
+	(fp_line
+		(start 5.6 6.1)
+		(end 5.6 -6.1)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "644b17b5-46b5-4a30-874f-75e5f7344ee5")
+	)
+	(fp_rect
+		(start 6 6.5)
+		(end -28 -6.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "34ac6b1b-fbf2-44c8-b77d-9e7750ea01f5")
+	)
+	(fp_line
+		(start -27.5 0)
+		(end -21 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "3afb9870-1987-495e-9768-c0e93669a85b")
+	)
+	(fp_line
+		(start -21 0)
+		(end -22 -1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a54c4a56-1168-4721-bfc9-726d590303fc")
+	)
+	(fp_line
+		(start -21 0)
+		(end -22 1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a5aa570a-4fc2-4c27-adec-efa376bb244b")
+	)
+	(fp_rect
+		(start -27.5 -2)
+		(end -7.5 2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "f46b6484-ad41-4210-aa43-1d433fc224f5")
+	)
+	(fp_rect
+		(start -13.5 -6)
+		(end 5.5 6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "e01d54c6-04e0-4c63-90fd-b211bdf761d9")
+	)
+	(fp_rect
+		(start -13.5 -5.5)
+		(end -27.5 5.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "7066c03e-4c3c-4c17-94d2-f2b2bc9046d2")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "0f801fa6-cf1a-4c8a-b20b-16b72902b639")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "" thru_hole circle
+		(at -6.36 -5.08)
+		(size 1.8 1.8)
+		(drill 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "030389e5-454a-4cba-8de2-bf499dae9e0e")
+	)
+	(pad "" thru_hole circle
+		(at -6.36 5.08)
+		(size 1.8 1.8)
+		(drill 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "2e9ae056-831c-45d4-8760-f6ee254040e2")
+	)
+	(pad "" thru_hole circle
+		(at 3.8 -5.08)
+		(size 1.8 1.8)
+		(drill 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "cd9da078-49e2-4fd4-83f0-0e097834c8b6")
+	)
+	(pad "" thru_hole circle
+		(at 3.8 5.08)
+		(size 1.8 1.8)
+		(drill 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "77da736f-2250-42ea-8ea4-3bedbb2c1702")
+	)
+	(pad "1" thru_hole circle
+		(at 0 0)
+		(size 3.5 3.5)
+		(drill 2.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "0163c70a-f2eb-4746-9c13-51f63b16f893")
+	)
+	(embedded_fonts no)
+	(model "${KICAD10_3DMODEL_DIR}/Connector.3dshapes/Banana_Cliff_FCR7350B_S16N-PC_Horizontal.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

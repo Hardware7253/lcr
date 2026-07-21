@@ -152,20 +152,21 @@ bool get_dut_measurement(polar_t *z, float range_resistor, float test_gain_resis
 // Returns GOOD_RANGE or BAD_RANGE depending on the quality of the test and dut waveforms
 // Returns NO_RANGE if no suitable range / gain resistor combination was found
 static range_status_t find_range_gain_resistors(test_frequency_t test_f, range_resistor_t *rr, gain_resistor_t *gr) {
-    buf_t best_test_pk_pk = 0;
-    buf_t best_dut_pk_pk = 0;
+    buf_t best_pk_pk = 0;
     range_resistor_t best_rr, best_gr;
+    range_status_t range_status = NO_RANGE;
 
     for (*gr = 0; *gr < NO_GRS; (*gr)++) {
         for (*rr = 0; *rr < NO_RRS; (*rr)++) {
             set_range_resistor(*rr);
             set_gain_resistor(*gr);
-            delay_ms(1);
+            delay_ms(50);
 
             start_dut_measurement(test_f);
             while (!sample_buffers_full()) {
                 (void)0;
             }
+            is_sampling = false;
 
             // Calculate pk-pk
             buf_t test_pk_pk, dut_pk_pk;
@@ -177,6 +178,17 @@ static range_status_t find_range_gain_resistors(test_frequency_t test_f, range_r
                 test_pk_pk = test_max - test_min;
                 dut_pk_pk = dut_max - dut_min;
             }
+            buf_t total_pk_pk = test_pk_pk + dut_pk_pk;
+
+            // Skip over this combination if either signal is clipping or lost in noise
+            if (
+                test_pk_pk > CLIP_PK_PK ||
+                dut_pk_pk > CLIP_PK_PK ||
+                test_pk_pk < NOISE_PK_PK ||
+                dut_pk_pk < NOISE_PK_PK
+            ) {
+                continue;
+            }
 
             // Return early if we find an acceptable combination
             if (test_pk_pk > GOOD_PK_PK && dut_pk_pk > GOOD_PK_PK) {
@@ -184,24 +196,25 @@ static range_status_t find_range_gain_resistors(test_frequency_t test_f, range_r
             }
 
             // Track the least bad combination
-            if (test_pk_pk > best_test_pk_pk && dut_pk_pk > best_dut_pk_pk) {
-                best_test_pk_pk = test_pk_pk;
-                best_dut_pk_pk = dut_pk_pk;
+            if (total_pk_pk > best_pk_pk) {
+                best_pk_pk = total_pk_pk;
                 best_rr = *rr;
                 best_gr = *gr;
+                range_status = BAD_RANGE;
             }
         }
     }
 
-    if (best_test_pk_pk > NOISE_PK_PK && best_dut_pk_pk > NOISE_PK_PK) {
+    // Select the best range resistor combination that was found
+    if (range_status == NO_RANGE) {
+        set_range_resistor(RR_DEFAULT);
+        set_gain_resistor(GR_DEFAULT);
+    } else {
         set_range_resistor(best_rr);
         set_gain_resistor(best_gr);
-        return BAD_RANGE;
     }
 
-    set_range_resistor(RR_DEFAULT);
-    set_gain_resistor(GR_DEFAULT);
-    return NO_RANGE;
+    return range_status;
 }
 
 // Automatically selects the correct range resistor and then

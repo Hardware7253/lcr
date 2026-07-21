@@ -6,10 +6,279 @@
 	(paper "A2")
 	(title_block
 		(title "LCR Analog Section")
-		(date "2026-06-30")
+		(date "2026-07-22")
 		(company "LWQ")
 	)
 	(lib_symbols
+		(symbol "Amplifier_Operational:OPA2197xDGK"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "OPA2197xDGK"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_SO:VSSOP-8_3x3mm_P0.65mm"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa2197.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Dual 36V, Precision, Rail-to-Rail Input/Output, Low Offset Voltage, Operational Amplifier, VSSOP-8"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "dual opamp rtor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "VSSOP*3x3mm*P0.65mm*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "OPA2197xDGK_1_1"
+				(polyline
+					(pts
+						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "OPA2197xDGK_2_1"
+				(polyline
+					(pts
+						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "OPA2197xDGK_3_1"
+				(pin power_in line
+					(at -2.54 -7.62 90)
+					(length 3.81)
+					(name "V-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 7.62 270)
+					(length 3.81)
+					(name "V+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Connector:Conn_01x01_Socket"
 			(pin_names
 				(offset 1.016)
@@ -1386,319 +1655,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:Opamp_Dual"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at 0 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "Opamp_Dual"
-				(at 0 -5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Dual operational amplifier"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Sim.Name" "kicad_builtin_opamp_dual"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Sim.Device" "SUBCKT"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Sim.Pins" "1=out1 2=in1- 3=in1+ 4=vee 5=in2+ 6=in2- 7=out2 8=vcc"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "dual opamp"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* MSOP*3x3mm*P0.65mm* SSOP*2.95x2.8mm*P0.65mm* TSSOP*3x3mm*P0.65mm* VSSOP*P0.5mm* TO?99*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Opamp_Dual_1_1"
-				(polyline
-					(pts
-						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin output line
-					(at 7.62 0 180)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -7.62 -2.54 0)
-					(length 2.54)
-					(name "-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -7.62 2.54 0)
-					(length 2.54)
-					(name "+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "Opamp_Dual_2_1"
-				(polyline
-					(pts
-						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin input line
-					(at -7.62 2.54 0)
-					(length 2.54)
-					(name "+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -7.62 -2.54 0)
-					(length 2.54)
-					(name "-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 7.62 0 180)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "Opamp_Dual_3_1"
-				(pin power_in line
-					(at -2.54 -7.62 90)
-					(length 3.81)
-					(name "V-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -2.54 7.62 270)
-					(length 3.81)
-					(name "V+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:R"
 			(pin_numbers
 				(hide yes)
@@ -2861,12 +2817,10 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Simulation_SPICE:NMOS"
-			(pin_numbers
-				(hide yes)
-			)
+		(symbol "Transistor_FET:2N7002"
 			(pin_names
 				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2874,7 +2828,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "Q"
-				(at 5.08 1.27 0)
+				(at 5.08 1.905 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -2884,8 +2838,8 @@
 					(justify left)
 				)
 			)
-			(property "Value" "NMOS"
-				(at 5.08 -1.27 0)
+			(property "Value" "2N7002"
+				(at 5.08 0 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -2895,8 +2849,21 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" ""
-				(at 5.08 2.54 0)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+				(at 5.08 -1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+				)
+			)
+			(property "Datasheet" "https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF"
+				(at 5.08 -3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -2904,20 +2871,10 @@
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
-				(at 0 -12.7 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "N-MOSFET transistor, drain/source/gate"
+			(property "Description" "0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2928,40 +2885,7 @@
 					)
 				)
 			)
-			(property "Sim.Device" "NMOS"
-				(at 0 -17.145 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Sim.Type" "VDMOS"
-				(at 0 -19.05 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Sim.Pins" "1=D 2=G 3=S"
-				(at 0 -15.24 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "transistor NMOS N-MOS N-MOSFET simulation"
+			(property "ki_keywords" "N-Channel Switching MOSFET"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2972,7 +2896,18 @@
 					)
 				)
 			)
-			(symbol "NMOS_0_1"
+			(property "ki_fp_filters" "SOT?23*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "2N7002_0_1"
 				(polyline
 					(pts
 						(xy 0.254 1.905) (xy 0.254 -1.905)
@@ -3116,7 +3051,7 @@
 				)
 				(polyline
 					(pts
-						(xy 2.794 0.508) (xy 2.921 0.381) (xy 3.683 0.381) (xy 3.81 0.254)
+						(xy 2.921 0.381) (xy 3.683 0.381)
 					)
 					(stroke
 						(width 0)
@@ -3139,11 +3074,11 @@
 					)
 				)
 			)
-			(symbol "NMOS_1_1"
-				(pin passive line
-					(at 2.54 5.08 270)
+			(symbol "2N7002_1_1"
+				(pin input line
+					(at -5.08 0 0)
 					(length 2.54)
-					(name "D"
+					(name "G"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3158,10 +3093,10 @@
 						)
 					)
 				)
-				(pin input line
-					(at -5.08 0 0)
+				(pin passive line
+					(at 2.54 -5.08 90)
 					(length 2.54)
-					(name "G"
+					(name "S"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3177,9 +3112,9 @@
 					)
 				)
 				(pin passive line
-					(at 2.54 -5.08 90)
+					(at 2.54 5.08 270)
 					(length 2.54)
-					(name "S"
+					(name "D"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -10844,6 +10779,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 459.74 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 459.74 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 459.74 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "10506703-f09b-4c02-b4cd-77da02a57980")
 		)
@@ -10959,6 +10927,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 359.41 176.53 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 359.41 176.53 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 359.41 176.53 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "08ade8cb-34cd-4847-8098-200b35f603c1")
 		)
@@ -11007,7 +11008,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector:Banana_Cliff_FCR7350R_S16N-PC_Horizontal"
+		(property "Footprint" "CustomFootprints:Banana_Red"
 			(at 176.53 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -11073,6 +11074,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 176.53 233.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 176.53 233.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 176.53 233.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "da136909-4213-4969-9e21-1589b340b392")
 		)
@@ -11080,145 +11114,6 @@
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
 					(reference "J3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Simulation_SPICE:NMOS")
-		(at 142.24 356.87 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "0634c604-73ed-4ec2-a06f-57ac8935ddbb")
-		(property "Reference" "Q1"
-			(at 147.066 355.6 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "NMOS"
-			(at 147.066 358.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-3"
-			(at 147.32 354.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C7429875.pdf"
-			(at 142.24 369.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "N-MOSFET transistor, drain/source/gate"
-			(at 142.24 356.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "NMOS"
-			(at 142.24 374.015 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Type" "VDMOS"
-			(at 142.24 375.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 142.24 372.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Already Have" "0"
-			(at 142.24 356.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC PART #" "C7429875"
-			(at 142.24 356.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "3"
-			(uuid "857f7b56-1a65-4ca8-b95b-19a5a3abc619")
-		)
-		(pin "1"
-			(uuid "982d25b1-e144-4de7-a8b6-f2d3f9dcb1c7")
-		)
-		(pin "2"
-			(uuid "8bf3388c-8ef8-42b3-9825-6b1105162bd5")
-		)
-		(instances
-			(project "lcr"
-				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "Q1")
 					(unit 1)
 				)
 			)
@@ -11314,6 +11209,39 @@
 			)
 		)
 		(property "Sim.Type" ""
+			(at 375.92 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 375.92 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 375.92 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
 			(at 375.92 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -11513,6 +11441,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 199.39 339.09 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 199.39 339.09 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 199.39 339.09 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "1b973a06-5a69-4caa-a945-6f362fd728b3")
 		)
@@ -11618,6 +11579,39 @@
 			)
 		)
 		(property "Sim.Type" ""
+			(at 215.9 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 215.9 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 215.9 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
 			(at 215.9 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -11740,6 +11734,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 459.74 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 459.74 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 459.74 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "79fdd947-33fa-4ed9-9b94-1431feff2db6")
 		)
@@ -11767,7 +11794,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0a869914-843c-4e75-b0fb-180cfd7d56b0")
-		(property "Reference" "#PWR048"
+		(property "Reference" "#PWR044"
 			(at 351.79 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -11827,7 +11854,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR048")
+					(reference "#PWR044")
 					(unit 1)
 				)
 			)
@@ -11923,7 +11950,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0d671773-1f5f-4238-81c5-d2002c557031")
-		(property "Reference" "#PWR0100"
+		(property "Reference" "#PWR0103"
 			(at 219.71 370.84 0)
 			(hide yes)
 			(show_name no)
@@ -11983,7 +12010,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR0100")
+					(reference "#PWR0103")
 					(unit 1)
 				)
 			)
@@ -12001,7 +12028,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0f109f40-20d6-4c04-bf81-6fa5b0e30f51")
-		(property "Reference" "#PWR044"
+		(property "Reference" "#PWR040"
 			(at 458.47 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -12061,7 +12088,149 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR044")
+					(reference "#PWR040")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Amplifier_Operational:OPA2197xDGK")
+		(at 283.21 81.28 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "116bb51f-bea0-4b1b-a058-6068ea3e820c")
+		(property "Reference" "U4"
+			(at 283.21 71.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "OPA2197xDGK"
+			(at 283.21 73.66 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "CustomFootprints:VSSOP-8_3x3mm_P0.65mm"
+			(at 283.21 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa2197.pdf"
+			(at 283.21 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Dual 36V, Precision, Rail-to-Rail Input/Output, Low Offset Voltage, Operational Amplifier, VSSOP-8"
+			(at 283.21 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC PART #" "C2867268"
+			(at 283.21 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 283.21 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 283.21 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 283.21 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3bd840c0-775c-43ea-85ea-0ce31c29861a")
+		)
+		(pin "5"
+			(uuid "2d8a10ff-4c22-4846-8507-afd207d8f25b")
+		)
+		(pin "4"
+			(uuid "7983ca52-34bb-43aa-a194-fee79c338de0")
+		)
+		(pin "7"
+			(uuid "f67861e2-a173-49ff-834f-3d1beee08628")
+		)
+		(pin "6"
+			(uuid "f65250e8-2ea3-4f69-860a-fb8d1f2bee4b")
+		)
+		(pin "2"
+			(uuid "1aa6ed01-42e4-49bc-8e43-482e8e918096")
+		)
+		(pin "3"
+			(uuid "1fded24a-fe43-4619-a930-628d03d89703")
+		)
+		(pin "8"
+			(uuid "1d01ee4d-06a2-4e36-a896-067c9cf68045")
+		)
+		(instances
+			(project "lcr"
+				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
+					(reference "U4")
 					(unit 1)
 				)
 			)
@@ -12078,7 +12247,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "122d5476-afc6-49af-bc2a-c2f4844b06e2")
-		(property "Reference" "R24"
+		(property "Reference" "R27"
 			(at 233.934 318.77 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12155,6 +12324,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 232.41 320.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 232.41 320.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 232.41 320.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "72baf25b-3970-45ea-8a54-b80e4e507ea2")
 		)
@@ -12164,7 +12366,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "R24")
+					(reference "R27")
 					(unit 1)
 				)
 			)
@@ -12270,6 +12472,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 454.66 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 454.66 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 454.66 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "7a77769b-88ed-46b7-b6fe-7c8d2d445c27")
 		)
@@ -12286,181 +12521,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:Opamp_Dual")
-		(at 361.95 83.82 0)
-		(unit 2)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1608a406-02bc-4dbc-9fbb-a5e6854aca74")
-		(property "Reference" "U4"
-			(at 361.95 74.93 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LMH6643MMX"
-			(at 361.95 77.47 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "CustomFootprints:VSSOP-8_3x3mm_P0.65mm"
-			(at 361.95 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C478382.pdf"
-			(at 361.95 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Dual operational amplifier"
-			(at 361.95 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
-			(at 361.95 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Name" "kicad_builtin_opamp_dual"
-			(at 361.95 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "SUBCKT"
-			(at 361.95 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=out1 2=in1- 3=in1+ 4=vee 5=in2+ 6=in2- 7=out2 8=vcc"
-			(at 361.95 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC PART #" "C478382"
-			(at 361.95 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Already Have" "0"
-			(at 361.95 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Type" ""
-			(at 361.95 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "8"
-			(uuid "6b9e75aa-b800-40d3-abd2-48a3df4a7550")
-		)
-		(pin "5"
-			(uuid "0a1e566b-41a5-4085-b5e4-449260ffaac6")
-		)
-		(pin "2"
-			(uuid "bbb5790d-7545-461f-a3f5-ea1e7b1f6137")
-		)
-		(pin "3"
-			(uuid "d9a53fde-90af-4197-b1fc-98a06c65c2ef")
-		)
-		(pin "7"
-			(uuid "b426d315-f6c6-4c80-a602-d0bc46bfe178")
-		)
-		(pin "6"
-			(uuid "c435df0f-18e0-4bf0-ae66-90ca57f4826c")
-		)
-		(pin "4"
-			(uuid "928f2348-9b97-4205-8747-de697d36a799")
-		)
-		(pin "1"
-			(uuid "b9a8f2b6-78e3-414f-8698-d4ca2288a522")
-		)
-		(instances
-			(project "lcr"
-				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "U4")
-					(unit 2)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 295.91 236.22 0)
 		(unit 1)
@@ -12472,7 +12532,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "181df503-ae65-429b-a174-5b850673c37b")
-		(property "Reference" "#PWR088"
+		(property "Reference" "#PWR091"
 			(at 295.91 242.57 0)
 			(hide yes)
 			(show_name no)
@@ -12532,185 +12592,8 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR088")
+					(reference "#PWR091")
 					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Opamp_Dual")
-		(at 477.52 219.71 0)
-		(unit 3)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "18fc3ab2-3927-43d7-bca0-709bead41b50")
-		(property "Reference" "U6"
-			(at 476.25 218.4399 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "LMH6643MMX"
-			(at 476.25 220.9799 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "CustomFootprints:VSSOP-8_3x3mm_P0.65mm"
-			(at 477.52 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C478382.pdf"
-			(at 477.52 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Dual operational amplifier"
-			(at 477.52 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
-			(at 477.52 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Name" "kicad_builtin_opamp_dual"
-			(at 477.52 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "SUBCKT"
-			(at 477.52 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=out1 2=in1- 3=in1+ 4=vee 5=in2+ 6=in2- 7=out2 8=vcc"
-			(at 477.52 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC PART #" "C478382"
-			(at 477.52 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Already Have" "0"
-			(at 477.52 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Type" ""
-			(at 477.52 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "8"
-			(uuid "22d827e2-0c1a-4ee9-b5b3-3327efd0329c")
-		)
-		(pin "5"
-			(uuid "161cfd2b-ea57-4bdc-b78d-05a2c1b563b6")
-		)
-		(pin "2"
-			(uuid "bbb5790d-7545-461f-a3f5-ea1e7b1f6139")
-		)
-		(pin "3"
-			(uuid "d9a53fde-90af-4197-b1fc-98a06c65c2f1")
-		)
-		(pin "7"
-			(uuid "760fe7bc-80f7-4cb9-b547-19d95cddc049")
-		)
-		(pin "6"
-			(uuid "749f29bc-7afb-4b4d-ad2a-d0d7cd9404ea")
-		)
-		(pin "4"
-			(uuid "f5d70cef-895a-417d-b3e6-a59f29255728")
-		)
-		(pin "1"
-			(uuid "b9a8f2b6-78e3-414f-8698-d4ca2288a524")
-		)
-		(instances
-			(project "lcr"
-				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "U6")
-					(unit 3)
 				)
 			)
 		)
@@ -12803,6 +12686,39 @@
 			)
 		)
 		(property "Sim.Type" ""
+			(at 288.29 223.52 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 288.29 223.52 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 288.29 223.52 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
 			(at 288.29 223.52 90)
 			(hide yes)
 			(show_name no)
@@ -12937,6 +12853,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 436.88 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 436.88 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 436.88 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "8334cb83-8e16-45e2-a342-f5deb43940ba")
 		)
@@ -13061,6 +13010,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 436.88 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 436.88 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 436.88 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "1528c390-0708-4be4-96a6-f5defa4c3f6c")
 		)
@@ -13088,7 +13070,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "238faf57-49db-444d-a500-d9af7a88c1d3")
-		(property "Reference" "#PWR051"
+		(property "Reference" "#PWR047"
 			(at 454.66 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -13148,7 +13130,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR051")
+					(reference "#PWR047")
 					(unit 1)
 				)
 			)
@@ -13166,7 +13148,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "254258db-cef3-4966-84c8-888d8a044276")
-		(property "Reference" "#PWR038"
+		(property "Reference" "#PWR034"
 			(at 477.52 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -13226,7 +13208,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR038")
+					(reference "#PWR034")
 					(unit 1)
 				)
 			)
@@ -13244,7 +13226,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "261ce18b-5556-45d7-9f2e-e596ad41d551")
-		(property "Reference" "R4"
+		(property "Reference" "R7"
 			(at 354.33 101.5999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13332,6 +13314,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 351.79 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 351.79 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 351.79 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "d1ec1457-9484-44a7-83c1-9a3aa64aea27")
 		)
@@ -13341,7 +13356,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "R4")
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -13427,6 +13442,39 @@
 			)
 		)
 		(property "LCSC PART #" "C47190"
+			(at 229.87 339.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 229.87 339.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 229.87 339.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
 			(at 229.87 339.09 0)
 			(hide yes)
 			(show_name no)
@@ -13570,6 +13618,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 359.41 219.71 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 359.41 219.71 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 359.41 219.71 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "32520f09-fae8-4685-82f3-a8fb77449e76")
 		)
@@ -13597,7 +13678,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2e60179e-4a35-4011-9b44-8e69494b2b59")
-		(property "Reference" "#PWR027"
+		(property "Reference" "#PWR025"
 			(at 458.47 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -13657,26 +13738,25 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR027")
+					(reference "#PWR025")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:Opamp_Dual")
-		(at 524.51 219.71 0)
-		(unit 3)
+		(lib_id "Transistor_FET:2N7002")
+		(at 217.17 356.87 0)
+		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2f7116b9-d0b4-4888-b87b-62029c30b955")
-		(property "Reference" "U7"
-			(at 523.24 218.4399 0)
+		(uuid "2f7624c1-64b5-493e-ad52-431e928e1460")
+		(property "Reference" "Q2"
+			(at 221.996 355.6 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13686,8 +13766,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "LMH6643MMX"
-			(at 523.24 220.9799 0)
+		(property "Value" "NMOS"
+			(at 221.996 358.14 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13697,8 +13777,33 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "CustomFootprints:VSSOP-8_3x3mm_P0.65mm"
-			(at 524.51 219.71 0)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 222.25 358.775 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C7429875.pdf"
+			(at 222.25 360.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" "0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23"
+			(at 217.17 356.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13708,8 +13813,8 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C478382.pdf"
-			(at 524.51 219.71 0)
+		(property "LCSC PART #" "C7429875"
+			(at 217.17 356.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13719,8 +13824,8 @@
 				)
 			)
 		)
-		(property "Description" "Dual operational amplifier"
-			(at 524.51 219.71 0)
+		(property "Sim.Device" ""
+			(at 217.17 356.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13730,8 +13835,8 @@
 				)
 			)
 		)
-		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
-			(at 524.51 219.71 0)
+		(property "Sim.Library" ""
+			(at 217.17 356.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13741,8 +13846,8 @@
 				)
 			)
 		)
-		(property "Sim.Name" "kicad_builtin_opamp_dual"
-			(at 524.51 219.71 0)
+		(property "Sim.Name" ""
+			(at 217.17 356.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13751,91 +13856,21 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
-		(property "Sim.Device" "SUBCKT"
-			(at 524.51 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=out1 2=in1- 3=in1+ 4=vee 5=in2+ 6=in2- 7=out2 8=vcc"
-			(at 524.51 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC PART #" "C478382"
-			(at 524.51 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Already Have" "0"
-			(at 524.51 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Type" ""
-			(at 524.51 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "8"
-			(uuid "c1713922-0daf-4ef5-a72d-a409220b58a5")
-		)
-		(pin "5"
-			(uuid "161cfd2b-ea57-4bdc-b78d-05a2c1b563b7")
-		)
-		(pin "2"
-			(uuid "bbb5790d-7545-461f-a3f5-ea1e7b1f613a")
-		)
-		(pin "3"
-			(uuid "d9a53fde-90af-4197-b1fc-98a06c65c2f2")
-		)
-		(pin "7"
-			(uuid "760fe7bc-80f7-4cb9-b547-19d95cddc04a")
-		)
-		(pin "6"
-			(uuid "749f29bc-7afb-4b4d-ad2a-d0d7cd9404eb")
-		)
-		(pin "4"
-			(uuid "3d2cc19d-8529-4fa3-a83b-9e98c7988257")
 		)
 		(pin "1"
-			(uuid "b9a8f2b6-78e3-414f-8698-d4ca2288a525")
+			(uuid "553facb6-f4b3-4f1e-be88-0d2dfc197efe")
+		)
+		(pin "3"
+			(uuid "066c9a51-a317-4654-b645-ff734214d34a")
+		)
+		(pin "2"
+			(uuid "3b301ae2-bb07-45e4-ac30-51704bc156d9")
 		)
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "U7")
-					(unit 3)
+					(reference "Q2")
+					(unit 1)
 				)
 			)
 		)
@@ -13852,7 +13887,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "34863523-670d-4b69-a91b-64e6d2febcac")
-		(property "Reference" "R3"
+		(property "Reference" "R6"
 			(at 361.95 90.17 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13938,6 +13973,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 361.95 96.52 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 361.95 96.52 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 361.95 96.52 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "27ef434d-52e3-4878-97e4-874af9791125")
 		)
@@ -13947,7 +14015,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "R3")
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -13965,7 +14033,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3711bfa1-a19a-441a-bdc7-9cd8fad8fa11")
-		(property "Reference" "#PWR054"
+		(property "Reference" "#PWR050"
 			(at 430.53 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -14025,7 +14093,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR054")
+					(reference "#PWR050")
 					(unit 1)
 				)
 			)
@@ -14043,7 +14111,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "375d1459-8be1-4961-b3f1-1ed767a1eb0a")
-		(property "Reference" "#PWR091"
+		(property "Reference" "#PWR092"
 			(at 359.41 246.38 0)
 			(hide yes)
 			(show_name no)
@@ -14103,7 +14171,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR091")
+					(reference "#PWR092")
 					(unit 1)
 				)
 			)
@@ -14142,7 +14210,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector:Banana_Cliff_FCR7350R_S16N-PC_Horizontal"
+		(property "Footprint" "CustomFootprints:Banana_Red"
 			(at 189.23 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -14208,6 +14276,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 189.23 233.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 189.23 233.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 189.23 233.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "e4112525-83ba-45a3-bd04-9c93c801ad0c")
 		)
@@ -14232,7 +14333,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "39deda33-ab76-44be-b619-1f13c24f0847")
-		(property "Reference" "#PWR043"
+		(property "Reference" "#PWR039"
 			(at 422.91 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -14292,7 +14393,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR043")
+					(reference "#PWR039")
 					(unit 1)
 				)
 			)
@@ -14310,7 +14411,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3ab2fe1f-b355-4814-99d3-9a7790144af9")
-		(property "Reference" "#PWR050"
+		(property "Reference" "#PWR046"
 			(at 430.53 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -14370,7 +14471,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR050")
+					(reference "#PWR046")
 					(unit 1)
 				)
 			)
@@ -14388,7 +14489,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3f164ca0-aded-4120-8e11-1f45595e4824")
-		(property "Reference" "#PWR092"
+		(property "Reference" "#PWR095"
 			(at 167.64 254 0)
 			(hide yes)
 			(show_name no)
@@ -14448,7 +14549,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR092")
+					(reference "#PWR095")
 					(unit 1)
 				)
 			)
@@ -14465,7 +14566,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3f56f307-d2ed-4e75-9a8f-2364401133f4")
-		(property "Reference" "#PWR017"
+		(property "Reference" "#PWR015"
 			(at 134.62 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -14525,7 +14626,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR017")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -14543,7 +14644,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4272a0ec-1b32-48b5-bc8a-ad0a3ba0580a")
-		(property "Reference" "#PWR029"
+		(property "Reference" "#PWR027"
 			(at 491.49 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -14603,7 +14704,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR029")
+					(reference "#PWR027")
 					(unit 1)
 				)
 			)
@@ -14699,6 +14800,39 @@
 			)
 		)
 		(property "Sim.Type" ""
+			(at 167.64 240.03 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 167.64 240.03 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 167.64 240.03 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
 			(at 167.64 240.03 90)
 			(hide yes)
 			(show_name no)
@@ -14891,7 +15025,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "48139bad-4a44-4504-ae3f-e10469952696")
-		(property "Reference" "R28"
+		(property "Reference" "R31"
 			(at 132.842 352.552 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14968,6 +15102,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 130.81 356.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 130.81 356.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 130.81 356.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "81faa56e-59b9-445d-94d8-2f53ac0fb660")
 		)
@@ -14977,7 +15144,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "R28")
+					(reference "R31")
 					(unit 1)
 				)
 			)
@@ -14995,7 +15162,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4a28f001-4b6e-432f-9dce-1b0112d1cdb1")
-		(property "Reference" "R7"
+		(property "Reference" "R9"
 			(at 448.31 121.92 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15081,6 +15248,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 448.31 128.27 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 448.31 128.27 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 448.31 128.27 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "fbb701cb-7cc2-4205-b45f-fe2e0f57ee96")
 		)
@@ -15090,7 +15290,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "R7")
+					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -15108,7 +15308,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4ac0d076-681f-42e7-ba4c-ddd4bf06bf2e")
-		(property "Reference" "R12"
+		(property "Reference" "R13"
 			(at 349.25 163.83 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15194,6 +15394,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 349.25 170.18 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 349.25 170.18 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 349.25 170.18 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "fd693a41-5423-4ca9-b68e-da730b8c82eb")
 		)
@@ -15203,7 +15436,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "R12")
+					(reference "R13")
 					(unit 1)
 				)
 			)
@@ -15221,7 +15454,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4bcefa5c-a153-46f7-89f8-76663b8d6b66")
-		(property "Reference" "#PWR097"
+		(property "Reference" "#PWR0100"
 			(at 219.71 330.2 0)
 			(hide yes)
 			(show_name no)
@@ -15281,7 +15514,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR097")
+					(reference "#PWR0100")
 					(unit 1)
 				)
 			)
@@ -15384,6 +15617,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 134.62 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 134.62 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 134.62 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "e3b3f8e4-1739-4751-a01c-7d8bdc32e9b1")
 		)
@@ -15417,7 +15683,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "51510cf1-2689-46ed-b9b6-d35ee8caf160")
-		(property "Reference" "C32"
+		(property "Reference" "C30"
 			(at 288.29 160.02 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15503,6 +15769,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 288.29 167.64 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 288.29 167.64 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 288.29 167.64 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "66b45a29-79e7-4f7d-a560-534df5bf078f")
 		)
@@ -15512,7 +15811,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "C32")
+					(reference "C30")
 					(unit 1)
 				)
 			)
@@ -15530,7 +15829,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "52229bf2-94a1-4e1c-9c2b-74e5503b82de")
-		(property "Reference" "#PWR087"
+		(property "Reference" "#PWR090"
 			(at 521.97 231.14 0)
 			(hide yes)
 			(show_name no)
@@ -15590,7 +15889,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR087")
+					(reference "#PWR090")
 					(unit 1)
 				)
 			)
@@ -15608,7 +15907,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "522cb166-f502-4ce2-8b9d-1803d6081038")
-		(property "Reference" "#PWR078"
+		(property "Reference" "#PWR081"
 			(at 433.07 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -15669,7 +15968,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR078")
+					(reference "#PWR081")
 					(unit 1)
 				)
 			)
@@ -15687,7 +15986,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "52699b8c-d67c-48d1-82bf-d6b879c3569d")
-		(property "Reference" "#PWR070"
+		(property "Reference" "#PWR072"
 			(at 521.97 208.28 0)
 			(hide yes)
 			(show_name no)
@@ -15747,8 +16046,152 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR070")
+					(reference "#PWR072")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Amplifier_Operational:OPA2197xDGK")
+		(at 524.51 219.71 0)
+		(unit 3)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5299cc6b-692e-4524-bedf-df132b301ee5")
+		(property "Reference" "U7"
+			(at 523.24 218.4399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "OPA2197xDGK"
+			(at 523.24 220.9799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "CustomFootprints:VSSOP-8_3x3mm_P0.65mm"
+			(at 524.51 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa2197.pdf"
+			(at 524.51 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Dual 36V, Precision, Rail-to-Rail Input/Output, Low Offset Voltage, Operational Amplifier, VSSOP-8"
+			(at 524.51 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC PART #" "C2867268"
+			(at 524.51 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 524.51 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 524.51 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 524.51 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b7326cec-a834-4a1d-b2f2-5fc7f94ec126")
+		)
+		(pin "5"
+			(uuid "2d8a10ff-4c22-4846-8507-afd207d8f259")
+		)
+		(pin "4"
+			(uuid "aa44b9a6-d482-4e1b-9b66-405618ecb520")
+		)
+		(pin "7"
+			(uuid "f67861e2-a173-49ff-834f-3d1beee08626")
+		)
+		(pin "6"
+			(uuid "f65250e8-2ea3-4f69-860a-fb8d1f2bee49")
+		)
+		(pin "2"
+			(uuid "07bb9636-6279-47f7-97d3-8dba282fac09")
+		)
+		(pin "3"
+			(uuid "5f87db97-bb77-4cf1-928b-5ba1ec974b54")
+		)
+		(pin "8"
+			(uuid "c9dfe088-3038-475c-a706-75f43a721976")
+		)
+		(instances
+			(project "lcr"
+				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
+					(reference "U7")
+					(unit 3)
 				)
 			)
 		)
@@ -15931,6 +16374,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 124.46 339.09 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 124.46 339.09 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 124.46 339.09 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "3dcd3b58-b041-4622-b0f9-856b0dc9aa34")
 		)
@@ -16023,6 +16499,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 504.19 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 504.19 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 504.19 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "e6c89778-55fe-4f19-bf88-835eec3dad3a")
 		)
@@ -16068,7 +16577,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector:Banana_Cliff_FCR7350B_S16N-PC_Horizontal"
+		(property "Footprint" "CustomFootprints:Banana_Black"
 			(at 217.17 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -16134,6 +16643,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 217.17 233.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 217.17 233.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 217.17 233.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "a4863bad-9f86-4a24-8889-be75f920c38a")
 		)
@@ -16157,7 +16699,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "552b858d-9352-4867-bf84-aa35b3a22bbb")
-		(property "Reference" "C24"
+		(property "Reference" "C20"
 			(at 461.772 83.82 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16245,6 +16787,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 458.47 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 458.47 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 458.47 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "43d8d75e-cadc-49ee-b9b4-182c72fce188")
 		)
@@ -16254,7 +16829,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "C24")
+					(reference "C20")
 					(unit 1)
 				)
 			)
@@ -16337,6 +16912,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 477.52 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 477.52 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 477.52 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "671967dd-73ae-4bf0-b8cd-d1a642ea3c8e")
 		)
@@ -16360,7 +16968,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "55ba67ad-46d0-4809-8b05-b4715eaa44a1")
-		(property "Reference" "R26"
+		(property "Reference" "R29"
 			(at 304.8 318.77 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16437,6 +17045,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 303.53 320.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 303.53 320.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 303.53 320.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "d44ddb4a-1c66-4113-b7cb-2009dd70e7d6")
 		)
@@ -16446,7 +17087,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "R26")
+					(reference "R29")
 					(unit 1)
 				)
 			)
@@ -16464,7 +17105,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "57035097-d1e1-48d0-9643-35ddf19c3107")
-		(property "Reference" "#PWR036"
+		(property "Reference" "#PWR033"
 			(at 250.19 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -16524,7 +17165,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR036")
+					(reference "#PWR033")
 					(unit 1)
 				)
 			)
@@ -16620,6 +17261,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 308.61 339.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 308.61 339.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 308.61 339.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "d7838b14-cc0c-4373-90dd-c9b8d5732c26")
 		)
@@ -16665,7 +17339,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5c3d9add-6365-4b96-8ad9-6face792fcfc")
-		(property "Reference" "#PWR028"
+		(property "Reference" "#PWR026"
 			(at 477.52 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -16725,7 +17399,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR028")
+					(reference "#PWR026")
 					(unit 1)
 				)
 			)
@@ -16831,6 +17505,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 331.47 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 331.47 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 331.47 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "5662f945-073f-4f86-bcec-edf1032ebe1a")
 		)
@@ -16854,7 +17561,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "63ddd473-e5cf-4cbd-9b99-4ff012f76cee")
-		(property "Reference" "R23"
+		(property "Reference" "R26"
 			(at 176.53 318.77 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16931,6 +17638,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 175.26 320.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 175.26 320.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 175.26 320.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "7b5e33dd-256c-4b60-8d87-c61a88f235ce")
 		)
@@ -16940,8 +17680,150 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "R23")
+					(reference "R26")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Amplifier_Operational:OPA2197xDGK")
+		(at 361.95 83.82 0)
+		(unit 2)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "651e72b9-5695-446f-b1fa-c4105a3787ca")
+		(property "Reference" "U4"
+			(at 361.95 73.66 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "OPA2197xDGK"
+			(at 361.95 76.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "CustomFootprints:VSSOP-8_3x3mm_P0.65mm"
+			(at 361.95 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa2197.pdf"
+			(at 361.95 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Dual 36V, Precision, Rail-to-Rail Input/Output, Low Offset Voltage, Operational Amplifier, VSSOP-8"
+			(at 361.95 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC PART #" "C2867268"
+			(at 361.95 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 361.95 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 361.95 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 361.95 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b7326cec-a834-4a1d-b2f2-5fc7f94ec127")
+		)
+		(pin "5"
+			(uuid "7a85fca3-32ec-44c6-a12d-feb19b2235dd")
+		)
+		(pin "4"
+			(uuid "7983ca52-34bb-43aa-a194-fee79c338ddf")
+		)
+		(pin "7"
+			(uuid "daf3063c-c184-41cd-aff5-1213d760413c")
+		)
+		(pin "6"
+			(uuid "228aa8e7-996e-4781-8ec5-951a0bf94f82")
+		)
+		(pin "2"
+			(uuid "07bb9636-6279-47f7-97d3-8dba282fac0a")
+		)
+		(pin "3"
+			(uuid "5f87db97-bb77-4cf1-928b-5ba1ec974b55")
+		)
+		(pin "8"
+			(uuid "1d01ee4d-06a2-4e36-a896-067c9cf68044")
+		)
+		(instances
+			(project "lcr"
+				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
+					(reference "U4")
+					(unit 2)
 				)
 			)
 		)
@@ -16958,7 +17840,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "66065f58-964a-4774-9433-323712c200d3")
-		(property "Reference" "R2"
+		(property "Reference" "R4"
 			(at 326.39 86.3599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17046,6 +17928,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 323.85 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 323.85 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 323.85 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "8d86b95d-a47a-40bc-80c4-f35b542bae91")
 		)
@@ -17055,7 +17970,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "R2")
+					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -17073,7 +17988,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "67582766-fea4-48d0-bf20-06604e024eff")
-		(property "Reference" "#PWR075"
+		(property "Reference" "#PWR077"
 			(at 175.26 222.25 0)
 			(hide yes)
 			(show_name no)
@@ -17133,14 +18048,156 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR075")
+					(reference "#PWR077")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:Opamp_Dual")
+		(lib_id "Amplifier_Operational:OPA2197xDGK")
+		(at 252.73 223.52 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "684771fe-d241-4fcd-824b-a68412366598")
+		(property "Reference" "U6"
+			(at 252.73 213.36 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "OPA2197xDGK"
+			(at 252.73 215.9 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "CustomFootprints:VSSOP-8_3x3mm_P0.65mm"
+			(at 252.73 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa2197.pdf"
+			(at 252.73 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Dual 36V, Precision, Rail-to-Rail Input/Output, Low Offset Voltage, Operational Amplifier, VSSOP-8"
+			(at 252.73 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC PART #" "C2867268"
+			(at 252.73 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 252.73 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 252.73 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 252.73 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b7326cec-a834-4a1d-b2f2-5fc7f94ec126")
+		)
+		(pin "5"
+			(uuid "2d8a10ff-4c22-4846-8507-afd207d8f259")
+		)
+		(pin "4"
+			(uuid "7983ca52-34bb-43aa-a194-fee79c338dde")
+		)
+		(pin "7"
+			(uuid "f67861e2-a173-49ff-834f-3d1beee08626")
+		)
+		(pin "6"
+			(uuid "f65250e8-2ea3-4f69-860a-fb8d1f2bee49")
+		)
+		(pin "2"
+			(uuid "07bb9636-6279-47f7-97d3-8dba282fac09")
+		)
+		(pin "3"
+			(uuid "5f87db97-bb77-4cf1-928b-5ba1ec974b54")
+		)
+		(pin "8"
+			(uuid "1d01ee4d-06a2-4e36-a896-067c9cf68043")
+		)
+		(instances
+			(project "lcr"
+				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
+					(reference "U6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Amplifier_Operational:OPA2197xDGK")
 		(at 321.31 170.18 0)
 		(unit 1)
 		(body_style 1)
@@ -17150,7 +18207,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "69ad2f35-f90e-40f1-8493-e52be3dededf")
+		(uuid "6dfce79f-b516-47e8-9f78-59556458d960")
 		(property "Reference" "U7"
 			(at 321.31 160.02 0)
 			(show_name no)
@@ -17161,7 +18218,7 @@
 				)
 			)
 		)
-		(property "Value" "LMH6643MMX"
+		(property "Value" "OPA2197xDGK"
 			(at 321.31 162.56 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17182,7 +18239,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C478382.pdf"
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa2197.pdf"
 			(at 321.31 170.18 0)
 			(hide yes)
 			(show_name no)
@@ -17193,7 +18250,7 @@
 				)
 			)
 		)
-		(property "Description" "Dual operational amplifier"
+		(property "Description" "Dual 36V, Precision, Rail-to-Rail Input/Output, Low Offset Voltage, Operational Amplifier, VSSOP-8"
 			(at 321.31 170.18 0)
 			(hide yes)
 			(show_name no)
@@ -17204,7 +18261,7 @@
 				)
 			)
 		)
-		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
+		(property "LCSC PART #" "C2867268"
 			(at 321.31 170.18 0)
 			(hide yes)
 			(show_name no)
@@ -17215,7 +18272,7 @@
 				)
 			)
 		)
-		(property "Sim.Name" "kicad_builtin_opamp_dual"
+		(property "Sim.Device" ""
 			(at 321.31 170.18 0)
 			(hide yes)
 			(show_name no)
@@ -17226,7 +18283,7 @@
 				)
 			)
 		)
-		(property "Sim.Device" "SUBCKT"
+		(property "Sim.Library" ""
 			(at 321.31 170.18 0)
 			(hide yes)
 			(show_name no)
@@ -17237,7 +18294,7 @@
 				)
 			)
 		)
-		(property "Sim.Pins" "1=out1 2=in1- 3=in1+ 4=vee 5=in2+ 6=in2- 7=out2 8=vcc"
+		(property "Sim.Name" ""
 			(at 321.31 170.18 0)
 			(hide yes)
 			(show_name no)
@@ -17247,63 +18304,30 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
-		(property "LCSC PART #" "C478382"
-			(at 321.31 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Already Have" "0"
-			(at 321.31 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Type" ""
-			(at 321.31 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "8"
-			(uuid "6b9e75aa-b800-40d3-abd2-48a3df4a7553")
-		)
-		(pin "5"
-			(uuid "161cfd2b-ea57-4bdc-b78d-05a2c1b563b8")
-		)
-		(pin "2"
-			(uuid "53170832-9a4f-45ea-aec8-203fce2c8ebc")
-		)
-		(pin "3"
-			(uuid "e406f5dd-fe9a-4fd1-8a88-c2b13db0ea5d")
-		)
-		(pin "7"
-			(uuid "760fe7bc-80f7-4cb9-b547-19d95cddc04b")
-		)
-		(pin "6"
-			(uuid "749f29bc-7afb-4b4d-ad2a-d0d7cd9404ec")
-		)
-		(pin "4"
-			(uuid "928f2348-9b97-4205-8747-de697d36a79c")
 		)
 		(pin "1"
-			(uuid "b466f75a-668f-4a61-8f49-f6a254e9d96b")
+			(uuid "add690c3-aabe-4992-93bf-c35161164a65")
+		)
+		(pin "5"
+			(uuid "2d8a10ff-4c22-4846-8507-afd207d8f25b")
+		)
+		(pin "4"
+			(uuid "7983ca52-34bb-43aa-a194-fee79c338de0")
+		)
+		(pin "7"
+			(uuid "f67861e2-a173-49ff-834f-3d1beee08628")
+		)
+		(pin "6"
+			(uuid "f65250e8-2ea3-4f69-860a-fb8d1f2bee4b")
+		)
+		(pin "2"
+			(uuid "12d601b4-18b9-4b8b-8d3b-2d72550c8fa3")
+		)
+		(pin "3"
+			(uuid "0793c1b7-891f-4ffc-92ca-c9ceb1bdd32f")
+		)
+		(pin "8"
+			(uuid "1d01ee4d-06a2-4e36-a896-067c9cf68045")
 		)
 		(instances
 			(project "lcr"
@@ -17404,7 +18428,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6f0cd156-fab8-4c38-997f-91bc89f6b6bb")
-		(property "Reference" "#PWR074"
+		(property "Reference" "#PWR076"
 			(at 359.41 217.17 0)
 			(hide yes)
 			(show_name no)
@@ -17464,7 +18488,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR074")
+					(reference "#PWR076")
 					(unit 1)
 				)
 			)
@@ -17560,6 +18584,39 @@
 			)
 		)
 		(property "Sim.Type" ""
+			(at 208.28 215.9 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 208.28 215.9 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 208.28 215.9 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
 			(at 208.28 215.9 90)
 			(hide yes)
 			(show_name no)
@@ -17685,6 +18742,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 372.11 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 372.11 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 372.11 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "5731b58b-9737-4d66-b314-b566014b3636")
 		)
@@ -17709,7 +18799,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "70bc292e-0a09-48a5-a729-1f85788bbcfc")
-		(property "Reference" "#PWR039"
+		(property "Reference" "#PWR035"
 			(at 491.49 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -17769,7 +18859,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR039")
+					(reference "#PWR035")
 					(unit 1)
 				)
 			)
@@ -17787,7 +18877,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "713e55f3-2a0b-4783-a3dd-779fd8a368b9")
-		(property "Reference" "R18"
+		(property "Reference" "R21"
 			(at 298.45 228.5999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17875,6 +18965,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 295.91 229.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 295.91 229.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 295.91 229.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "4d786fe9-aef2-45ad-8183-e712e12a047f")
 		)
@@ -17884,7 +19007,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "R18")
+					(reference "R21")
 					(unit 1)
 				)
 			)
@@ -17979,7 +19102,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "73b07f4b-9068-4309-812b-8cdf5e42b629")
-		(property "Reference" "R1"
+		(property "Reference" "R2"
 			(at 243.84 73.66 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18065,6 +19188,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 243.84 78.74 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 243.84 78.74 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 243.84 78.74 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "1074b85b-ae9c-49e7-a334-5d860576f393")
 		)
@@ -18074,7 +19230,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "R1")
+					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -18180,6 +19336,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 331.47 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 331.47 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 331.47 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "d6678b26-3ba6-43e1-a51d-98dafec5e953")
 		)
@@ -18204,7 +19393,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "765d3d3b-2af4-46e0-9f20-40f81ee5a681")
-		(property "Reference" "#PWR055"
+		(property "Reference" "#PWR052"
 			(at 454.66 127 0)
 			(hide yes)
 			(show_name no)
@@ -18264,7 +19453,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR055")
+					(reference "#PWR052")
 					(unit 1)
 				)
 			)
@@ -18448,6 +19637,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 175.26 208.28 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 175.26 208.28 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 175.26 208.28 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "eed4b199-79c3-4fe7-95e4-6c6fbb7b9af1")
 		)
@@ -18475,7 +19697,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7c91fe52-bd1f-42cc-9bf9-d62f27bece75")
-		(property "Reference" "#PWR069"
+		(property "Reference" "#PWR071"
 			(at 474.98 208.28 0)
 			(hide yes)
 			(show_name no)
@@ -18535,7 +19757,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR069")
+					(reference "#PWR071")
 					(unit 1)
 				)
 			)
@@ -18615,6 +19837,148 @@
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
 					(reference "#PWR08")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Amplifier_Operational:OPA2197xDGK")
+		(at 252.73 167.64 0)
+		(unit 2)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7e7dc97c-c9d4-4686-afbc-3dbe18c21264")
+		(property "Reference" "U6"
+			(at 252.73 157.48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "OPA2197xDGK"
+			(at 252.73 160.02 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "CustomFootprints:VSSOP-8_3x3mm_P0.65mm"
+			(at 252.73 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa2197.pdf"
+			(at 252.73 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Dual 36V, Precision, Rail-to-Rail Input/Output, Low Offset Voltage, Operational Amplifier, VSSOP-8"
+			(at 252.73 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC PART #" "C2867268"
+			(at 252.73 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 252.73 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 252.73 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 252.73 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b7326cec-a834-4a1d-b2f2-5fc7f94ec126")
+		)
+		(pin "5"
+			(uuid "2d8a10ff-4c22-4846-8507-afd207d8f259")
+		)
+		(pin "4"
+			(uuid "7983ca52-34bb-43aa-a194-fee79c338dde")
+		)
+		(pin "7"
+			(uuid "f67861e2-a173-49ff-834f-3d1beee08626")
+		)
+		(pin "6"
+			(uuid "f65250e8-2ea3-4f69-860a-fb8d1f2bee49")
+		)
+		(pin "2"
+			(uuid "07bb9636-6279-47f7-97d3-8dba282fac09")
+		)
+		(pin "3"
+			(uuid "5f87db97-bb77-4cf1-928b-5ba1ec974b54")
+		)
+		(pin "8"
+			(uuid "1d01ee4d-06a2-4e36-a896-067c9cf68043")
+		)
+		(instances
+			(project "lcr"
+				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
+					(reference "U6")
+					(unit 2)
 				)
 			)
 		)
@@ -18719,6 +20083,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 424.18 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 424.18 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 424.18 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "640cf767-2d3b-4330-b592-72dec6fd77c9")
 		)
@@ -18735,6 +20132,150 @@
 		)
 	)
 	(symbol
+		(lib_id "Amplifier_Operational:OPA2197xDGK")
+		(at 477.52 219.71 0)
+		(unit 3)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "81c9915d-a5e0-4fa2-b89b-d7c2a502fb15")
+		(property "Reference" "U6"
+			(at 476.25 218.4399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "OPA2197xDGK"
+			(at 476.25 220.9799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "CustomFootprints:VSSOP-8_3x3mm_P0.65mm"
+			(at 477.52 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa2197.pdf"
+			(at 477.52 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Dual 36V, Precision, Rail-to-Rail Input/Output, Low Offset Voltage, Operational Amplifier, VSSOP-8"
+			(at 477.52 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC PART #" "C2867268"
+			(at 477.52 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 477.52 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 477.52 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 477.52 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b7326cec-a834-4a1d-b2f2-5fc7f94ec126")
+		)
+		(pin "5"
+			(uuid "2d8a10ff-4c22-4846-8507-afd207d8f259")
+		)
+		(pin "4"
+			(uuid "7983ca52-34bb-43aa-a194-fee79c338dde")
+		)
+		(pin "7"
+			(uuid "f67861e2-a173-49ff-834f-3d1beee08626")
+		)
+		(pin "6"
+			(uuid "f65250e8-2ea3-4f69-860a-fb8d1f2bee49")
+		)
+		(pin "2"
+			(uuid "07bb9636-6279-47f7-97d3-8dba282fac09")
+		)
+		(pin "3"
+			(uuid "5f87db97-bb77-4cf1-928b-5ba1ec974b54")
+		)
+		(pin "8"
+			(uuid "1d01ee4d-06a2-4e36-a896-067c9cf68043")
+		)
+		(instances
+			(project "lcr"
+				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
+					(reference "U6")
+					(unit 3)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3V3")
 		(at 217.17 71.12 0)
 		(unit 1)
@@ -18745,7 +20286,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "831a34ba-e66a-47c0-b11c-51577244195a")
-		(property "Reference" "#PWR018"
+		(property "Reference" "#PWR016"
 			(at 217.17 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -18805,8 +20346,152 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR018")
+					(reference "#PWR016")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Amplifier_Operational:OPA2197xDGK")
+		(at 441.96 219.71 0)
+		(unit 3)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "83aca6f9-2130-4a0c-869d-56ef21504db2")
+		(property "Reference" "U4"
+			(at 440.69 218.4399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "OPA2197xDGK"
+			(at 440.69 220.9799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "CustomFootprints:VSSOP-8_3x3mm_P0.65mm"
+			(at 441.96 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa2197.pdf"
+			(at 441.96 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Dual 36V, Precision, Rail-to-Rail Input/Output, Low Offset Voltage, Operational Amplifier, VSSOP-8"
+			(at 441.96 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC PART #" "C2867268"
+			(at 441.96 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 441.96 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 441.96 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 441.96 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b7326cec-a834-4a1d-b2f2-5fc7f94ec126")
+		)
+		(pin "5"
+			(uuid "2d8a10ff-4c22-4846-8507-afd207d8f259")
+		)
+		(pin "4"
+			(uuid "e5bb9841-70be-4e0e-9a70-31a43f967c23")
+		)
+		(pin "7"
+			(uuid "f67861e2-a173-49ff-834f-3d1beee08626")
+		)
+		(pin "6"
+			(uuid "f65250e8-2ea3-4f69-860a-fb8d1f2bee49")
+		)
+		(pin "2"
+			(uuid "07bb9636-6279-47f7-97d3-8dba282fac09")
+		)
+		(pin "3"
+			(uuid "5f87db97-bb77-4cf1-928b-5ba1ec974b54")
+		)
+		(pin "8"
+			(uuid "a6aa9dc6-0a81-4acd-a1e2-016cf6aa50b2")
+		)
+		(instances
+			(project "lcr"
+				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
+					(reference "U4")
+					(unit 3)
 				)
 			)
 		)
@@ -18823,7 +20508,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "847fa253-1960-4d4f-93c7-05d8f4fd421d")
-		(property "Reference" "#PWR035"
+		(property "Reference" "#PWR032"
 			(at 134.62 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -18883,358 +20568,8 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR035")
+					(reference "#PWR032")
 					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Opamp_Dual")
-		(at 252.73 223.52 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "86db8220-baf8-4b99-a7f4-10f2d2c648a9")
-		(property "Reference" "U6"
-			(at 252.73 213.36 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LMH6643MMX"
-			(at 252.73 215.9 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "CustomFootprints:VSSOP-8_3x3mm_P0.65mm"
-			(at 252.73 223.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C478382.pdf"
-			(at 252.73 223.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Dual operational amplifier"
-			(at 252.73 223.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
-			(at 252.73 223.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Name" "kicad_builtin_opamp_dual"
-			(at 252.73 223.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "SUBCKT"
-			(at 252.73 223.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=out1 2=in1- 3=in1+ 4=vee 5=in2+ 6=in2- 7=out2 8=vcc"
-			(at 252.73 223.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC PART #" "C478382"
-			(at 252.73 223.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Already Have" "0"
-			(at 252.73 223.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Type" ""
-			(at 252.73 223.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "8"
-			(uuid "6b9e75aa-b800-40d3-abd2-48a3df4a7554")
-		)
-		(pin "5"
-			(uuid "161cfd2b-ea57-4bdc-b78d-05a2c1b563b9")
-		)
-		(pin "2"
-			(uuid "b20a04cd-f1ca-4175-80df-d18be83cbf08")
-		)
-		(pin "3"
-			(uuid "4925818e-6e62-446b-be0c-355dbc950bf8")
-		)
-		(pin "7"
-			(uuid "760fe7bc-80f7-4cb9-b547-19d95cddc04c")
-		)
-		(pin "6"
-			(uuid "749f29bc-7afb-4b4d-ad2a-d0d7cd9404ed")
-		)
-		(pin "4"
-			(uuid "928f2348-9b97-4205-8747-de697d36a79d")
-		)
-		(pin "1"
-			(uuid "635272dc-9e52-4c4f-98d6-c3329ca97762")
-		)
-		(instances
-			(project "lcr"
-				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "U6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Opamp_Dual")
-		(at 252.73 167.64 0)
-		(unit 2)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "878c853a-be89-4521-a3f3-028e6d535578")
-		(property "Reference" "U6"
-			(at 252.73 158.75 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LMH6643MMX"
-			(at 252.73 161.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "CustomFootprints:VSSOP-8_3x3mm_P0.65mm"
-			(at 252.73 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C478382.pdf"
-			(at 252.73 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Dual operational amplifier"
-			(at 252.73 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
-			(at 252.73 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Name" "kicad_builtin_opamp_dual"
-			(at 252.73 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "SUBCKT"
-			(at 252.73 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=out1 2=in1- 3=in1+ 4=vee 5=in2+ 6=in2- 7=out2 8=vcc"
-			(at 252.73 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC PART #" "C478382"
-			(at 252.73 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Already Have" "0"
-			(at 252.73 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Type" ""
-			(at 252.73 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "8"
-			(uuid "6b9e75aa-b800-40d3-abd2-48a3df4a7552")
-		)
-		(pin "5"
-			(uuid "9dea1aa1-6bf6-450b-89f2-ca4cb1cd08e5")
-		)
-		(pin "2"
-			(uuid "bbb5790d-7545-461f-a3f5-ea1e7b1f6138")
-		)
-		(pin "3"
-			(uuid "d9a53fde-90af-4197-b1fc-98a06c65c2f0")
-		)
-		(pin "7"
-			(uuid "d1753753-de1d-4842-8633-28228c9ad3f3")
-		)
-		(pin "6"
-			(uuid "8bd1ff2f-12dc-40ba-9a3e-dabe4f5cc369")
-		)
-		(pin "4"
-			(uuid "928f2348-9b97-4205-8747-de697d36a79b")
-		)
-		(pin "1"
-			(uuid "b9a8f2b6-78e3-414f-8698-d4ca2288a523")
-		)
-		(instances
-			(project "lcr"
-				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "U6")
-					(unit 2)
 				)
 			)
 		)
@@ -19316,6 +20651,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 491.49 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 491.49 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 491.49 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "def0a479-4d10-4e67-8e00-bf84d03e8ec5")
 		)
@@ -19340,7 +20708,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "88e85ef5-d67b-4098-912a-c1b20ecc0ad7")
-		(property "Reference" "#PWR062"
+		(property "Reference" "#PWR061"
 			(at 359.41 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -19400,7 +20768,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR062")
+					(reference "#PWR061")
 					(unit 1)
 				)
 			)
@@ -19418,7 +20786,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "890c39cd-4951-479c-9eae-8843e45cb294")
-		(property "Reference" "#PWR085"
+		(property "Reference" "#PWR088"
 			(at 439.42 231.14 0)
 			(hide yes)
 			(show_name no)
@@ -19478,7 +20846,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR085")
+					(reference "#PWR088")
 					(unit 1)
 				)
 			)
@@ -19584,6 +20952,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 278.13 339.09 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 278.13 339.09 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 278.13 339.09 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "150e7506-ef20-4a1e-bb41-e0a9cb4c8e80")
 		)
@@ -19610,7 +21011,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8bc89216-08ce-4234-b4b7-e42a7526c57d")
-		(property "Reference" "R25"
+		(property "Reference" "R28"
 			(at 244.094 318.77 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19687,6 +21088,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 242.57 320.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 242.57 320.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 242.57 320.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "79d64760-63d0-42d4-b9ee-561fbbcab0a2")
 		)
@@ -19696,7 +21130,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "R25")
+					(reference "R28")
 					(unit 1)
 				)
 			)
@@ -19781,181 +21215,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:Opamp_Dual")
-		(at 283.21 81.28 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8f23ad26-ec4e-4ed4-b29d-506987930065")
-		(property "Reference" "U4"
-			(at 283.21 71.12 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LMH6643MMX"
-			(at 283.21 73.66 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "CustomFootprints:VSSOP-8_3x3mm_P0.65mm"
-			(at 283.21 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C478382.pdf"
-			(at 283.21 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Dual operational amplifier"
-			(at 283.21 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
-			(at 283.21 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Name" "kicad_builtin_opamp_dual"
-			(at 283.21 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "SUBCKT"
-			(at 283.21 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=out1 2=in1- 3=in1+ 4=vee 5=in2+ 6=in2- 7=out2 8=vcc"
-			(at 283.21 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC PART #" "C478382"
-			(at 283.21 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Already Have" "0"
-			(at 283.21 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Type" ""
-			(at 283.21 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "8"
-			(uuid "6b9e75aa-b800-40d3-abd2-48a3df4a7551")
-		)
-		(pin "5"
-			(uuid "161cfd2b-ea57-4bdc-b78d-05a2c1b563b5")
-		)
-		(pin "2"
-			(uuid "dfdf54b1-165c-440b-9d59-6a6a33f4e651")
-		)
-		(pin "3"
-			(uuid "b811a810-49f0-4902-ae20-cbe339088ee6")
-		)
-		(pin "7"
-			(uuid "760fe7bc-80f7-4cb9-b547-19d95cddc048")
-		)
-		(pin "6"
-			(uuid "749f29bc-7afb-4b4d-ad2a-d0d7cd9404e9")
-		)
-		(pin "4"
-			(uuid "928f2348-9b97-4205-8747-de697d36a79a")
-		)
-		(pin "1"
-			(uuid "ac645e87-3181-4293-80a3-d2f48ecdac0f")
-		)
-		(instances
-			(project "lcr"
-				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "U4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3V3")
 		(at 439.42 204.47 0)
 		(unit 1)
@@ -19967,7 +21226,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "90f400dd-d069-4706-920f-86b728fb9832")
-		(property "Reference" "#PWR068"
+		(property "Reference" "#PWR070"
 			(at 439.42 208.28 0)
 			(hide yes)
 			(show_name no)
@@ -20027,7 +21286,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR068")
+					(reference "#PWR070")
 					(unit 1)
 				)
 			)
@@ -20045,7 +21304,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "912f5677-b6ae-4f48-91fa-22633610033b")
-		(property "Reference" "R13"
+		(property "Reference" "R15"
 			(at 298.45 172.7199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20133,6 +21392,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 295.91 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 295.91 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 295.91 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "b2f68879-5e9e-477b-abff-95daf6935f47")
 		)
@@ -20142,7 +21434,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "R13")
+					(reference "R15")
 					(unit 1)
 				)
 			)
@@ -20238,6 +21530,39 @@
 			)
 		)
 		(property "Sim.Type" ""
+			(at 422.91 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 422.91 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 422.91 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
 			(at 422.91 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -20363,6 +21688,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 440.69 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 440.69 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 440.69 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "3eaede89-0d40-4fed-8f07-9741b19ba374")
 		)
@@ -20396,7 +21754,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "95c4d9af-21d6-4bfa-978e-4a5246d360bc")
-		(property "Reference" "C14"
+		(property "Reference" "C13"
 			(at 209.55 66.04 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20482,6 +21840,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 209.55 73.66 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 209.55 73.66 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 209.55 73.66 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "7757d19f-b176-4ddc-b0da-b48a040b69f0")
 		)
@@ -20491,7 +21882,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "C14")
+					(reference "C13")
 					(unit 1)
 				)
 			)
@@ -20509,7 +21900,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "979dbba8-dd03-4481-af5e-c2ac562e484d")
-		(property "Reference" "C22"
+		(property "Reference" "C18"
 			(at 254 83.8199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20597,6 +21988,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 250.19 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 250.19 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 250.19 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "93342bbd-b015-47b5-9c0a-06d3acf202fe")
 		)
@@ -20606,7 +22030,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "C22")
+					(reference "C18")
 					(unit 1)
 				)
 			)
@@ -20624,7 +22048,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "97bbe795-eb14-4209-a7b5-e36cc6d73747")
-		(property "Reference" "C19"
+		(property "Reference" "C16"
 			(at 115.57 80.0099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20712,6 +22136,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 111.76 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 111.76 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 111.76 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "8bfbe144-0294-47d0-bd10-6666be8daf22")
 		)
@@ -20721,7 +22178,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "C19")
+					(reference "C16")
 					(unit 1)
 				)
 			)
@@ -20739,7 +22196,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9824efd0-a495-4e61-be2a-df499a3f42af")
-		(property "Reference" "R9"
+		(property "Reference" "R10"
 			(at 298.45 160.0199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20827,6 +22284,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 295.91 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 295.91 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 295.91 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "4d218a39-131c-4f8e-89da-932a727fc8d8")
 		)
@@ -20836,7 +22326,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "R9")
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -20942,6 +22432,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 495.3 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 495.3 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 495.3 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "6b51fe2e-d6c0-45a8-ab75-00c22d54a33e")
 		)
@@ -20968,7 +22491,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9ac0c244-71e6-4135-8ef5-93c11d49d80f")
-		(property "Reference" "C23"
+		(property "Reference" "C19"
 			(at 419.862 83.82 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21056,6 +22579,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 422.91 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 422.91 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 422.91 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "5f24b61a-4349-4840-8e72-b76fe3fbfb59")
 		)
@@ -21065,7 +22621,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "C23")
+					(reference "C19")
 					(unit 1)
 				)
 			)
@@ -21150,145 +22706,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Simulation_SPICE:NMOS")
-		(at 217.17 356.87 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "9d62d5b0-8c79-414e-a39d-c0aefb5a09b9")
-		(property "Reference" "Q2"
-			(at 221.996 355.6 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "NMOS"
-			(at 221.996 358.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-3"
-			(at 222.25 354.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C7429875.pdf"
-			(at 217.17 369.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "N-MOSFET transistor, drain/source/gate"
-			(at 217.17 356.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "NMOS"
-			(at 217.17 374.015 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Type" "VDMOS"
-			(at 217.17 375.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 217.17 372.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Already Have" "0"
-			(at 217.17 356.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC PART #" "C7429875"
-			(at 217.17 356.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "3"
-			(uuid "c69f25ef-cad5-427a-af0a-43e816c4de78")
-		)
-		(pin "1"
-			(uuid "c5570c02-f413-41dc-a082-cd1a1b8d69cb")
-		)
-		(pin "2"
-			(uuid "5646d896-7dd0-47b0-9b74-f3868ab2a70b")
-		)
-		(instances
-			(project "lcr"
-				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "Q2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 462.28 219.71 90)
 		(unit 1)
@@ -21300,7 +22717,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9f8d7ccb-f702-44aa-905d-71d46fecb16d")
-		(property "Reference" "#PWR079"
+		(property "Reference" "#PWR082"
 			(at 468.63 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -21361,7 +22778,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR079")
+					(reference "#PWR082")
 					(unit 1)
 				)
 			)
@@ -21457,7 +22874,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a290365f-03c0-4d5c-b543-a3dda83d96c7")
-		(property "Reference" "R6"
+		(property "Reference" "R8"
 			(at 448.31 107.95 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21543,6 +22960,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 448.31 114.3 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 448.31 114.3 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 448.31 114.3 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "a4644cf0-c5e9-4681-aadb-12837e75cd5b")
 		)
@@ -21552,7 +23002,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "R6")
+					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -21648,6 +23098,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 154.94 339.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 154.94 339.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 154.94 339.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "f1e6370b-ebca-4be5-a066-25abc8a13871")
 		)
@@ -21692,7 +23175,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a3e8e528-92cd-443f-bcd5-bd152f8594bb")
-		(property "Reference" "R27"
+		(property "Reference" "R30"
 			(at 314.96 318.77 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21769,6 +23252,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 313.69 320.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 313.69 320.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 313.69 320.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "a76a6c6b-2b64-49ed-9ade-216f226333e7")
 		)
@@ -21778,7 +23294,138 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "R27")
+					(reference "R30")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:2N7002")
+		(at 142.24 356.87 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a6dcc01d-e33c-450a-bc87-64f353ce0678")
+		(property "Reference" "Q1"
+			(at 147.066 355.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "NMOS"
+			(at 147.066 358.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 147.32 358.775 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C7429875.pdf"
+			(at 147.32 360.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" "0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23"
+			(at 142.24 356.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC PART #" "C7429875"
+			(at 142.24 356.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 142.24 356.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 142.24 356.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 142.24 356.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "dfdeb935-3b93-477f-a022-3f8fd9ce0e67")
+		)
+		(pin "3"
+			(uuid "45e7850d-73ce-462d-bcd9-9f4565f08edd")
+		)
+		(pin "2"
+			(uuid "3753c0c8-efb7-44c0-98e0-2aedfb947301")
+		)
+		(instances
+			(project "lcr"
+				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
+					(reference "Q1")
 					(unit 1)
 				)
 			)
@@ -21884,6 +23531,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 375.92 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 375.92 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 375.92 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "8f2b4374-82cb-46f0-9e22-3b24ab4b6e8b")
 		)
@@ -21908,7 +23588,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a8d98446-988a-4498-b7b3-52e0658b8481")
-		(property "Reference" "#PWR041"
+		(property "Reference" "#PWR037"
 			(at 173.99 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -21968,7 +23648,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR041")
+					(reference "#PWR037")
 					(unit 1)
 				)
 			)
@@ -21986,7 +23666,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "aa69172d-2aaa-4172-9cc1-9bd9212010f1")
-		(property "Reference" "#PWR026"
+		(property "Reference" "#PWR024"
 			(at 422.91 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -22046,324 +23726,8 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR026")
+					(reference "#PWR024")
 					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Simulation_SPICE:NMOS")
-		(at 295.91 356.87 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "aa949ffe-f524-4eee-af8c-f2996c9541c9")
-		(property "Reference" "Q3"
-			(at 300.736 355.6 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "NMOS"
-			(at 300.736 358.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-3"
-			(at 300.99 354.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C7429875.pdf"
-			(at 295.91 369.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "N-MOSFET transistor, drain/source/gate"
-			(at 295.91 356.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "NMOS"
-			(at 295.91 374.015 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Type" "VDMOS"
-			(at 295.91 375.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 295.91 372.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Already Have" "0"
-			(at 295.91 356.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC PART #" "C7429875"
-			(at 295.91 356.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "3"
-			(uuid "5973907e-a1cd-4cd6-8881-d2c74c1e3757")
-		)
-		(pin "1"
-			(uuid "b25b5eb8-e811-49f1-ab35-3cd516f98209")
-		)
-		(pin "2"
-			(uuid "597b6054-833a-4351-bdfe-ac23de225a7d")
-		)
-		(instances
-			(project "lcr"
-				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "Q3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Opamp_Dual")
-		(at 441.96 219.71 0)
-		(unit 3)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ab7125b8-0f80-4eea-a8fa-ad1a6ea753ee")
-		(property "Reference" "U4"
-			(at 440.69 218.4399 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "LMH6643MMX"
-			(at 440.69 220.9799 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "CustomFootprints:VSSOP-8_3x3mm_P0.65mm"
-			(at 441.96 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C478382.pdf"
-			(at 441.96 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Dual operational amplifier"
-			(at 441.96 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
-			(at 441.96 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Name" "kicad_builtin_opamp_dual"
-			(at 441.96 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "SUBCKT"
-			(at 441.96 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=out1 2=in1- 3=in1+ 4=vee 5=in2+ 6=in2- 7=out2 8=vcc"
-			(at 441.96 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC PART #" "C478382"
-			(at 441.96 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Already Have" "0"
-			(at 441.96 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Type" ""
-			(at 441.96 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "8"
-			(uuid "a8ab87c0-319e-475f-b5ea-91a05b9e8abf")
-		)
-		(pin "5"
-			(uuid "161cfd2b-ea57-4bdc-b78d-05a2c1b563ba")
-		)
-		(pin "2"
-			(uuid "bbb5790d-7545-461f-a3f5-ea1e7b1f613b")
-		)
-		(pin "3"
-			(uuid "d9a53fde-90af-4197-b1fc-98a06c65c2f3")
-		)
-		(pin "7"
-			(uuid "760fe7bc-80f7-4cb9-b547-19d95cddc04d")
-		)
-		(pin "6"
-			(uuid "749f29bc-7afb-4b4d-ad2a-d0d7cd9404ee")
-		)
-		(pin "4"
-			(uuid "d1e8b90a-3a24-457e-884a-90ddd6f872a7")
-		)
-		(pin "1"
-			(uuid "b9a8f2b6-78e3-414f-8698-d4ca2288a526")
-		)
-		(instances
-			(project "lcr"
-				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "U4")
-					(unit 3)
 				)
 			)
 		)
@@ -22458,6 +23822,39 @@
 			)
 		)
 		(property "Sim.Type" ""
+			(at 162.56 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 162.56 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 162.56 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
 			(at 162.56 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -22581,6 +23978,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 176.53 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 176.53 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 176.53 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "7"
 			(uuid "9e99d7b8-fda4-407a-bd2c-04e02c378b60")
 		)
@@ -22632,7 +24062,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b2534fc1-03ca-4a96-b56e-609a389c3f31")
-		(property "Reference" "#PWR096"
+		(property "Reference" "#PWR099"
 			(at 144.78 330.2 0)
 			(hide yes)
 			(show_name no)
@@ -22692,7 +24122,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR096")
+					(reference "#PWR099")
 					(unit 1)
 				)
 			)
@@ -22775,6 +24205,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 477.52 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 477.52 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 477.52 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "63941566-88f5-44ae-b0a1-e30bf9ef143f")
 		)
@@ -22783,181 +24246,6 @@
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
 					(reference "TP1")
 					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Opamp_Dual")
-		(at 321.31 226.06 0)
-		(unit 2)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b6756c7c-afd9-4202-a90b-811fc79203c6")
-		(property "Reference" "U7"
-			(at 321.31 217.17 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LMH6643MMX"
-			(at 321.31 219.71 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "CustomFootprints:VSSOP-8_3x3mm_P0.65mm"
-			(at 321.31 226.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C478382.pdf"
-			(at 321.31 226.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Dual operational amplifier"
-			(at 321.31 226.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
-			(at 321.31 226.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Name" "kicad_builtin_opamp_dual"
-			(at 321.31 226.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "SUBCKT"
-			(at 321.31 226.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=out1 2=in1- 3=in1+ 4=vee 5=in2+ 6=in2- 7=out2 8=vcc"
-			(at 321.31 226.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC PART #" "C478382"
-			(at 321.31 226.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Already Have" "0"
-			(at 321.31 226.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Type" ""
-			(at 321.31 226.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "8"
-			(uuid "6b9e75aa-b800-40d3-abd2-48a3df4a7555")
-		)
-		(pin "5"
-			(uuid "14fdab07-fbdc-4668-ac95-ad76ddc2920b")
-		)
-		(pin "2"
-			(uuid "bbb5790d-7545-461f-a3f5-ea1e7b1f613c")
-		)
-		(pin "3"
-			(uuid "d9a53fde-90af-4197-b1fc-98a06c65c2f4")
-		)
-		(pin "7"
-			(uuid "a7362b27-f073-4362-b0e3-9e1a18c30d19")
-		)
-		(pin "6"
-			(uuid "0257102c-311a-4319-b008-c5837a21d67e")
-		)
-		(pin "4"
-			(uuid "928f2348-9b97-4205-8747-de697d36a79e")
-		)
-		(pin "1"
-			(uuid "b9a8f2b6-78e3-414f-8698-d4ca2288a527")
-		)
-		(instances
-			(project "lcr"
-				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "U7")
-					(unit 2)
 				)
 			)
 		)
@@ -22974,7 +24262,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bad8c15c-3bf3-4fe4-b5ba-c8b6865b5ebe")
-		(property "Reference" "R11"
+		(property "Reference" "R12"
 			(at 226.06 163.83 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23060,6 +24348,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 226.06 170.18 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 226.06 170.18 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 226.06 170.18 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "edb3291f-82f7-4772-a72b-8bbbbc6ac354")
 		)
@@ -23069,7 +24390,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "R11")
+					(reference "R12")
 					(unit 1)
 				)
 			)
@@ -23152,6 +24473,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 504.19 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 504.19 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 504.19 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "2a5e105d-d167-4b11-8bd6-a04d406757d0")
 		)
@@ -23176,7 +24530,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c0faa39d-be5d-497d-b184-fa1ddf662e8f")
-		(property "Reference" "#PWR071"
+		(property "Reference" "#PWR073"
 			(at 208.28 201.93 0)
 			(hide yes)
 			(show_name no)
@@ -23236,7 +24590,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR071")
+					(reference "#PWR073")
 					(unit 1)
 				)
 			)
@@ -23253,7 +24607,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c4cce259-836a-4e98-8e89-b78eed31c70a")
-		(property "Reference" "R21"
+		(property "Reference" "R24"
 			(at 160.02 318.77 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23330,6 +24684,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 158.75 320.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 158.75 320.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 158.75 320.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "20800fe6-4e80-429e-9a21-64d646f931fb")
 		)
@@ -23339,7 +24726,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "R21")
+					(reference "R24")
 					(unit 1)
 				)
 			)
@@ -23445,6 +24832,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 506.73 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 506.73 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 506.73 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "772e4ad8-5f35-43f4-8243-e11751d94012")
 		)
@@ -23472,7 +24892,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c641051c-702e-458a-984b-5941a0914dce")
-		(property "Reference" "#PWR042"
+		(property "Reference" "#PWR038"
 			(at 323.85 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -23532,7 +24952,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR042")
+					(reference "#PWR038")
 					(unit 1)
 				)
 			)
@@ -23550,7 +24970,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cb802306-391a-492e-b0e3-acf6b3909ba9")
-		(property "Reference" "#PWR073"
+		(property "Reference" "#PWR075"
 			(at 295.91 214.63 0)
 			(hide yes)
 			(show_name no)
@@ -23610,7 +25030,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR073")
+					(reference "#PWR075")
 					(unit 1)
 				)
 			)
@@ -23628,7 +25048,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cc31e701-3889-4a66-82f4-8c70b3f4c860")
-		(property "Reference" "#PWR0101"
+		(property "Reference" "#PWR0104"
 			(at 298.45 370.84 0)
 			(hide yes)
 			(show_name no)
@@ -23688,7 +25108,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR0101")
+					(reference "#PWR0104")
 					(unit 1)
 				)
 			)
@@ -23872,6 +25292,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 185.42 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 185.42 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 185.42 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "50d724c2-0ade-4a23-a2be-0e31d61e3fd3")
 		)
@@ -23899,7 +25352,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cfe4a550-eef0-49d7-bb3b-a3ef02a17607")
-		(property "Reference" "#PWR040"
+		(property "Reference" "#PWR036"
 			(at 504.19 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -23959,7 +25412,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR040")
+					(reference "#PWR036")
 					(unit 1)
 				)
 			)
@@ -23977,7 +25430,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d0a356b6-8d1c-41f3-8c7a-1843b7fd6d84")
-		(property "Reference" "#PWR030"
+		(property "Reference" "#PWR028"
 			(at 504.19 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -24037,7 +25490,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR030")
+					(reference "#PWR028")
 					(unit 1)
 				)
 			)
@@ -24055,7 +25508,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d398bb7e-4fda-4fef-8b36-73a3fc4f8ece")
-		(property "Reference" "#PWR086"
+		(property "Reference" "#PWR089"
 			(at 474.98 231.14 0)
 			(hide yes)
 			(show_name no)
@@ -24115,7 +25568,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR086")
+					(reference "#PWR089")
 					(unit 1)
 				)
 			)
@@ -24133,7 +25586,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d3a23b7b-ef1f-4235-b390-fa67261ccab5")
-		(property "Reference" "C20"
+		(property "Reference" "C17"
 			(at 317.5 73.66 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24219,6 +25672,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 317.5 81.28 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 317.5 81.28 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 317.5 81.28 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "90428e42-c035-4d87-83d4-6498d80dd876")
 		)
@@ -24228,7 +25714,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "C20")
+					(reference "C17")
 					(unit 1)
 				)
 			)
@@ -24245,7 +25731,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d7cf0b43-0adf-4e47-8349-4f606a685c54")
-		(property "Reference" "R20"
+		(property "Reference" "R23"
 			(at 152.4 318.77 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24322,6 +25808,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 151.13 320.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 151.13 320.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 151.13 320.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "37fd3814-975d-4702-be6d-4c197fc0601c")
 		)
@@ -24331,7 +25850,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "R20")
+					(reference "R23")
 					(unit 1)
 				)
 			)
@@ -24437,6 +25956,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 424.18 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 424.18 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 424.18 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "a60f0f3b-742b-4e29-a0c0-d8f87ccbff92")
 		)
@@ -24464,7 +26016,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "da69810b-6edc-44c8-b70d-5802df92c5f8")
-		(property "Reference" "#PWR081"
+		(property "Reference" "#PWR084"
 			(at 241.3 236.22 0)
 			(hide yes)
 			(show_name no)
@@ -24524,7 +26076,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR081")
+					(reference "#PWR084")
 					(unit 1)
 				)
 			)
@@ -24607,6 +26159,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 491.49 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 491.49 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 491.49 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "3bdaa5f0-1dc8-49d1-b390-c4412a9437a3")
 		)
@@ -24631,7 +26216,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dd99f2b1-c0da-486b-8e11-6294ff49279c")
-		(property "Reference" "R17"
+		(property "Reference" "R20"
 			(at 349.25 219.71 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24717,6 +26302,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 349.25 226.06 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 349.25 226.06 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 349.25 226.06 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "0a94c6de-0757-41ae-a383-0a2ab1efe0a7")
 		)
@@ -24726,7 +26344,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "R17")
+					(reference "R20")
 					(unit 1)
 				)
 			)
@@ -24744,7 +26362,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "de8d84f8-39e8-4065-bfca-ab0a8ecf58fc")
-		(property "Reference" "#PWR080"
+		(property "Reference" "#PWR083"
 			(at 495.3 232.41 0)
 			(hide yes)
 			(show_name no)
@@ -24804,7 +26422,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR080")
+					(reference "#PWR083")
 					(unit 1)
 				)
 			)
@@ -24821,7 +26439,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "def4a35e-f4b6-43f8-acdf-ede17d765e71")
-		(property "Reference" "R30"
+		(property "Reference" "R33"
 			(at 286.512 352.552 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24898,6 +26516,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 284.48 356.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 284.48 356.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 284.48 356.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "d2259ff4-9a17-4cbe-92ba-1224fc7e641b")
 		)
@@ -24907,7 +26558,138 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "R30")
+					(reference "R33")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:2N7002")
+		(at 295.91 356.87 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "defaa5f6-df83-4704-8fde-e0548b22a774")
+		(property "Reference" "Q3"
+			(at 300.736 355.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "NMOS"
+			(at 300.736 358.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 300.99 358.775 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C7429875.pdf"
+			(at 300.99 360.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" "0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23"
+			(at 295.91 356.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC PART #" "C7429875"
+			(at 295.91 356.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 295.91 356.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 295.91 356.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 295.91 356.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9b4572a2-cdb7-47b4-babe-c3595455d256")
+		)
+		(pin "3"
+			(uuid "314c7e38-7fd3-4fcd-9777-6fdff0e79f22")
+		)
+		(pin "2"
+			(uuid "13bddaa1-1061-40c5-a170-3d275cd77a78")
+		)
+		(instances
+			(project "lcr"
+				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
+					(reference "Q3")
 					(unit 1)
 				)
 			)
@@ -25003,6 +26785,39 @@
 			)
 		)
 		(property "Sim.Type" ""
+			(at 204.47 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 204.47 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 204.47 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
 			(at 204.47 166.37 0)
 			(hide yes)
 			(show_name no)
@@ -25125,6 +26940,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 359.41 232.41 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 359.41 232.41 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 359.41 232.41 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "dc6de5a1-b276-4a7d-a5b3-29a254f9c947")
 		)
@@ -25228,7 +27076,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e5d817b8-9eea-4d57-b7cf-9f473bfd8350")
-		(property "Reference" "R29"
+		(property "Reference" "R32"
 			(at 207.772 352.552 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25305,6 +27153,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 205.74 356.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 205.74 356.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 205.74 356.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "90b868db-6971-49c6-addf-a5786589b837")
 		)
@@ -25314,7 +27195,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "R29")
+					(reference "R32")
 					(unit 1)
 				)
 			)
@@ -25332,7 +27213,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e856deeb-5167-482f-bdfb-a7e3ecd2b140")
-		(property "Reference" "#PWR099"
+		(property "Reference" "#PWR0102"
 			(at 144.78 370.84 0)
 			(hide yes)
 			(show_name no)
@@ -25392,7 +27273,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR099")
+					(reference "#PWR0102")
 					(unit 1)
 				)
 			)
@@ -25488,6 +27369,39 @@
 			)
 		)
 		(property "Sim.Type" ""
+			(at 200.66 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 200.66 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 200.66 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
 			(at 200.66 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -25612,6 +27526,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 441.96 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 441.96 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 441.96 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "9ced55fc-7891-4632-9290-02ae7142e50f")
 		)
@@ -25648,7 +27595,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "eeade3e0-1c29-49b2-b931-0fab764c0895")
-		(property "Reference" "R15"
+		(property "Reference" "R18"
 			(at 298.45 215.8999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25736,6 +27683,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 295.91 217.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 295.91 217.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 295.91 217.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "7aeb21aa-400c-45b5-8466-c4e0f289be8e")
 		)
@@ -25745,7 +27725,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "R15")
+					(reference "R18")
 					(unit 1)
 				)
 			)
@@ -25762,7 +27742,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f021a939-a60e-46ec-81d5-f3054d66a3a0")
-		(property "Reference" "R22"
+		(property "Reference" "R25"
 			(at 168.91 318.77 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25839,6 +27819,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 167.64 320.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 167.64 320.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 167.64 320.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "87546cb9-aba6-433f-a78e-ad75a5cf16c1")
 		)
@@ -25848,7 +27861,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "R22")
+					(reference "R25")
 					(unit 1)
 				)
 			)
@@ -25866,7 +27879,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f4294969-0178-4bb4-ba9d-640401dfeb96")
-		(property "Reference" "#PWR098"
+		(property "Reference" "#PWR0101"
 			(at 298.45 330.2 0)
 			(hide yes)
 			(show_name no)
@@ -25926,7 +27939,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
-					(reference "#PWR098")
+					(reference "#PWR0101")
 					(unit 1)
 				)
 			)
@@ -25965,7 +27978,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector:Banana_Cliff_FCR7350B_S16N-PC_Horizontal"
+		(property "Footprint" "CustomFootprints:Banana_Black"
 			(at 204.47 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -26021,6 +28034,39 @@
 			)
 		)
 		(property "Sim.Type" ""
+			(at 204.47 233.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 204.47 233.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 204.47 233.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
 			(at 204.47 233.68 90)
 			(hide yes)
 			(show_name no)
@@ -26143,6 +28189,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 359.41 163.83 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 359.41 163.83 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 359.41 163.83 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "26f11fd7-b44b-42cb-868e-3dfd04fb2eac")
 		)
@@ -26154,6 +28233,148 @@
 				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
 					(reference "D3")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Amplifier_Operational:OPA2197xDGK")
+		(at 321.31 226.06 0)
+		(unit 2)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fc30bcb2-20b1-4c04-a805-247b599dafe3")
+		(property "Reference" "U7"
+			(at 321.31 215.9 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "OPA2197xDGK"
+			(at 321.31 218.44 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "CustomFootprints:VSSOP-8_3x3mm_P0.65mm"
+			(at 321.31 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa2197.pdf"
+			(at 321.31 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Dual 36V, Precision, Rail-to-Rail Input/Output, Low Offset Voltage, Operational Amplifier, VSSOP-8"
+			(at 321.31 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC PART #" "C2867268"
+			(at 321.31 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 321.31 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 321.31 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 321.31 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b7326cec-a834-4a1d-b2f2-5fc7f94ec127")
+		)
+		(pin "5"
+			(uuid "2b9cb55a-d03b-4003-87d3-27b2ec830971")
+		)
+		(pin "4"
+			(uuid "7983ca52-34bb-43aa-a194-fee79c338ddf")
+		)
+		(pin "7"
+			(uuid "f174be62-c09b-4d19-8884-a4f52e761098")
+		)
+		(pin "6"
+			(uuid "eb237141-1b99-4d4a-9b54-9db1eaa23a27")
+		)
+		(pin "2"
+			(uuid "07bb9636-6279-47f7-97d3-8dba282fac0a")
+		)
+		(pin "3"
+			(uuid "5f87db97-bb77-4cf1-928b-5ba1ec974b55")
+		)
+		(pin "8"
+			(uuid "1d01ee4d-06a2-4e36-a896-067c9cf68044")
+		)
+		(instances
+			(project "lcr"
+				(path "/226ea51e-4da2-4daa-967e-dce167947430/c9f416db-c7a0-48f3-8fda-35fdd9af5fe5"
+					(reference "U7")
+					(unit 2)
 				)
 			)
 		)
@@ -26248,6 +28469,39 @@
 			)
 		)
 		(property "Sim.Type" ""
+			(at 506.73 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 506.73 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 506.73 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" ""
 			(at 506.73 226.06 0)
 			(hide yes)
 			(show_name no)

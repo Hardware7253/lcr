@@ -6,8 +6,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-#include "button_debounce_cfg.h"
-#include "button_debouncing.h"
+#include "btn_debounce.h"
 
 typedef enum {
     BUTTON_1 = 0,
@@ -16,12 +15,4 @@ typedef enum {
 
 void init_buttons(void);
 void poll_buttons(void);
-
-bool is_button_pressed(button_t button);
-bool is_button_just_pressed(button_t button);
-bool is_button_long_pressed(button_t button);
-bool is_button_just_long_pressed(button_t button);
-
-#if ENABLE_BUTTON_COUNTING
-uint8_t get_button_consecutive_presses(button_t button);
-#endif
+uint8_t get_button_data(button_t button, btn_getter btn_getter);

@@ -14,10 +14,10 @@
 #define SAMPLES_PER_PERIOD 16
 
 typedef enum {
-    TF_100KHZ = 0,
-    TF_10KHZ,
+    TF_100HZ = 0,
     TF_1KHZ,
-    TF_100HZ,
+    TF_10KHZ,
+    TF_100KHZ,
     NO_OF_TEST_FREQUENCIES,
 } test_frequency_t;
 
