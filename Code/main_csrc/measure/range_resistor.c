@@ -12,6 +12,9 @@
 #define R1_PIN GPIO_PIN_4
 #define R1_BUS GPIOA
 
+const range_resistor_t RR_DEFAULT = RR_100K;
+const gain_resistor_t GR_DEFAULT = GR_10K;
+
 // Initialise GPIO for switching the range/gain resistors
 void init_range_resistors(void) {
     PINS_CLK_ENABLE();

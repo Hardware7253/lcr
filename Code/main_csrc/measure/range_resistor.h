@@ -1,10 +1,5 @@
 #pragma once
 
-// Defaults are the range/gain resistors that are selected without
-// applying any voltage to the selector relay coils
-#define RR_DEFAULT RR_100K
-#define GR_DEFAULT GR_10K
-
 // Values the main range resistors can take
 // Ordered from most to least likely to find the correct range (most likely = 5K)
 typedef enum {
@@ -21,6 +16,11 @@ typedef enum {
     GR_100K,
     NO_GRS,
 } gain_resistor_t;
+
+// Defaults are the range/gain resistors that are selected without
+// applying any voltage to the selector relay coils
+extern const range_resistor_t RR_DEFAULT;
+extern const gain_resistor_t GR_DEFAULT;
 
 void init_range_resistors(void);
 float set_range_resistor(range_resistor_t rr);

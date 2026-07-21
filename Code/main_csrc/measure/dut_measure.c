@@ -10,26 +10,34 @@
 #define SAMPLE_PERIODS 10 
 #define SAMPLES (SAMPLES_PER_PERIOD * SAMPLE_PERIODS)
 
-// Value of R11
-#define V_TEST_AMP_R1 1000.0f
+
+typedef int32_t buf_t; // int32_t is needed to allow multiplication of 12 bit ADC reads and large accumulators
+
+// Value of R12
+static const float V_TEST_AMP_R1 = 1000.0f;
 
 // Number of measurements used to form an average
-#define NO_OF_TESTS 5
+static const uint8_t NO_OF_TESTS = 5;
 
 // The signal is clipping if it's pk-pk ADC read exceeds this value
-#define CLIP_PK_PK 3972 /* 3.2V */
+static const buf_t CLIP_PK_PK = 3972; // 3.2V
 
 // Pk-pk less than this is considered noise
-#define NOISE_PK_PK 62 /* 50mV */
+static const buf_t NOISE_PK_PK = 62; // 50mV
 
 // If the waveforms are above this threshold when selecting range resistors
 // the combination will be accepted instantly
-#define GOOD_PK_PK 248 /* 200mV */
+static const buf_t GOOD_PK_PK = 248; // 200mV
 
-typedef int32_t buf_t; // int32_t is needed to allow multiplication of 12 bit ADC reads and large accumulators
+// How long to wait before doing anything after changing any relay state
+static const uint32_t RELAY_WAIT_TIME = 50; // 50 ms
+
+// How long to wait inbetween independent measurements/tests
+static const uint32_t MEASUREMENT_WAIT_TIME = 10; // 10 ms
+
+
 static buf_t test_samples[SAMPLES] = {0}; // Measured before DUT
 static buf_t dut_samples[SAMPLES] = {0};  // Measured after DUT
-
 
 static bool is_sampling = false;
 
@@ -148,7 +156,7 @@ bool get_dut_measurement(polar_t *z, float range_resistor, float test_gain_resis
 }
 
 // Finds the correct range and gain resistor to use for the selected test frequency
-// Returns true if a range/gain resistor combination was found, false otherwise
+// This function can block for a long time (hundreds of milliseconds but depends on RELAY_WAIT_TIME)
 // Returns GOOD_RANGE or BAD_RANGE depending on the quality of the test and dut waveforms
 // Returns NO_RANGE if no suitable range / gain resistor combination was found
 static range_status_t find_range_gain_resistors(test_frequency_t test_f, range_resistor_t *rr, gain_resistor_t *gr) {
@@ -160,7 +168,7 @@ static range_status_t find_range_gain_resistors(test_frequency_t test_f, range_r
         for (*rr = 0; *rr < NO_RRS; (*rr)++) {
             set_range_resistor(*rr);
             set_gain_resistor(*gr);
-            delay_ms(50);
+            delay_ms(RELAY_WAIT_TIME);
 
             start_dut_measurement(test_f);
             while (!sample_buffers_full()) {
@@ -214,13 +222,13 @@ static range_status_t find_range_gain_resistors(test_frequency_t test_f, range_r
         set_gain_resistor(best_gr);
     }
 
+    delay_ms(RELAY_WAIT_TIME);
     return range_status;
 }
 
 // Automatically selects the correct range resistor and then
 // measures the DUT multiple times and averages the complex impedances
 // The impedance result is returned by updating *z
-// The function returns the status of the range resistors
 range_status_t measure_dut(polar_t *z, test_frequency_t test_f) {
 
     // Select range and gain resistor
@@ -232,9 +240,10 @@ range_status_t measure_dut(polar_t *z, test_frequency_t test_f) {
         return range_status;
     }
 
+    // Have to set the range resistors again just to get their values
     float rr_val = set_range_resistor(rr);
     float gr_val = set_gain_resistor(gr);
-    delay_ms(1);
+    delay_ms(RELAY_WAIT_TIME);
 
     polar_t z_result;
 
@@ -249,7 +258,7 @@ range_status_t measure_dut(polar_t *z, test_frequency_t test_f) {
 
         z->mag += z_result.mag;
         z->angle += z_result.angle;
-        delay_ms(1);
+        delay_ms(MEASUREMENT_WAIT_TIME);
     }
 
     // Reset range resistors to default state (coil unpowered)
