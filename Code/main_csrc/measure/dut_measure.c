@@ -36,8 +36,8 @@ static const uint32_t RELAY_WAIT_TIME = 50; // 50 ms
 static const uint32_t MEASUREMENT_WAIT_TIME = 10; // 10 ms
 
 
-static buf_t test_samples[SAMPLES] = {0}; // Measured before DUT
-static buf_t dut_samples[SAMPLES] = {0};  // Measured after DUT
+static buf_t test_samples[SAMPLES] = {0}; // Test waveform samples
+static buf_t curr_samples[SAMPLES] = {0}; // DUT current waveform samples
 
 static bool is_sampling = false;
 
@@ -85,22 +85,22 @@ static void offset_samples(buf_t buf[], uint16_t buf_len, buf_t offset) {
     }
 }
 
-// Calculate impedance from test and dut sample buffers
+// Calculate impedance from test and current sample buffers
 // Assumes the sample buffers are usable
 static polar_t calculate_z(float range_resistor, float test_gain_resistor) {
-    buf_t test_pk_pk, dut_pk_pk;
+    buf_t test_pk_pk, curr_pk_pk;
 
     // Remove DC component from ADC readings
     {
         buf_t test_mean, test_max, test_min;
-        buf_t dut_mean, dut_max, dut_min;
+        buf_t curr_mean, curr_max, curr_min;
         bin_get_mean_min_max(test_samples, SAMPLES, SAMPLES_PER_PERIOD, &test_mean, &test_max, &test_min);
-        bin_get_mean_min_max(dut_samples, SAMPLES, SAMPLES_PER_PERIOD, &dut_mean, &dut_max, &dut_min);
+        bin_get_mean_min_max(curr_samples, SAMPLES, SAMPLES_PER_PERIOD, &curr_mean, &curr_max, &curr_min);
         offset_samples(test_samples, SAMPLES, -test_mean);
-        offset_samples(dut_samples, SAMPLES, -dut_mean);
+        offset_samples(curr_samples, SAMPLES, -curr_mean);
 
         test_pk_pk = test_max - test_min;
-        dut_pk_pk = dut_max - dut_min;
+        curr_pk_pk = curr_max - curr_min;
     }
 
     int64_t in_phase = 0;
@@ -113,8 +113,8 @@ static polar_t calculate_z(float range_resistor, float test_gain_resistor) {
             j %= SAMPLES;
         }
 
-        in_phase += test_samples[i] * dut_samples[i];
-        quadrature += test_samples[j] * dut_samples[i];
+        in_phase += test_samples[i] * curr_samples[i];
+        quadrature += test_samples[j] * curr_samples[i];
     }
 
     in_phase /= SAMPLES;
@@ -123,7 +123,7 @@ static polar_t calculate_z(float range_resistor, float test_gain_resistor) {
     float v_test_amp_gain = test_gain_resistor / V_TEST_AMP_R1;
 
     return (polar_t) {
-        .mag =  ((float)test_pk_pk * (float)range_resistor) / ((float)dut_pk_pk * v_test_amp_gain),
+        .mag =  ((float)test_pk_pk * (float)range_resistor) / ((float)curr_pk_pk * v_test_amp_gain),
         .angle = -atan2f((float)(quadrature), (float)(in_phase))
     };
 }
@@ -138,7 +138,7 @@ void init_dut_measurement(void) {
 // This function does not block
 void start_dut_measurement(test_frequency_t test_f) {
     if (!is_sampling) {
-        start_sampling(test_f, (uint32_t*)test_samples, (uint32_t*)dut_samples, SAMPLES);
+        start_sampling(test_f, (uint32_t*)test_samples, (uint32_t*)curr_samples, SAMPLES);
         is_sampling = true;
     }
 }
@@ -157,7 +157,7 @@ bool get_dut_measurement(polar_t *z, float range_resistor, float test_gain_resis
 
 // Finds the correct range and gain resistor to use for the selected test frequency
 // This function can block for a long time (hundreds of milliseconds but depends on RELAY_WAIT_TIME)
-// Returns GOOD_RANGE or BAD_RANGE depending on the quality of the test and dut waveforms
+// Returns GOOD_RANGE or BAD_RANGE depending on the quality of the test and current waveforms
 // Returns NO_RANGE if no suitable range / gain resistor combination was found
 static range_status_t find_range_gain_resistors(test_frequency_t test_f, range_resistor_t *rr, gain_resistor_t *gr) {
     buf_t best_pk_pk = 0;
@@ -177,29 +177,29 @@ static range_status_t find_range_gain_resistors(test_frequency_t test_f, range_r
             is_sampling = false;
 
             // Calculate pk-pk
-            buf_t test_pk_pk, dut_pk_pk;
+            buf_t test_pk_pk, curr_pk_pk;
             {
                 buf_t test_mean, test_max, test_min;
-                buf_t dut_mean, dut_max, dut_min;
+                buf_t curr_mean, curr_max, curr_min;
                 bin_get_mean_min_max(test_samples, SAMPLES, SAMPLES_PER_PERIOD, &test_mean, &test_max, &test_min);
-                bin_get_mean_min_max(dut_samples, SAMPLES, SAMPLES_PER_PERIOD, &dut_mean, &dut_max, &dut_min);
+                bin_get_mean_min_max(curr_samples, SAMPLES, SAMPLES_PER_PERIOD, &curr_mean, &curr_max, &curr_min);
                 test_pk_pk = test_max - test_min;
-                dut_pk_pk = dut_max - dut_min;
+                curr_pk_pk = curr_max - curr_min;
             }
-            buf_t total_pk_pk = test_pk_pk + dut_pk_pk;
+            buf_t total_pk_pk = test_pk_pk + curr_pk_pk;
 
             // Skip over this combination if either signal is clipping or lost in noise
             if (
                 test_pk_pk > CLIP_PK_PK ||
-                dut_pk_pk > CLIP_PK_PK ||
+                curr_pk_pk > CLIP_PK_PK ||
                 test_pk_pk < NOISE_PK_PK ||
-                dut_pk_pk < NOISE_PK_PK
+                curr_pk_pk < NOISE_PK_PK
             ) {
                 continue;
             }
 
             // Return early if we find an acceptable combination
-            if (test_pk_pk > GOOD_PK_PK && dut_pk_pk > GOOD_PK_PK) {
+            if (test_pk_pk > GOOD_PK_PK && curr_pk_pk > GOOD_PK_PK) {
                 return GOOD_RANGE;
             }
 
@@ -245,6 +245,8 @@ range_status_t measure_dut(polar_t *z, test_frequency_t test_f) {
     float gr_val = set_gain_resistor(gr);
     delay_ms(RELAY_WAIT_TIME);
 
+    z->angle = 0;
+    z->mag = 0;
     polar_t z_result;
 
     // Perform tests

@@ -6,7 +6,7 @@
 	(paper "A3")
 	(title_block
 		(title "LCR Main Section (digital)")
-		(date "2026-07-22")
+		(date "2026-08-07")
 		(company "LWQ")
 	)
 	(lib_symbols
@@ -14755,21 +14755,26 @@
 		)
 		(pin "13"
 			(uuid "67cdf2f3-e237-4548-b9e6-0d570f88dd8a")
+			(alternate "ADC2_IN13")
 		)
 		(pin "38"
 			(uuid "7d5964c2-e19f-4565-975f-1cbb4073d924")
+			(alternate "SYS_JTCK-SWCLK")
 		)
 		(pin "33"
 			(uuid "65086012-adea-41cc-9e1c-b7e2a2e06971")
+			(alternate "USB_DM")
 		)
 		(pin "41"
 			(uuid "dc3fc594-93f7-47cc-a716-a8a86f402bc9")
+			(alternate "SPI1_MISO")
 		)
 		(pin "31"
 			(uuid "ef78a496-3221-464c-9b4c-b6a6f7098d47")
 		)
 		(pin "42"
 			(uuid "5120d1d6-4f6d-4108-90bb-383a4339c868")
+			(alternate "SPI1_MOSI")
 		)
 		(pin "24"
 			(uuid "6aa8d4c3-6d38-4c97-8a6a-fd91d34e2088")
@@ -14782,6 +14787,7 @@
 		)
 		(pin "34"
 			(uuid "5fda8fc3-16a6-43ec-938b-28894caa3334")
+			(alternate "USB_DP")
 		)
 		(pin "35"
 			(uuid "1073f16f-9f18-41e9-8f10-998b601acfed")
@@ -14791,12 +14797,14 @@
 		)
 		(pin "29"
 			(uuid "e1d77e37-7b8e-4cb4-97e2-65be44e9415a")
+			(alternate "SPI2_MOSI")
 		)
 		(pin "25"
 			(uuid "1d763a79-3584-4113-bf00-0b7bf58c4881")
 		)
 		(pin "16"
 			(uuid "f352be13-8911-4420-85de-e1501b37962c")
+			(alternate "ADC1_IN15")
 		)
 		(pin "32"
 			(uuid "f2176ab9-6a51-41b1-bdb5-61ef29c06b0e")
@@ -14812,6 +14820,7 @@
 		)
 		(pin "5"
 			(uuid "97611193-3d19-434e-be9e-d2f6e21d5cc3")
+			(alternate "RCC_OSC_IN")
 		)
 		(pin "46"
 			(uuid "d205f29d-c075-4d80-bcbb-be59be36c451")
@@ -14824,6 +14833,7 @@
 		)
 		(pin "6"
 			(uuid "c96fd840-94f5-4f62-8adc-d5b2afd036c1")
+			(alternate "RCC_OSC_OUT")
 		)
 		(pin "2"
 			(uuid "42aa6b66-10d9-49cd-93e1-76a79afef627")
@@ -14845,9 +14855,11 @@
 		)
 		(pin "37"
 			(uuid "c52cdaed-1ffd-4cbf-8bbd-8bacbb030a3e")
+			(alternate "SYS_JTMS-SWDIO")
 		)
 		(pin "40"
 			(uuid "d6f6dccc-d0e4-43a9-b478-3288cb5a631a")
+			(alternate "SPI1_SCK")
 		)
 		(pin "39"
 			(uuid "a889ea0f-3b11-4c76-9b49-e7f7f5643d8e")
@@ -14875,6 +14887,7 @@
 		)
 		(pin "27"
 			(uuid "0f8db113-eee4-4237-92b0-6312868f87a6")
+			(alternate "SPI2_SCK")
 		)
 		(pin "17"
 			(uuid "2034289a-f96f-4b6b-8992-271855a0116d")
@@ -20788,7 +20801,7 @@
 		(instances
 			(project "lcr"
 				(path "/226ea51e-4da2-4daa-967e-dce167947430"
-					(page "1")
+					(page "2")
 				)
 			)
 		)

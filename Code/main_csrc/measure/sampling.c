@@ -8,29 +8,29 @@
 #define DMA_CLK_EN              __HAL_RCC_DMA1_CLK_ENABLE(); __HAL_RCC_DMAMUX1_CLK_ENABLE
 
 // ADC for measuring test waveform
-#define TEST_ADC                ADC1
+#define TEST_ADC                ADC2
 #define TEST_ADC_CLK_EN         __HAL_RCC_ADC12_CLK_ENABLE
-#define TEST_ADC_CHANNEL        ADC_CHANNEL_15
-#define TEST_DMA_REQUEST        DMA_REQUEST_ADC1
-#define TEST_DMA_INST           DMA1_Channel1
-#define TEST_DMA_IRQn           DMA1_Channel1_IRQn 
-#define TEST_DMA_ISR            DMA1_Channel1_IRQHandler
+#define TEST_ADC_CHANNEL        ADC_CHANNEL_13
+#define TEST_DMA_REQUEST        DMA_REQUEST_ADC2
+#define TEST_DMA_INST           DMA1_Channel2
+#define TEST_DMA_IRQn           DMA1_Channel2_IRQn 
+#define TEST_DMA_ISR            DMA1_Channel2_IRQHandler
 
 // ADC for measuring current waveform
-#define CURR_ADC                 ADC2 
+#define CURR_ADC                 ADC1 
 #define CURR_ADC_CLK_EN          __HAL_RCC_ADC12_CLK_ENABLE
-#define CURR_ADC_CHANNEL         ADC_CHANNEL_13
-#define CURR_DMA_REQUEST         DMA_REQUEST_ADC2
-#define CURR_DMA_INST            DMA1_Channel2 
-#define CURR_DMA_IRQn            DMA1_Channel2_IRQn
-#define CURR_DMA_ISR             DMA1_Channel2_IRQHandler
+#define CURR_ADC_CHANNEL         ADC_CHANNEL_15
+#define CURR_DMA_REQUEST         DMA_REQUEST_ADC1
+#define CURR_DMA_INST            DMA1_Channel1 
+#define CURR_DMA_IRQn            DMA1_Channel1_IRQn
+#define CURR_DMA_ISR             DMA1_Channel1_IRQHandler
 
-#define TEST_PIN                 GPIO_PIN_0
-#define TEST_PIN_BUS             GPIOB
+#define TEST_PIN                 GPIO_PIN_5
+#define TEST_PIN_BUS             GPIOA
 #define TEST_PIN_CLK_EN          __HAL_RCC_GPIOB_CLK_ENABLE 
 
-#define CURR_PIN                 GPIO_PIN_5
-#define CURR_PIN_BUS             GPIOA
+#define CURR_PIN                 GPIO_PIN_0
+#define CURR_PIN_BUS             GPIOB
 #define CURR_PIN_CLK_EN          __HAL_RCC_GPIOA_CLK_ENABLE 
 
 // Timer peripheral to trigger ADC conversions
@@ -67,7 +67,7 @@ static ADC_HandleTypeDef hadc_test;
 static ADC_HandleTypeDef hadc_curr;
 
 static bool test_buf_full = false;
-static bool dut_buf_full = false;
+static bool curr_buf_full = false;
 
 // Struct for setting up timer period for ADC read and ADC sample times
 typedef struct {
@@ -294,9 +294,9 @@ void init_sampling(void) {
     init_ad9833(&AD9833);
 }
 
-// Start sampling test and dut waveforms
+// Start sampling test and current waveforms
 // buf_elements should be given as the number of samples to be recorded in the buffers NOT byte length
-void start_sampling(test_frequency_t test_f, uint32_t *test_buf, uint32_t *dut_buf, uint32_t buf_len) {
+void start_sampling(test_frequency_t test_f, uint32_t *test_buf, uint32_t *curr_buf, uint32_t buf_len) {
     const test_frequency_conf_t *conf = &TEST_CONFIGS[test_f];
     sample_buffers_full(); // Ensure buffer state variables are rest
 
@@ -332,16 +332,16 @@ void start_sampling(test_frequency_t test_f, uint32_t *test_buf, uint32_t *dut_b
 
     // Start recording data
     error_handler_msg(HAL_ADC_Start_DMA(&hadc_test, test_buf, buf_len), "Failed to start test ADC DMA");
-    error_handler_msg(HAL_ADC_Start_DMA(&hadc_curr, dut_buf, buf_len), "Failed to start current ADC DMA");
+    error_handler_msg(HAL_ADC_Start_DMA(&hadc_curr, curr_buf, buf_len), "Failed to start current ADC DMA");
     error_handler_msg(HAL_TIM_Base_Start(&htim), "Failed to start TIM");
 }
 
 // Returns true when the sample buffers have been filled
 // This function will return true once per buffer fill
 bool sample_buffers_full(void) {
-    if (test_buf_full && dut_buf_full) {
+    if (test_buf_full && curr_buf_full) {
         test_buf_full = false;
-        dut_buf_full = false;
+        curr_buf_full = false;
         return true;
     }
     return false;
@@ -352,10 +352,10 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc) {
     if (hadc->Instance == TEST_ADC) {
         test_buf_full = true;
     } else if (hadc->Instance == CURR_ADC) {
-        dut_buf_full = true;
+        curr_buf_full = true;
     }
 
-    if (test_buf_full && dut_buf_full) {
+    if (test_buf_full && curr_buf_full) {
         error_handler_msg(HAL_TIM_Base_Stop(&htim), "Failed to stop TIM");
         stop_ad9833(&AD9833);
     }
