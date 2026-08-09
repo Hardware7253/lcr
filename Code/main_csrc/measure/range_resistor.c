@@ -39,11 +39,11 @@ float set_range_resistor(range_resistor_t rr) {
         case RR_100:
             HAL_GPIO_WritePin(R0_BUS, R0_PIN, 0);
             HAL_GPIO_WritePin(R1_BUS, R1_PIN, 1);
-            return 100.0;
+            return 100.3;
         case RR_5K:
             HAL_GPIO_WritePin(R0_BUS, R0_PIN, 1);
             HAL_GPIO_WritePin(R1_BUS, R1_PIN, 0);
-            return 5100.0;
+            return 5117.0;
         case RR_100K:
             HAL_GPIO_WritePin(R0_BUS, R0_PIN, 0);
             HAL_GPIO_WritePin(R1_BUS, R1_PIN, 0);
@@ -59,7 +59,7 @@ float set_gain_resistor(gain_resistor_t gr) {
     switch (gr) {
         case GR_10K:
             HAL_GPIO_WritePin(G0_BUS, G0_PIN, 0);
-            return 10e3;
+            return 9.97e3;
         case GR_100K:
             HAL_GPIO_WritePin(G0_BUS, G0_PIN, 1);
             return 100e3;

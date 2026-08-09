@@ -4,7 +4,7 @@
 #define PI 3.14159265358979323846F
 
 // Complex impedance angle in radians before a component is considered reactive
-#define REACTIVE_THRESHOLD 0.78F
+#define REACTIVE_THRESHOLD 0.2F
 
 // Calculate the passive component from a given complex impedance and frequency
 passive_component_t calc_passive_component(const polar_t *z, float frequency) {

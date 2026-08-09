@@ -7,34 +7,37 @@
 #include <math.h>
 
 #define OFFSET_SAMPLES_90_DEG (SAMPLES_PER_PERIOD / 4) 
-#define SAMPLE_PERIODS 10 
+#define SAMPLE_PERIODS 20 
 #define SAMPLES (SAMPLES_PER_PERIOD * SAMPLE_PERIODS)
 
 
 typedef int32_t buf_t; // int32_t is needed to allow multiplication of 12 bit ADC reads and large accumulators
 
 // Value of R12
-static const float V_TEST_AMP_R1 = 1000.0f;
+// v_test inverting amplifier input resistor value
+static const float V_TEST_AMP_R1 = 1000.0f; // Ω
 
 // Number of measurements used to form an average
 static const uint8_t NO_OF_TESTS = 5;
 
 // The signal is clipping if it's pk-pk ADC read exceeds this value
-static const buf_t CLIP_PK_PK = 3972; // 3.2V
-
-// Pk-pk less than this is considered noise
-static const buf_t NOISE_PK_PK = 62; // 50mV
+static const buf_t CLIP_PK_PK = 4066; // 3.276V
 
 // If the waveforms are above this threshold when selecting range resistors
 // the combination will be accepted instantly
-static const buf_t GOOD_PK_PK = 248; // 200mV
+static const buf_t GOOD_PK_PK = 500; // 403mV
 
 // How long to wait before doing anything after changing any relay state
-static const uint32_t RELAY_WAIT_TIME = 50; // 50 ms
+static const uint32_t RELAY_WAIT = 50; // ms
 
 // How long to wait inbetween independent measurements/tests
-static const uint32_t MEASUREMENT_WAIT_TIME = 10; // 10 ms
+static const uint32_t MEASUREMENT_WAIT = 50; // ms
 
+// How long to wait after starting the DDS to start sampling
+static const uint32_t DDS_WAIT = 50; // ms
+
+// Expected number of zero crossings in the sample buffers + margin for noise
+static const uint16_t EXPECTED_CROSSINGS = (2 * SAMPLE_PERIODS) + (SAMPLE_PERIODS / 4);
 
 static buf_t test_samples[SAMPLES] = {0}; // Test waveform samples
 static buf_t curr_samples[SAMPLES] = {0}; // DUT current waveform samples
@@ -155,6 +158,28 @@ bool get_dut_measurement(polar_t *z, float range_resistor, float test_gain_resis
     return false;
 }
 
+// Returns the number of times the samples in the buffer cross the cross_point
+static uint16_t get_crossings(buf_t cross_point, buf_t buf[], uint16_t buf_len) {
+    uint16_t crossings = 0;
+    if (buf_len < 2) {
+        return crossings;
+    }
+
+    buf_t last_val = buf[0];
+    for (uint16_t i = 1; i < buf_len; i++) {
+        buf_t this_val = buf[i];
+
+        if (
+            (last_val < cross_point && this_val >= cross_point) ||
+            (last_val > cross_point && this_val <= cross_point)
+        ) {
+            crossings++;
+        }
+        last_val = this_val;
+    }
+    return crossings;
+}
+
 // Finds the correct range and gain resistor to use for the selected test frequency
 // This function can block for a long time (hundreds of milliseconds but depends on RELAY_WAIT_TIME)
 // Returns GOOD_RANGE or BAD_RANGE depending on the quality of the test and current waveforms
@@ -163,12 +188,14 @@ static range_status_t find_range_gain_resistors(test_frequency_t test_f, range_r
     buf_t best_pk_pk = 0;
     range_resistor_t best_rr, best_gr;
     range_status_t range_status = NO_RANGE;
+    start_dds(test_f);
+    delay_ms(DDS_WAIT);
 
     for (*gr = 0; *gr < NO_GRS; (*gr)++) {
         for (*rr = 0; *rr < NO_RRS; (*rr)++) {
             set_range_resistor(*rr);
             set_gain_resistor(*gr);
-            delay_ms(RELAY_WAIT_TIME);
+            delay_ms(RELAY_WAIT);
 
             start_dut_measurement(test_f);
             while (!sample_buffers_full()) {
@@ -177,10 +204,11 @@ static range_status_t find_range_gain_resistors(test_frequency_t test_f, range_r
             is_sampling = false;
 
             // Calculate pk-pk
-            buf_t test_pk_pk, curr_pk_pk;
+            buf_t test_pk_pk, test_mean;
+            buf_t curr_pk_pk, curr_mean;
             {
-                buf_t test_mean, test_max, test_min;
-                buf_t curr_mean, curr_max, curr_min;
+                buf_t test_max, test_min;
+                buf_t curr_max, curr_min;
                 bin_get_mean_min_max(test_samples, SAMPLES, SAMPLES_PER_PERIOD, &test_mean, &test_max, &test_min);
                 bin_get_mean_min_max(curr_samples, SAMPLES, SAMPLES_PER_PERIOD, &curr_mean, &curr_max, &curr_min);
                 test_pk_pk = test_max - test_min;
@@ -188,18 +216,20 @@ static range_status_t find_range_gain_resistors(test_frequency_t test_f, range_r
             }
             buf_t total_pk_pk = test_pk_pk + curr_pk_pk;
 
-            // Skip over this combination if either signal is clipping or lost in noise
+            // This combination is bad if there are too many zero crossings (signal is noisy)
+            // Combination is also bad if the signals are clipping
             if (
+                get_crossings(test_mean, test_samples, SAMPLES) > EXPECTED_CROSSINGS ||
+                get_crossings(curr_mean, curr_samples, SAMPLES) > EXPECTED_CROSSINGS ||
                 test_pk_pk > CLIP_PK_PK ||
-                curr_pk_pk > CLIP_PK_PK ||
-                test_pk_pk < NOISE_PK_PK ||
-                curr_pk_pk < NOISE_PK_PK
+                curr_pk_pk > CLIP_PK_PK
             ) {
                 continue;
             }
 
             // Return early if we find an acceptable combination
             if (test_pk_pk > GOOD_PK_PK && curr_pk_pk > GOOD_PK_PK) {
+                stop_dds();
                 return GOOD_RANGE;
             }
 
@@ -221,8 +251,11 @@ static range_status_t find_range_gain_resistors(test_frequency_t test_f, range_r
         set_range_resistor(best_rr);
         set_gain_resistor(best_gr);
     }
+    *rr = best_rr;
+    *gr = best_gr;
 
-    delay_ms(RELAY_WAIT_TIME);
+    stop_dds();
+    delay_ms(RELAY_WAIT);
     return range_status;
 }
 
@@ -243,11 +276,14 @@ range_status_t measure_dut(polar_t *z, test_frequency_t test_f) {
     // Have to set the range resistors again just to get their values
     float rr_val = set_range_resistor(rr);
     float gr_val = set_gain_resistor(gr);
-    delay_ms(RELAY_WAIT_TIME);
+    delay_ms(RELAY_WAIT);
 
     z->angle = 0;
     z->mag = 0;
     polar_t z_result;
+
+    start_dds(test_f);
+    delay_ms(DDS_WAIT);
 
     // Perform tests
     for (uint8_t i = 0; i < NO_OF_TESTS; i++) {
@@ -260,8 +296,10 @@ range_status_t measure_dut(polar_t *z, test_frequency_t test_f) {
 
         z->mag += z_result.mag;
         z->angle += z_result.angle;
-        delay_ms(MEASUREMENT_WAIT_TIME);
+        delay_ms(MEASUREMENT_WAIT);
     }
+
+    stop_dds();
 
     // Reset range resistors to default state (coil unpowered)
     set_range_resistor(RR_DEFAULT);

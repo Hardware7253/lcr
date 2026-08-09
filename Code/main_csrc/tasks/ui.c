@@ -109,7 +109,7 @@ static void update_display(bool overwrite_message, const char* message) {
     npf_snprintf(
         lines[0],
         CHARS_PER_LINE,
-        "Z = %.3f<%.2f* %s^",
+        "Z=%.3f<%.2f* %s^",
         dut_z_mag_eng_val.val,
         rad_to_degrees(dut_z.angle),
         get_unit_prefix_string(dut_z_mag_eng_val.unit_prefix)
@@ -117,7 +117,7 @@ static void update_display(bool overwrite_message, const char* message) {
 
     // Print impedance real part
     eng_float_t dut_r_eng_val = convert_to_eng_notation(dut.impedance.real);
-    npf_snprintf(lines[1], CHARS_PER_LINE, "R = %.2f %c^", dut_r_eng_val.val, dut_r_eng_val.unit_prefix);
+    npf_snprintf(lines[1], CHARS_PER_LINE, "R=%.2f %c^", dut_r_eng_val.val, dut_r_eng_val.unit_prefix);
 
     if (dut.passive_type != RESISTOR) {
         char symbol = 'C';
@@ -133,7 +133,7 @@ static void update_display(bool overwrite_message, const char* message) {
         npf_snprintf(
             lines[2],
             CHARS_PER_LINE,
-            "%c = %.2f %s%c",
+            "%c=%.2f %s%c",
             symbol,
             reactive_component_eng_val.val,
             get_unit_prefix_string(reactive_component_eng_val.unit_prefix),
@@ -141,7 +141,7 @@ static void update_display(bool overwrite_message, const char* message) {
         );
 
         // Print dissipation factor
-        npf_snprintf(lines[3], CHARS_PER_LINE, "D = %.3f", dut.impedance.real / fabsf(dut.impedance.imaginary));
+        npf_snprintf(lines[3], CHARS_PER_LINE, "D=%.3f", dut.impedance.real / fabsf(dut.impedance.imaginary));
     } else {
 
         // Show resistor stray reactance
@@ -149,7 +149,7 @@ static void update_display(bool overwrite_message, const char* message) {
         npf_snprintf(
             lines[2],
             CHARS_PER_LINE,
-            "X = %.3f %s^",
+            "X=%.3f %s^",
             dut_x_eng_val.val,
             get_unit_prefix_string(dut_x_eng_val.unit_prefix)
         );

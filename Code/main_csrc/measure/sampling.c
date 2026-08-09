@@ -294,7 +294,26 @@ void init_sampling(void) {
     init_ad9833(&AD9833);
 }
 
+// Starts a test sine waveform with the specified frequency
+// Consider adding a delay after this function to ensure the output is steady before sampling
+void start_dds(test_frequency_t test_f) {
+    const test_frequency_conf_t *conf = &TEST_CONFIGS[test_f];
+    ad9833_cfg_t dds_cfg = {
+        .mode = SINE_OUT,
+        .frequency = (float)conf->test_f,
+        .phase = 0.0,
+    };
+
+    start_ad9833(&AD9833, &dds_cfg);
+}
+
+// Stop the DDS test waveform output
+void stop_dds(void) {
+    stop_ad9833(&AD9833);
+}
+
 // Start sampling test and current waveforms
+// The dds output needs to be started before running this function
 // buf_elements should be given as the number of samples to be recorded in the buffers NOT byte length
 void start_sampling(test_frequency_t test_f, uint32_t *test_buf, uint32_t *curr_buf, uint32_t buf_len) {
     const test_frequency_conf_t *conf = &TEST_CONFIGS[test_f];
@@ -320,16 +339,6 @@ void start_sampling(test_frequency_t test_f, uint32_t *test_buf, uint32_t *curr_
     htim.Init.Period = conf->period;
     error_handler_msg(HAL_TIM_Base_Init(&htim), "Failed to init TIM");
 
-    ad9833_cfg_t dds_cfg = {
-        .mode = SINE_OUT,
-        .frequency = (float)conf->test_f,
-        .phase = 0.0,
-    };
-
-    // Start DDS
-    start_ad9833(&AD9833, &dds_cfg);
-    delay_ms(10); // Alow system to stabilise before measuring
-
     // Start recording data
     error_handler_msg(HAL_ADC_Start_DMA(&hadc_test, test_buf, buf_len), "Failed to start test ADC DMA");
     error_handler_msg(HAL_ADC_Start_DMA(&hadc_curr, curr_buf, buf_len), "Failed to start current ADC DMA");
@@ -347,7 +356,7 @@ bool sample_buffers_full(void) {
     return false;
 }
 
-// Set buffer states and stop trigger timer and test waveform
+// Set buffer state flags and stop ADC trigger timer
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc) {
     if (hadc->Instance == TEST_ADC) {
         test_buf_full = true;
@@ -357,7 +366,6 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc) {
 
     if (test_buf_full && curr_buf_full) {
         error_handler_msg(HAL_TIM_Base_Stop(&htim), "Failed to stop TIM");
-        stop_ad9833(&AD9833);
     }
 }
 
