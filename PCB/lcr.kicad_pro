@@ -561,7 +561,7 @@
       "plot": "manufacture/gerbers/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "lcr.step",
       "svg": "",
       "vrml": ""
     },
@@ -689,6 +689,24 @@
           "label": "Sim.Type",
           "name": "Sim.Type",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Digikey Part #",
+          "name": "Digikey Part #",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "KLC_S3.3",
+          "name": "KLC_S3.3",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "KLC_S4.1",
+          "name": "KLC_S4.1",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -755,7 +773,7 @@
         "uuid": "226ea51e-4da2-4daa-967e-dce167947430"
       }
     ],
-    "used_designators": "C1-44,H1-4,Q1-6,SW1-2,D1-13,U1-13,N1,PS1,#PWR1-108,Y1-2,J1-6,K1-3,DS1,R1-33,TP1-17,#FLG1-3",
+    "used_designators": "DS1,PS1,#FLG1-3,J1-7,K1-3,C1-47,R1-35,TP1-17,Q1-6,N1,D1-13,U1-13,H1-4,SW1-2,#PWR1-109,Y1-2",
     "variants": []
   },
   "sheets": [

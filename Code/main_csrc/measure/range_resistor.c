@@ -32,14 +32,14 @@ void init_range_resistors(void) {
     HAL_GPIO_Init(R1_BUS, &relay_pin_cfg); 
 }
 
-// Switches is the desired range resistor
+// Switches in the desired range resistor
 // Returns the resistance (in ohms) of the selected range resistor
 float set_range_resistor(range_resistor_t rr) {
     switch (rr) {
         case RR_100:
             HAL_GPIO_WritePin(R0_BUS, R0_PIN, 0);
             HAL_GPIO_WritePin(R1_BUS, R1_PIN, 1);
-            return 100.3;
+            return 100.2; // Actual value of 100.3 ohm in parallel with 100k
         case RR_5K:
             HAL_GPIO_WritePin(R0_BUS, R0_PIN, 1);
             HAL_GPIO_WritePin(R1_BUS, R1_PIN, 0);
